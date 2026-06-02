@@ -133,7 +133,7 @@ onMounted(() => {
         >
 
           <div
-            class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-500 mb-10  w-[350px] "
+            class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-500 mb-10 "
           >
 
             <!-- Image -->
