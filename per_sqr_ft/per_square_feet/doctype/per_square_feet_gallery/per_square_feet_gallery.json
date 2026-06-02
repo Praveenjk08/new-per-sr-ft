@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-05-27 15:59:05.624440",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "select_tag",
+  "add_alt_text",
+  "image",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "fieldname": "select_tag",
+   "fieldtype": "Link",
+   "label": "Select Tag",
+   "options": "Tag"
+  },
+  {
+   "fieldname": "add_alt_text",
+   "fieldtype": "Data",
+   "label": "Add Alt Text"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-06-01 12:14:42.121839",
+ "modified_by": "Administrator",
+ "module": "Per Square Feet",
+ "name": "Per Square feet Gallery",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
