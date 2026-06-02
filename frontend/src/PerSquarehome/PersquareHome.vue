@@ -51,14 +51,14 @@
           <div class="flex flex-col md:flex-row gap-3">
 
             <!-- Input -->
-            <input
-              type="text"
+            <input  
+              type="text" v-model="searchText"
               placeholder="Search by City, Property, Builder..."
               class="flex-1 px-4 py-3 sm:py-4 rounded-2xl outline-none bg-white text-gray-700 text-sm sm:text-lg"
             />
 
             <!-- Button -->
-            <button
+            <button @click="searchProperty"
               class="bg-[#156082] hover:bg-[#0f4f68] text-white px-6 sm:px-10 py-3 sm:py-4 rounded-2xl text-sm sm:text-lg font-semibold transition-all duration-300"
             >
               Search Property
@@ -146,4 +146,20 @@ import OurServices from "./OurServices.vue";
 import Thefamilysection from "./Thefamilysection.vue";
 import TheKitcheniamge from "./TheKitcheniamge.vue";
 import PropertySlides from "./PropertySlides.vue";
+import { useRouter } from "vue-router";
+import { ref } from "vue";
+
+const router = useRouter();
+const searchText = ref("");
+
+const searchProperty = () => {
+  router.push({
+    path: "/search-projects",
+    query: {
+      search: searchText.value,
+    },
+  });
+};
+
+
 </script>

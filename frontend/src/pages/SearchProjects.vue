@@ -1,166 +1,3 @@
-<!-- <script setup>
-import { ref, onMounted } from "vue";
-
-const projects = ref([]);
-
-const fetchProjects = async () => {
-
-  const response = await fetch(
-    "/api/method/desirenest.api.property.get_all_projects"
-  );
-
-  const data = await response.json();
-
-  projects.value = data.message;
-};
-
-onMounted(() => {
-  fetchProjects();
-});
-</script>
-
-<template>
-
-<section class="py-16">
-
-<div class="max-w-7xl mx-auto px-4">
-
-<h1 class="text-5xl font-bold mb-10">
-Find Your Dream Property
-</h1>
-
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
-<div
-  v-for="project in projects"
-  :key="project.name"
-  class="bg-white rounded-3xl shadow-md overflow-hidden"
->
-
-<router-link :to="`/project/${project.url}`">
-
-<img
-  :src="project.thumbnail_image"
-  class="w-full h-[250px] object-cover"
-/>
-
-<div class="p-5">
-
-<h2 class="text-2xl font-bold">
-{{ project.project_name }}
-</h2>
-
-<p class="mt-2 text-gray-500">
-{{ project.full_location }}
-</p>
-
-<button
-  class="mt-5 bg-black text-white px-5 py-3 rounded-full"
->
-Know More
-</button>
-
-</div>
-
-</router-link>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-</template> -->
-
-
-
-<script setup>
-
-import FeatureImages from "@/PerSquarehome/FeatureImages.vue";
-import { ref, onMounted, computed, watch } from "vue";
-import { useRoute, useRouter } from "vue-router";
-
-const projects = ref([]);
-
-const route = useRoute();
-
-const searchQuery = ref("");
-// const searchQueryFromHome = ref(route.query.search || "");
-
-// const filteredProjects = computed(() => {
-//   return projects.value.filter((project) => {
-//     return (
-//       project.project_name?.toLowerCase().includes(searchQueryFromHome.value.toLowerCase()) ||
-//       project.full_location?.toLowerCase().includes(searchQueryFromHome.value.toLowerCase()) ||
-//       project.status?.toLowerCase().includes(searchQueryFromHome.value.toLowerCase())
-//     );
-//   });
-// });
-
-const fetchProjects = async () => {
-
-  try {
-
-    const response = await fetch(
-      "/api/method/per_sqr_ft.api.property.get_all_projects"
-    );
-
-    const data = await response.json();
-
-    projects.value = data.message;
-
-  } catch (error) {
-
-    console.log(error);
-
-  }
-
-};
-
-onMounted(() => {
-  fetchProjects();
-});
-
-// watch(
-//   () => route.query.search,
-//   (newValue) => {
-//     searchQueryFromHome.value = newValue || "";
-//   }
-// );
-
-/* Search Filter */
-
-const filteredProjects = computed(() => {
-
-  return projects.value.filter((project) => {
-
-    return (
-
-      project.project_name
-        ?.toLowerCase()
-        .includes(searchQuery.value.toLowerCase())
-
-      ||
-
-      project.full_location
-        ?.toLowerCase()
-        .includes(searchQuery.value.toLowerCase())
-
-      ||
-
-      project.status
-        ?.toLowerCase()
-        .includes(searchQuery.value.toLowerCase())
-
-    );
-
-  });
-
-});
-</script>
-
 <template>
 
 <section class="py-16 bg-[#f8f8f8] min-h-screen">
@@ -316,4 +153,115 @@ const filteredProjects = computed(() => {
 
 </section>
 <feature-images/>
+
+
 </template>
+<script setup>
+import FeatureImages from "@/PerSquarehome/FeatureImages.vue";
+import { ref, onMounted, computed } from "vue";
+import { useRoute } from "vue-router";
+
+const route = useRoute();
+
+const projects = ref([]);
+
+// Search text from Home page URL
+const homeSearch = route.query.search || "";
+
+// Search box on Search Page
+const searchQuery = ref("");
+
+const fetchProjects = async () => {
+  try {
+    const response = await fetch(
+      "/api/method/per_sqr_ft.api.property.get_all_projects"
+    );
+
+    const data = await response.json();
+
+    projects.value = data.message || [];
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+onMounted(() => {
+  fetchProjects();
+});
+
+const filteredProjects = computed(() => {
+  // If user types in search page use that
+  // otherwise use Home page search
+  const search = (
+    searchQuery.value || homeSearch
+  ).toLowerCase();
+
+  if (!search) {
+    return projects.value;
+  }
+
+  return projects.value.filter((project) => {
+    return (
+      project.project_name
+        ?.toLowerCase()
+        .includes(search) ||
+
+      project.full_location
+        ?.toLowerCase()
+        .includes(search) ||
+
+      project.status
+        ?.toLowerCase()
+        .includes(search)
+    );
+  });
+});
+</script>
+
+<!-- <script setup>
+import FeatureImages from "@/PerSquarehome/FeatureImages.vue";
+import { ref, onMounted, computed } from "vue";
+import { useRoute } from "vue-router";
+
+const route = useRoute();
+
+const projects = ref([]);
+
+// Get search text from Home page URL
+const searchQuery = ref(route.query.search || "");
+
+const fetchProjects = async () => {
+  try {
+    const response = await fetch(
+      "/api/method/per_sqr_ft.api.property.get_all_projects"
+    );
+
+    const data = await response.json();
+
+    projects.value = data.message || [];
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+onMounted(() => {
+  fetchProjects();
+});
+
+// Filter Projects
+const filteredProjects = computed(() => {
+  const search = searchQuery.value.toLowerCase();
+
+  if (!search) return projects.value;
+
+  return projects.value.filter((project) => {
+    return (
+      project.project_name?.toLowerCase().includes(search) ||
+      project.full_location?.toLowerCase().includes(search) ||
+      project.status?.toLowerCase().includes(search)
+    );
+  });
+});
+
+
+</script> -->

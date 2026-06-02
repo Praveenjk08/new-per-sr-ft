@@ -281,7 +281,7 @@
 
                 <li>
                   <router-link
-                    to="/interiors"
+                    to="/interior"
                     class="block text-[18px] font-medium text-[#156082] no-underline"
                     @click="closeMenu"
                   >

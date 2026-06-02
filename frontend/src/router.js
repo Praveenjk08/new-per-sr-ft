@@ -64,7 +64,14 @@ const routes = [
     name: "projects-by-status",
     component: () => import('@/pages/ProjectsByStatus.vue')
   },
-  ,
+
+  {
+    path: "/search-projects",
+    name: "SearchProjects",
+    component: () => import("@/pages/SearchProjects.vue"),
+  }
+
+
 ]
 
 let router = createRouter({
