@@ -5,6 +5,10 @@ app_description = "Per Square Feet Real-estate app"
 app_email = "praveenjk088@gmail.com"
 app_license = "mit"
 
+website_route_rules = [
+    {"from_route": "/frontend", "to_route": "frontend"}
+]
+
 # Apps
 # ------------------
 
