@@ -6,7 +6,8 @@ app_email = "praveenjk088@gmail.com"
 app_license = "mit"
 
 website_route_rules = [
-    {"from_route": "/frontend", "to_route": "frontend"}
+    # {"from_route": "/frontend", "to_route": "frontend"}
+    {"from_route": "/", "to_route": "/"},
 ]
 
 # Apps
