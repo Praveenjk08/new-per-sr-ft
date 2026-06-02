@@ -20,7 +20,7 @@ const fetchProjects = async () => {
 
     const response = await fetch(
 
-      `/api/method/desirenest.api.property.get_all_project_by_status?status=${route.params.status}`
+      `/api/method/per_sqr_ft.api.property.get_all_project_by_status?status=${route.params.status}`
 
       );
 //     const response = await fetch(
