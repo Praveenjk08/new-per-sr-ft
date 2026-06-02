@@ -50,7 +50,7 @@
             </button>
 
             <div
-              class="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-xl py-3 w-68 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
+              class="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-xl py-3 w-80 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
             >
 
               <router-link
