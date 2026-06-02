@@ -1,7 +1,7 @@
 <script setup>
 
 
-import { ref, onMounted, computed } from "vue";
+import { ref, onMounted, computed ,watch} from "vue";
 
 import FeatureImages from "@/PerSquarehome/FeatureImages.vue";
 
@@ -18,14 +18,14 @@ const fetchProjects = async () => {
 
   try {
 
-    // const response = await fetch(
-
-    //   `/api/method/desirenest.api.property.get_all_project_by_status?status=${route.params.status}`
-
-      // );
     const response = await fetch(
-  `/api/method/per_sqr_ft.api.property.get_all_project_by_status?status=${route.params.status}`
-);
+
+      `/api/method/desirenest.api.property.get_all_project_by_status?status=${route.params.status}`
+
+      );
+//     const response = await fetch(
+//   `/api/method/per_sqr_ft.api.property.get_all_project_by_status?status=${route.params.status}`
+// );
 
       const data = await response.json();
     
@@ -43,6 +43,13 @@ const fetchProjects = async () => {
 onMounted(() => {
   fetchProjects();
 });
+
+watch(
+  () => route.params.status,
+  () => {
+    fetchProjects();
+  }
+);
 
 /* Search Filter */
 

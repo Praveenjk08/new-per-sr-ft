@@ -15,7 +15,7 @@ const fetchProjects = async () => {
   try {
 
     const response = await fetch(
-      "http://127.0.0.1:8004/api/method/per_sqr_ft.api.property.get_all_projects"
+      "/api/method/per_sqr_ft.api.property.get_all_projects"
     );
 
     const data = await response.json();
@@ -133,7 +133,7 @@ onMounted(() => {
         >
 
           <div
-            class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-500 mb-10"
+            class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-500 mb-10  w-[350px] "
           >
 
             <!-- Image -->
@@ -142,7 +142,7 @@ onMounted(() => {
 
               <img
                 :src="project.thumbnail_image"
-                class="w-full h-[200px] object-cover hover:scale-105 transition duration-500"
+                class="w-full h-[200px] object-cover hover:scale-105 transition duration-500 "
               />
 
               <!-- Status -->
