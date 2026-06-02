@@ -266,6 +266,7 @@
     </p>
 
     <button
+      @click="goToContact"
       class="mt-8 bg-[#d49a37c9] hover:bg-[#d49a37] text-white px-8 py-4 rounded-2xl text-[16px] font-semibold transition duration-300"
     >
       Contact Us
@@ -278,3 +279,12 @@
   </section>
 
 </template>
+<script setup>
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+const goToContact = () => {
+  router.push("/contact-us");
+};
+</script>

@@ -36,7 +36,7 @@
         for the future.
       </p>
 
-      <button
+      <button @click="goToProjects"
         class="mt-8 bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full text-lg transition duration-300"
       >
         Explore Projects
@@ -327,6 +327,7 @@
       </p>
 
       <button
+        @click="goToContact"
         class="mt-8 bg-[#d49a37c9] hover:bg-[#d49a37] text-white px-8 py-4 rounded-2xl text-[16px] font-semibold transition duration-300"
       >
         Contact Us
@@ -337,3 +338,18 @@
   </section>
 
 </template>
+<script setup>
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+const goToContact = () => {
+  router.push("/contact-us");
+};
+
+
+const goToProjects = () => {
+  router.push("/projects");
+};
+
+</script>
