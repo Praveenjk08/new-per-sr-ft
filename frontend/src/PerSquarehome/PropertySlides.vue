@@ -13,7 +13,7 @@ const projects = ref([]);
 const fetchProjects = async () => {
 
   try {
-
+    //api calling
     const response = await fetch(
       "/api/method/per_sqr_ft.api.property.get_all_projects"
     );
