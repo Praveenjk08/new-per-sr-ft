@@ -151,9 +151,9 @@
             </div>
           </div>
 
-          <!-- <router-link to="/blog" class="nav-link">
+          <router-link to="/blog" class="nav-link">
             Gallery
-          </router-link> -->
+          </router-link>
 
           <router-link to="/contact-us" class="nav-link">
             Contact
