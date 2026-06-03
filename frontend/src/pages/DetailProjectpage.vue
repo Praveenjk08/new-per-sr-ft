@@ -557,7 +557,7 @@ onMounted(() => {
       class="bg-white rounded-[35px] shadow-xl overflow-hidden"
     >
 <iframe
-  :src="project.location_link"
+  :src="project.project_location_map_embed"
   class="w-full h-[350px] sm:h-[350px] md:h-[450px] lg:h-[550px]"
   style="border:0;"
   loading="lazy"
