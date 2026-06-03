@@ -6,7 +6,7 @@
 
     <!-- Background Image -->
     <img
-      src="/files/real_estate_house_.jpg"
+      src="/files/real_estate_house_2.jpg"
       alt="Luxury Home"
       class="w-full h-full object-cover absolute inset-0  rounded-3xl "
     />
