@@ -8,6 +8,18 @@ app_license = "mit"
 website_route_rules = [
     # {"from_route": "/frontend", "to_route": "frontend"}
     {"from_route": "/", "to_route": "/"},
+    {"from_route": "/about-us", "to_route": "/"},
+    {"from_route": "/contact-us", "to_route": "/"},
+    {"from_route": "/construction", "to_route": "/"},
+    {"from_route": "/interior", "to_route": "/"},
+    {"from_route": "/projects", "to_route": "/"},
+    {"from_route": "/real-estate-consultation", "to_route": "/"},
+    {"from_route": "/housing-loan", "to_route": "/"},
+    {"from_route": "/legal", "to_route": "/"},
+    {"from_route": "/property-management", "to_route": "/"},
+    {"from_route": "/search-projects", "to_route": "/"},
+    {"from_route": "/project/<path:slug>", "to_route": "/"},
+    {"from_route": "/projects/<path:status>", "to_route": "/"},
 ]
 
 # Apps
