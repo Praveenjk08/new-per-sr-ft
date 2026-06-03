@@ -54,10 +54,15 @@ const routes = [
     component: () => import("@/pages/Projects.vue"),
   },
 
+  // {
+  //   path: "/project/:slug",
+  //   name: "single-project",
+  //   component: () => import("@/pages/SingleProject.vue"),
+  // },
   {
     path: "/project/:slug",
-    name: "single-project",
-    component: () => import("@/pages/SingleProject.vue"),
+    name: "detail-project",
+    component: () => import("@/pages/DetailProjectpage.vue"),
   },
   {
     path: "/projects/:status",

@@ -1,45 +1,40 @@
 <template>
 
-  <!-- Banner Section -->
-  <section class="px-4 sm:px-6 lg:px-10 my-8">
+  <section class="relative h-[400px] md:h-[600px] overflow-hidden">
 
-    <div
-      class="relative w-full h-[300px] sm:h-[500px] lg:h-[600px] overflow-hidden rounded-[40px]"
-    >
+  <img
+    src="/files/contactbanner.png"
+    alt="Contact Us"
+    class="w-full h-full object-cover"
+  />
 
-      <!-- Banner Image -->
-      <img
-        src="/files/contactbanner.png"
-        alt="Contact Us"
-        class="w-full h-full object-cover"
-      />
+  <div class="absolute inset-0 bg-black/55"></div>
 
-      <!-- Overlay -->
-      <div class="absolute inset-0 bg-black/45 rounded-[40px]"></div>
+  <div
+    class="absolute inset-0 flex items-center justify-center"
+  >
 
-      <!-- Content -->
-      <div
-        class="absolute inset-0 flex flex-col items-center justify-center text-center px-6"
+    <div class="text-center px-4">
+
+      <h1
+        class="text-white text-5xl md:text-7xl font-bold"
       >
+        Let's Connect
+      </h1>
 
-        <h1
-          class="text-white text-3xl sm:text-3xl lg:text-3xl font-bold leading-tight"
-        >
-          Contact Us
-        </h1>
-
-        <p
-          class="text-white/90 text-sm sm:text-lg lg:text-xl mt-5 max-w-3xl leading-8"
-        >
-          We are here to help you with all your real estate,
-          construction, interior, and property-related needs.
-        </p>
-
-      </div>
+      <p
+        class="text-white/90 text-lg md:text-xl mt-6 max-w-3xl mx-auto"
+      >
+        Whether you're buying, selling, investing,
+        or seeking property consultation,
+        our experts are here to help.
+      </p>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
   <!-- Contact Section -->
@@ -177,7 +172,7 @@
 
         <p class="text-gray-600 leading-7 text-sm sm:text-base">
           Monday - Saturday <br />
-          9:00 AM - 7:00 PM
+          9:00 AM - 6:00 PM
         </p>
       </div>
 

@@ -27,6 +27,7 @@
   "description",
   "thumbnail_image",
   "is_active",
+  "location_link",
   "project_related_images_section",
   "carousel_images",
   "gallery_images",
@@ -169,15 +170,21 @@
    "fieldtype": "Table",
    "label": "Per Square feet Gallery",
    "options": "Per Square feet Gallery"
+  },
+  {
+   "fieldname": "location_link",
+   "fieldtype": "Data",
+   "label": "Location Link"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-01 11:40:46.251326",
+ "modified": "2026-06-03 17:21:16.054534",
  "modified_by": "Administrator",
  "module": "Per Square Feet",
  "name": "Property Project",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

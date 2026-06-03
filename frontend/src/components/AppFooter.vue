@@ -191,8 +191,10 @@
               href="tel:+919686450917"
               class="text-gray-300 no-underline hover:text-yellow-400"
             >
-              +91 9686450917
+             +91 8884436688 <br>
+              +91 9686872201
             </a>
+            
 
           </div>
 
@@ -205,7 +207,7 @@
               href="mailto:info@persquarefeet.com"
               class="text-gray-300 no-underline hover:text-yellow-400"
             >
-              info@persquarefeet.com
+             kenchagowda.gj@gmail.com
             </a>
 
           </div>

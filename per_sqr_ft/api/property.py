@@ -80,7 +80,8 @@ def get_all_details_from_project():
             "description",
             "floors",
             "project_area",
-            "project_by_builder"
+            "project_by_builder",
+            "location_link"
         ]
     )
 

@@ -15,6 +15,7 @@ import {
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import FeatureImages from "@/PerSquarehome/FeatureImages.vue";
 
 
 
@@ -65,6 +66,8 @@ watch(
   }
 
 );
+
+
 </script>
 
 <template>
@@ -458,10 +461,24 @@ watch(
     </div>
 
   </div>
-
+<!-- 
+  <h1>Workng</h1> -->
+   
 </section>
 
 
+<div class="bg-red-500 text-white p-10">
+  BEFORE FEATURE IMAGES
+</div>
+
+<feature-images/>
+
+<div class="bg-green-500 text-white p-10">
+  AFTER FEATURE IMAGES
+</div>
+
+
+ 
 </template>
 
 <style>
