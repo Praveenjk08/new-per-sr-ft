@@ -213,115 +213,97 @@ onMounted(() => {
 <!-- PART 2.3 : PROPERTY DETAILS -->
 <!-- ===================================== -->
 
-<section class="bg-[#f5f7fb] pb-24">
+<section class="bg-[#f5f7fb] pb-16">
 
   <div class="max-w-7xl mx-auto px-6">
 
     <!-- Heading -->
-
     <div class="text-center mb-16">
-
-      <p
-        class="uppercase tracking-[6px] text-sm text-gray-400"
-      >
+      <p class="uppercase tracking-[6px] text-sm text-gray-400">
         Property Information
       </p>
-
-      <h2
-        class="text-4xl md:text-5xl font-bold text-[#0B1560] mt-4"
-      >
+      <h2 class="text-4xl md:text-5xl font-bold text-[#0B1560] mt-4">
         Property Details
       </h2>
-
     </div>
 
     <!-- Main Card -->
-
-    <div
-      class="bg-white rounded-[35px] shadow-xl overflow-hidden"
-    >
+    <div class="bg-white rounded-[35px] shadow-xl overflow-hidden">
 
       <!-- Top Border -->
+      <div class="h-2 bg-gradient-to-r from-[#0B1560] via-blue-500 to-cyan-400"></div>
 
-      <div
-        class="h-2 bg-gradient-to-r from-[#0B1560] via-blue-500 to-cyan-400"
-      ></div>
-
-      <!-- Details -->
-
-      <div
-        class="grid md:grid-cols-2"
-      >
+      <!-- Details Grid -->
+      <div class="grid md:grid-cols-2">
 
         <!-- Row -->
-
         <div
-          class="flex justify-between items-center p-6 border-b md:border-r"
+          class="flex justify-between items-center p-6 border-b md:border-r 
+                 hover:bg-blue-50 transition duration-300 cursor-pointer"
         >
-          <span class="text-gray-500 font-medium">
-            Location
+          <span class="text-gray-500 font-medium flex items-center gap-2">
+            📍 Location
           </span>
-
           <span class="font-semibold text-[#0B1560] text-right">
             {{ project.full_location }}
           </span>
         </div>
 
         <div
-          class="flex justify-between items-center p-6 border-b"
+          class="flex justify-between items-center p-6 border-b 
+                 hover:bg-blue-50 transition duration-300 cursor-pointer"
         >
-          <span class="text-gray-500 font-medium">
-            Property Type
+          <span class="text-gray-500 font-medium flex items-center gap-2">
+            🏠 Property Type
           </span>
-
           <span class="font-semibold text-[#0B1560]">
             {{ project.bhk }}
           </span>
         </div>
 
         <div
-          class="flex justify-between items-center p-6 border-b md:border-r"
+          class="flex justify-between items-center p-6 border-b md:border-r 
+                 hover:bg-blue-50 transition duration-300 cursor-pointer"
         >
-          <span class="text-gray-500 font-medium">
-            Total Area
+          <span class="text-gray-500 font-medium flex items-center gap-2">
+            📐 Total Area
           </span>
-
           <span class="font-semibold text-[#0B1560]">
             {{ project.project_area }}
           </span>
         </div>
 
         <div
-          class="flex justify-between items-center p-6 border-b"
+          class="flex justify-between items-center p-6 border-b 
+                 hover:bg-blue-50 transition duration-300 cursor-pointer"
         >
-          <span class="text-gray-500 font-medium">
-            Project Status
+          <span class="text-gray-500 font-medium flex items-center gap-2">
+            🚧 Project Status
           </span>
-
           <span class="font-semibold text-[#0B1560]">
             {{ project.status }}
           </span>
         </div>
 
         <div
-          class="flex justify-between items-center p-6 border-b md:border-r"
+          class="flex justify-between items-center p-6 border-b md:border-r 
+                 hover:bg-blue-50 transition duration-300 cursor-pointer"
         >
-          <span class="text-gray-500 font-medium">
-            Builder
+          <span class="text-gray-500 font-medium flex items-center gap-2">
+            🏗️ Builder
           </span>
-
           <span class="font-semibold text-[#0B1560]">
             {{ project.project_by_builder }}
           </span>
         </div>
 
         <div
-          class="flex justify-between items-center p-6 border-b"
+          class="flex justify-between items-center p-6 border-b 
+                 hover:bg-blue-50 transition duration-300 cursor-pointer"
         >
-          <span class="text-gray-500 font-medium">
-            Rooms
+          <span class="text-gray-500 font-medium flex items-center gap-2">
+            🚪 Rooms
           </span>
-
           <span class="font-semibold text-[#0B1560]">
             {{ project.bath }}
           </span>
@@ -330,30 +312,25 @@ onMounted(() => {
       </div>
 
       <!-- CTA -->
-
-      <div
-        class="bg-[#f8f9fc] p-8 text-center"
-      >
-
+      <div class="bg-[#f8f9fc] p-8 text-center">
         <button
           @click="contactUs"
-          class="bg-[#0B1560] hover:bg-[#16248f] text-white px-10 py-4 rounded-full font-semibold transition-all duration-300 hover:shadow-xl"
+          class="bg-[#0B1560] hover:bg-[#16248f] text-white px-10 py-4 rounded-full 
+                 font-semibold transition-all duration-300 hover:shadow-xl animate-pulse"
         >
           Contact Us
         </button>
-
       </div>
 
     </div>
 
   </div>
-
 </section>
 
 <!-- ===================================== -->
 <!-- PART 2.3 ENDS HERE -->
 <!-- ===================================== -->
-<!-- ===================================== -->
+
 
 
 <!-- ===================================== -->
@@ -582,7 +559,7 @@ onMounted(() => {
   <div class="max-w-7xl mx-auto px-6">
 
     <div
-      class="bg-white rounded-[35px] shadow-xl overflow-hidden"
+      class="bg-white  rounded-[35px] shadow-xl overflow-hidden"
     >
 
       <div
@@ -592,7 +569,7 @@ onMounted(() => {
         <!-- Left Side -->
 
         <div
-          class="lg:col-span-4 bg-[#0B1560] text-white p-10 flex flex-col justify-center"
+          class="lg:col-span-4 bg-[#0B1560] text-white p-10  flex flex-col justify-center"
         >
 
           <p

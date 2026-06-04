@@ -18,6 +18,21 @@
       />
     </a>
 
+<!-- Sticky Enquiry Button -->
+
+<a
+  v-if="route.path !== '/'"
+  href="/contact-us"
+  class="fixed right-0  top-1/2 z-50
+         bg-[#B91C1C] text-white
+         px-1 py-2 rounded-l-xl shadow-xl text-[12px]
+         hidden lg:block"
+  style="writing-mode: vertical-rl; transform: translateY(-50%) rotate(180deg);"
+>
+  CONTACT US FOR ENQUIRY
+</a>
+
+
     <!-- Scroll To Top Button -->
     <button
       v-show="showButton"
@@ -35,8 +50,10 @@
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import AppNavBar from "./components/AppNavBar.vue";
 import AppFooter from "./components/AppFooter.vue";
+import { useRoute } from "vue-router";
 
 const showButton = ref(false);
+const route = useRoute();
 
 const handleScroll = () => {
   showButton.value = window.scrollY > 300;

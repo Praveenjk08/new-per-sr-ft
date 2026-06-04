@@ -69,7 +69,7 @@
 </p>
 
         <!-- Button -->
-        <button
+        <button   @click="goToProjects"
           class="mt-2 bg-[#156082] hover:bg-[#0B1560] text-white px-8 py-3 rounded-2xl text-lg font-medium transition-all duration-300"
         >
           Explore More
@@ -520,4 +520,8 @@ const router = useRouter();
 const goToContact = () => {
   router.push("/contact-us");
 };
+
+const goToProjects = () => {
+  router.push('/projects')
+}
 </script>
