@@ -5,40 +5,24 @@
     <router-view />
 
     <!-- Floating WhatsApp Button -->
-    <a
-      href="https://wa.me/918310673692"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="fixed bottom-20 right-5 z-50"
-    >
-      <img
-        src="/files/WhatsApp.png"
-        alt="WhatsApp"
-        class="w-12 rounded-full shadow-lg hover:scale-110 transition-transform duration-300"
-      />
+    <a href="https://wa.me/919686872201" target="_blank" rel="noopener noreferrer" class="fixed bottom-20 right-5 z-50">
+      <img src="/files/WhatsApp.png" alt="WhatsApp"
+        class="w-12 rounded-full shadow-lg hover:scale-110 transition-transform duration-300" />
     </a>
 
-<!-- Sticky Enquiry Button -->
+    <!-- Sticky Enquiry Button -->
 
-<a
-  v-if="route.path !== '/'"
-  href="/contact-us"
-  class="fixed right-0  top-1/2 z-50
+    <a v-if="route.path !== '/'" href="/contact-us" class="fixed right-0  top-1/2 z-50
          bg-[#B91C1C] text-white
          px-1 py-2 rounded-l-xl shadow-xl text-[12px]
-         hidden lg:block"
-  style="writing-mode: vertical-rl; transform: translateY(-50%) rotate(360deg);"
->
-  CONTACT US FOR ENQUIRY
-</a>
+         hidden lg:block" style="writing-mode: vertical-rl; transform: translateY(-50%) rotate(360deg);">
+      CONTACT US FOR ENQUIRY
+    </a>
 
 
     <!-- Scroll To Top Button -->
-    <button
-      v-show="showButton"
-      @click="scrollToTop"
-      class="fixed bottom-5 right-5 z-50 bg-[#1f2937] hover:bg-black text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all duration-300"
-    >
+    <button v-show="showButton" @click="scrollToTop"
+      class="fixed bottom-5 right-5 z-50 bg-[#1f2937] hover:bg-black text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all duration-300">
       <i class="bi bi-chevron-up text-2xl"></i>
     </button>
 

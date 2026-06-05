@@ -30,11 +30,11 @@
         </div>
 
         <!-- Button -->
-        <router-link to="/projects">
-          <button class="mt-6 bg-black text-white px-6 py-3 rounded-2xl text-sm sm:text-base">
-            <router-link to="/about-us">Discover →</router-link>
-          </button>
-        </router-link>
+
+        <button class="mt-6 bg-black text-white px-6 py-3 rounded-2xl text-sm sm:text-base">
+          <router-link to="/projects">Discover →</router-link>
+        </button>
+
 
       </div>
 
