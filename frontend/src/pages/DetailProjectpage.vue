@@ -254,7 +254,7 @@ onMounted(() => {
                  hover:bg-blue-50 transition duration-300 cursor-pointer"
         >
           <span class="text-gray-500 font-medium flex items-center gap-2">
-            🏠 Property Type
+            🏠 Bhk
           </span>
           <span class="font-semibold text-[#0B1560]">
             {{ project.bhk }}

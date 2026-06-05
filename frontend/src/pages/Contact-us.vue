@@ -1,12 +1,14 @@
 <template>
 
-  <section class="relative h-[400px] md:h-[600px] overflow-hidden">
-
+  <section class="relative h-[280px] sm:h-[450px] overflow-hidden">
+<div class="w-full  " >
   <img
     src="/files/contactbanner.png"
     alt="Contact Us"
-    class="w-full h-full object-cover"
+    class="w-full h-[250px] sm:h-[450px] object-cover"
   />
+</div>
+ 
 
   <div class="absolute inset-0 bg-black/55"></div>
 
@@ -16,23 +18,24 @@
 
     <div class="text-center px-4">
 
-      <h1
+      <!-- <h1
         class="text-white text-5xl md:text-7xl font-bold"
       >
         Let's Connect
-      </h1>
+      </h1> -->
 
-      <p
+      <!-- <p
         class="text-white/90 text-lg md:text-xl mt-6 max-w-3xl mx-auto"
       >
         Whether you're buying, selling, investing,
         or seeking property consultation,
         our experts are here to help.
-      </p>
+      </p> -->
 
     </div>
 
   </div>
+  
 
 </section>
 
@@ -51,13 +54,13 @@
 
   <!-- Heading -->
   <p
-    class="text-[#4b4b9b] font-semibold text-base sm:text-lg mb-3 tracking-wide"
+    class="text-[#4b4b9b]text-2xl sm:text-3xl  font-bold text-base mb-3 tracking-wide"
   >
     Get In Touch
   </p>
 
   <h2
-    class="text-2xl sm:text-3xl font-bold text-[#2f2f68] leading-tight mb-6"
+    class=" sm:text-lg font-semibold text-[#2f2f68] leading-tight mb-6"
   >
     Let’s Discuss Your Dream Project
   </h2>
@@ -202,7 +205,7 @@
       <!-- Name -->
       <div>
         <input
-          v-model="form.full_name"
+          v-model="form.name"
           type="text"
           placeholder="Your Name"
           class="w-full border border-gray-300 rounded-2xl px-5 py-4 outline-none focus:border-[#0B1560]"
@@ -224,7 +227,7 @@
       <!-- Phone -->
       <div>
         <input
-          v-model="form.phone_number"
+          v-model="form.phone"
           type="text"
           placeholder="Phone Number"
           class="w-full border border-gray-300 rounded-2xl px-5 py-4 outline-none focus:border-[#0B1560]"
@@ -235,9 +238,9 @@
       <!-- Service -->
       <div>
         <select
-          v-model="form.service"
+          
           class="w-full border border-gray-300 rounded-2xl px-5 py-4 outline-none focus:border-[#0B1560]"
-          required
+         
         >
           <option value="">Select Service</option>
           <option>Real Estate Consultation</option>
@@ -249,14 +252,14 @@
         </select>
       </div>
 
-      <!-- Message -->
+      <!-- Message v-model="form.service"   v-model="form.message"-->
       <div>
         <textarea
-          v-model="form.message"
+         
           rows="5"
           placeholder="Write Your Message"
           class="w-full border border-gray-300 rounded-2xl px-5 py-4 outline-none focus:border-[#0B1560]"
-          required
+          
         ></textarea>
       </div>
 
@@ -294,7 +297,7 @@
 
 
   <!-- Map Section -->
-<section class="px-4 sm:px-6 lg:px-10 pb-16">
+<section class="px-4  sm:px-6 lg:px-10 pb-6">
 
   <div class="max-w-7xl mx-auto">
 
@@ -327,18 +330,18 @@ const successMessage=ref(false)
 const errorMessage = ref(false);
 
 const form = reactive({
-  full_name: "",
+  name: "",
   email: "",
-  phone_number: "",
-  service: "",
-  message: "",
+  phone: "",
+  // service: "",
+  // message: "",
 });
 
 const submitForm = async () => {
   try {
 
     const response = await fetch(
-      "/api/method/per_sqr_ft.api.contact.create_contact",
+      "/api/method/per_sqr_ft.api.lead.add_lead",
       {
         method: "POST",
         headers: {
@@ -346,18 +349,19 @@ const submitForm = async () => {
         },
 
         body: JSON.stringify({
-          full_name: form.full_name,
+          name: form.name,
+          phone: form.phone,
           email: form.email,
-          phone_number: form.phone_number,
-          service: form.service,
-          message: form.message,
+          // mobile_no: form.phone,
+          // service: form.service,
+          // message: form.message,
         }),
       }
     );
 
     const data = await response.json();
 
-    if (data.message.status === "success") {
+    if (data.message === "Lead added successfully") {
 
      
      successMessage.value = true;
@@ -367,11 +371,12 @@ setTimeout(() => {
 }, 4000);
       
 
-      form.full_name = "";
+      form.name = "";
+      form.phone = "";
       form.email = "";
-      form.phone_number = "";
-      form.service = "";
-      form.message = "";
+      
+      // form.service = "";
+      // form.message = "";
     }
     else {
 

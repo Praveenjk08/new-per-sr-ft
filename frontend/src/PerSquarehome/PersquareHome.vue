@@ -1,14 +1,14 @@
 <template>
   <!-- Hero Section -->
   <section
-    class="relative h-[700px] sm:h-[700px]   overflow-hidden  mx-4  sm:mx-6 my-10  "
+    class="relative h-[500px] sm:h-[500px]   overflow-hidden  mx-4  sm:mx-6 mb-10 mt-4 "
   >
 
     <!-- Background Image -->
     <img
       src="/files/real_estate_house_2.jpg"
       alt="Luxury Home"
-      class="w-full h-full object-cover absolute inset-0  rounded-3xl "
+      class="w-full h-full object-cover absolute inset-0  rounded-xl "
     />
 
     <!-- Content -->
@@ -46,15 +46,15 @@
 
         <!-- Search Box -->
         <div
-          class="mt-8 sm:mt-10 bg-white/80 backdrop-blur-xl rounded-3xl p-3 sm:p-4 shadow-xl"
+          class="mt-6 sm:mt-6 bg-white/80 backdrop-blur-xl rounded-3xl p-3 sm:p-4 shadow-xl"
         >
-          <div class="flex flex-col md:flex-row gap-3">
+          <div class="flex flex-col md:flex-row gap-2">
 
             <!-- Input -->
             <input  
               type="text" v-model="searchText"
               placeholder="Search by City, Property, Builder..."
-              class="flex-1 px-4 py-3 sm:py-4 rounded-2xl outline-none bg-white text-gray-700 text-sm sm:text-lg"
+              class="flex-1 px-4 py-1 sm:py-4 rounded-2xl outline-none bg-white text-gray-700 text-sm sm:text-lg"
             />
 
             <!-- Button -->
@@ -69,12 +69,12 @@
 
         <!-- Stats -->
         <div
-          class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4"
+          class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-2"
         >
 
           <!-- Card 1 -->
           <div
-            class="bg-white/70 backdrop-blur-md rounded-2xl p-4 sm:p-5"
+            class="bg-white/70 backdrop-blur-md rounded-xl p-4 sm:p-5"
           >
             <h2 class="text-black text-2xl sm:text-3xl font-bold">
               500+
@@ -87,7 +87,7 @@
 
           <!-- Card 2 -->
           <div
-            class="bg-white/70 backdrop-blur-md rounded-2xl p-4 sm:p-5"
+            class="bg-white/70 backdrop-blur-md rounded-xl p-4 sm:p-5"
           >
             <h2 class="text-black text-2xl sm:text-3xl font-bold">
               20K+

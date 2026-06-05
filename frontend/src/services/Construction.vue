@@ -1,16 +1,16 @@
 <template>
 <!-- Hero Section -->
-<section class="px-4 sm:px-6 lg:pl-10 my-8">
+<section class="   mb-0 ">
 
   <div
-    class="relative w-full h-[400px] sm:h-[500px] lg:h-[650px] overflow-hidden rounded-[40px]"
+    class="relative w-full h-[350px] sm:h-[450px] md:h-[450px] overflow-hidden"
   >
 
     <!-- Background Image -->
     <img
       src="/files/constructionbannerimage.png"
       alt="Construction"
-      class="w-full h-full object-cover"
+      class="w-full h-full object-cover "
     />
 
     <!-- Dark Overlay -->
@@ -49,7 +49,7 @@
 </section>
 
   <!-- About Construction -->
-  <section class="w-full py-16 px-5 lg:px-20 bg-white">
+  <section class="w-full py-12 px-5 lg:px-20 bg-white">
 
     <div
       class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
@@ -65,7 +65,7 @@
         </p>
 
         <h1
-          class="text-[30px] sm:text-[30px] font-bold text-[#0B1560] mt-3"
+          class="text-[15px] sm:text-[15px] font-bold text-[#0B1560] mt-3"
         >
           Trusted Construction Solutions
         </h1>
@@ -96,7 +96,7 @@
         <img
           src="/files/Constructionrightsideiamge.png"
           alt="Construction Work"
-          class="w-full h-[350px] sm:h-[500px] object-cover rounded-[35px] shadow-xl"
+          class="w-full h-[350px] sm:h-[350px] object-cover rounded-[35px] shadow-xl"
         />
 
       </div>
@@ -107,21 +107,21 @@
 
   <!-- Services -->
   <section
-    class="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#f8fafc] py-16"
+    class="relative w-full bg-[#f8fafc] py-10"
   >
 
     <div class="px-5 lg:px-20">
 
-      <div class="text-center mb-12">
+      <div class="text-center mb-4">
 
         <p
-          class="text-[#d49a37c9] text-[18px] font-semibold uppercase tracking-[2px]"
+          class="text-[#d49a37c9] text-[18px] font-bold uppercase tracking-[2px]"
         >
           Our Services
         </p>
 
         <h1
-          class="text-[30px] sm:text-[30px] font-bold text-[#0B1560] mt-3"
+          class="text-[15px] sm:text-[15px] font-semibold text-[#0B1560] mt-3"
         >
           What We Provide
         </h1>
@@ -135,11 +135,11 @@
 
         <!-- Card -->
         <div
-          class="bg-white rounded-[30px] p-10 shadow-lg"
+          class="bg-white rounded-xl p-10 shadow-lg"
         >
 
           <h2
-            class="text-[22px] font-bold text-[#156082]"
+            class="text-[16px] font-bold text-[#156082]"
           >
             Residential Construction
           </h2>
@@ -155,11 +155,11 @@
 
         <!-- Card -->
         <div
-          class="bg-white rounded-[30px] p-10 shadow-lg"
+          class="bg-white rounded-xl p-10 shadow-lg"
         >
 
           <h2
-            class="text-[22px] font-bold text-[#156082]"
+            class="text-[16px] font-bold text-[#156082]"
           >
             Commercial Construction
           </h2>
@@ -175,11 +175,11 @@
 
         <!-- Card -->
         <div
-          class="bg-white rounded-[30px] p-10 shadow-lg"
+          class="bg-white rounded-xl p-10 shadow-lg"
         >
 
           <h2
-            class="text-[22px] font-bold text-[#156082]"
+            class="text-[16px] font-bold text-[#156082]"
           >
             Renovation & Remodeling
           </h2>
@@ -200,18 +200,18 @@
   </section>
 
   <!-- Why Choose Us -->
-  <section class="w-full py-16 px-5 lg:px-20 bg-white">
+  <section class="w-full pb-16 pt-4 px-5 lg:px-20 bg-white">
 
-    <div class="text-center mb-12">
+    <div class="text-center mb-4">
 
       <p
-        class="text-[#d49a37c9] text-[18px] font-semibold uppercase tracking-[2px]"
+        class="text-[#d49a37c9] text-[18px] font-bold uppercase tracking-[2px]"
       >
         Why Choose Us
       </p>
 
       <h1
-        class="text-[30px] sm:text-[30px] font-bold text-[#0B1560] mt-3"
+        class="text-[15px] sm:text-[15px] font-semibold text-[#0B1560] mt-3"
       >
         Excellence In Every Project
       </h1>
@@ -224,11 +224,11 @@
 
       <!-- Card -->
       <div
-        class="bg-[#f8fafc] rounded-[25px] p-8 shadow-lg text-center"
+        class="bg-[#f8fafc] rounded-xl p-8 shadow-lg text-center"
       >
 
         <h2
-          class="text-[18px] font-bold text-[#156082]"
+          class="text-[16px] font-bold text-[#156082]"
         >
           Quality Materials
         </h2>
@@ -244,11 +244,11 @@
 
       <!-- Card -->
       <div
-        class="bg-[#f8fafc] rounded-[25px] p-8 shadow-lg text-center"
+        class="bg-[#f8fafc] rounded-xl p-8 shadow-lg text-center"
       >
 
         <h2
-          class="text-[18px] font-bold text-[#156082]"
+          class="text-[16px] font-bold text-[#156082]"
         >
           Expert Team
         </h2>
@@ -264,11 +264,11 @@
 
       <!-- Card -->
       <div
-        class="bg-[#f8fafc] rounded-[25px] p-8 shadow-lg text-center"
+        class="bg-[#f8fafc] rounded-xl p-8 shadow-lg text-center"
       >
 
         <h2
-          class="text-[18px] font-bold text-[#156082]"
+          class="text-[16px] font-bold text-[#156082]"
         >
           Timely Delivery
         </h2>
@@ -284,11 +284,11 @@
 
       <!-- Card -->
       <div
-        class="bg-[#f8fafc] rounded-[25px] p-8 shadow-lg text-center"
+        class="bg-[#f8fafc] rounded-xl p-8 shadow-lg text-center"
       >
 
         <h2
-          class="text-[18px] font-bold text-[#156082]"
+          class="text-[16px] font-bold text-[#156082]"
         >
           Modern Design
         </h2>
@@ -308,13 +308,13 @@
 
   <!-- CTA -->
   <section
-    class="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#0B1560] py-16"
+    class="relative w-full bg-[#0B1560] py-16"
   >
 
     <div class="text-center px-5">
 
       <h1
-        class="text-white text-[32px] sm:text-[45px] font-bold"
+        class="text-white text-[25px] sm:text-[25px] font-bold"
       >
         Ready To Build Your Dream Project?
       </h1>

@@ -3,7 +3,7 @@
     <div class="max-w-[1400px] mx-auto">
 
       <!-- Navbar -->
-      <nav class="flex items-center h-[85px] px-4 lg:px-10">
+      <nav class="flex items-center h-[65px] px-4 lg:px-10">
 
         <!-- Logo -->
         <div class="flex items-center gap-2">
@@ -487,7 +487,7 @@ const goToLogin = () => {
 .nav-link {
   color: #156082;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 400;
   transition: all 0.3s ease;
 }
@@ -499,7 +499,7 @@ const goToLogin = () => {
 .nav-link-service-project {
   color: #156082;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .mobile-link {

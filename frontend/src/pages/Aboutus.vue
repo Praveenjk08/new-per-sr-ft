@@ -1,7 +1,7 @@
 <template>
   <!-- About Section -->
   <section
-    class="w-full bg-[#f8fafc] py-8 px-5 lg:px-10"
+    class="w-full bg-[#f8fafc]  "
   >
 
     <!-- Top Image -->
@@ -10,14 +10,17 @@
       <img
         src="/files/Aboutus.png"
         alt="Per Square Feet"
-        class="w-full h-[250px] sm:h-[450px] lg:h-[650px] object-cover rounded-[30px]"
+        class="w-full h-[250px] sm:h-[410px] object-cover"
       />
 
     </div>
+  </section>
 
+
+  <section class="max-w-6xl mx-8 px-4 pb-2">
     <!-- Bottom Content -->
     <div
-      class="flex flex-col lg:flex-row items-center gap-12 mt-16"
+      class="flex flex-col lg:flex-row items-center gap-14 mt-4"
     >
 
       <!-- Left Content -->
@@ -25,21 +28,21 @@
 
         <!-- Small Heading -->
         <h1
-          class="text-[#0B1560] text-[25px] sm:text-[25px] lg:text-3xl  font-semibold tracking-[2px] uppercase mb-3"
+          class="text-[#0B1560] text-[18px] sm:text-[18px] lg:text-[18px]  font-semibold tracking-[2px] uppercase mb-3"
         >
           About Us
       </h1>
 
         <!-- Main Heading -->
         <p
-          class="text-xl sm:text-3xl lg:text-2xl font-bold text-[#156082] leading-tight"
+          class="text-[15px] sm:text-[15px] lg:text-[15px] font-bold text-[#156082] leading-tight"
         >
           Your Trusted Real Estate Partner
     </p>
 
         <!-- Paragraph -->
        <p
-  class="text-gray-600 text-[15px] sm:text-[15px] leading-8 mt-6"
+  class="text-gray-600 text-[15px] sm:text-[15px] leading-7 mt-2"
 >
   A home is more than just a place to live — it is a space where
   comfort, security, and happiness come together. At Per Square Feet,
@@ -48,7 +51,7 @@
 </p>
 
 <p
-  class="text-gray-600 text-[15px] sm:text-[15px] leading-8 mt-5"
+  class="text-gray-600 text-[15px] sm:text-[15px] leading-7 mt-2"
 >
   Our mission is to help clients discover premium apartments,
   villas, plots, and luxury homes that perfectly match their
@@ -58,7 +61,7 @@
 </p>
 
 <p
-  class="text-gray-600 text-[15px] sm:text-[15px] leading-8 mt-5"
+  class="text-gray-600 text-[15px] sm:text-[15px] leading-7 mt-2"
 >
   With a strong focus on trust, transparency, and customer
   satisfaction, Per Square Feet has become a reliable destination
@@ -83,29 +86,30 @@
         <img
           src="/files/aboutusright.png"
           alt="Luxury Property"
-          class="w-full h-[300px] sm:h-[500px] object-cover rounded-[35px] shadow-xl"
+          class="w-full h-[300px] sm:h-[450px] object-cover rounded-xl shadow-xl"
         />
 
       </div>
 
     </div>
-    <section class="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-gray-100 py-14 mt-3">
+    </section>
+    <section class="relative w-full bg-gray-100 py-7 mt-3">
 
   <div class="px-5 lg:px-20">
 
     <!-- Heading -->
     <div class="text-center mb-7">
-      <h1 class="text-[25px] sm:text-[25px] font-bold text-[#d49a37c9]">
+      <h1 class="text-[18px] sm:text-[18px] font-bold text-[#d49a37c9]">
         Our Core Services
       </h1>
     </div>
 
     <!-- Services Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
       <!-- Card 1 -->
-      <div class="bg-white rounded-[30px] shadow-xl p-10">
-        <h2 class="text-[20px] font-semibold text-black">
+      <div class="bg-white rounded-xl shadow-xl p-10">
+        <h2 class="text-[16px] font-bold text-black">
           Sales & Marketing
         </h2>
 
@@ -117,8 +121,8 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="bg-white rounded-[30px] shadow-xl p-10">
-        <h2 class="text-[20px] font-semibold text-black">
+      <div class="bg-white rounded-xl shadow-xl p-10">
+        <h2 class="text-[16px] font-bold text-black">
           Construction
         </h2>
 
@@ -130,8 +134,8 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="bg-white rounded-[30px] shadow-xl p-10">
-        <h2 class="text-[20px] font-semibold text-black">
+      <div class="bg-white rounded-xl shadow-xl p-10">
+        <h2 class="text-[16px] font-bold text-black">
           Interior Design
         </h2>
 
@@ -149,7 +153,7 @@
 </section>
 <!-- Mission & Vision Section -->
 <section
-  class="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#f8fafc] py-16 mt-5"
+  class="relative w-full bg-[#f8fafc] py-8 mt-5"
 >
 
   <div class="px-5 lg:px-20">
@@ -158,19 +162,19 @@
 
       <!-- Mission -->
       <div
-        class="bg-white rounded-[30px] p-10 shadow-lg"
+        class="bg-white rounded-xl p-10 shadow-lg"
       >
 
         <!-- Small Heading -->
         <p
-          class="text-[#d49a37c9] text-[18px] font-semibold uppercase tracking-[2px]"
+          class="text-[#d49a37c9] text-[18px] font-bold uppercase tracking-[2px]"
         >
           Our Mission
         </p>
 
         <!-- Heading -->
         <h2
-          class="text-[15px] sm:text-[18px] font-bold text-[#0B1560] mt-3"
+          class="text-[17px] sm:text-[17px] font-bold text-[#0B1560] mt-3"
         >
           Helping Families Find Their Perfect Space
         </h2>
@@ -200,19 +204,19 @@
 
       <!-- Vision -->
       <div
-        class="bg-white rounded-[30px] p-10 shadow-lg"
+        class="bg-white rounded-xl p-10 shadow-lg"
       >
 
         <!-- Small Heading -->
         <p
-          class="text-[#d49a37c9] text-[18px] font-semibold uppercase tracking-[2px]"
+          class="text-[#d49a37c9] text-[18px] font-bold uppercase tracking-[2px]"
         >
           Our Vision
         </p>
 
         <!-- Heading -->
         <h2
-          class="text-[15px] sm:text-[18px] font-bold text-[#0B1560] mt-3"
+          class="text-[17px] sm:text-[17px] font-bold text-[#0B1560] mt-3"
         >
           Building Trust Through Modern Real Estate
         </h2>
@@ -247,18 +251,18 @@
 </section>
 
 <!-- Why Choose Us Section -->
-<section class="w-full py-16 bg-white">
+<section class="w-full py-8 px-8 bg-white">
 
-  <div class="text-center mb-12">
+  <div class="text-center mb-8">
 
     <p
-      class="text-[#d49a37c9] text-[18px] font-semibold uppercase tracking-[2px]"
+      class="text-[#d49a37c9] text-[18px] font-bold uppercase tracking-[2px]"
     >
       Why Choose Us
     </p>
 
     <h1
-      class="text-[28px] sm:text-[35px] font-bold text-[#0B1560] mt-3"
+      class="text-[17px] sm:text-[17px] font-bold text-[#0B1560] mt-3"
     >
       Why Choose Per Square Feet?
     </h1>
@@ -267,14 +271,14 @@
 
   <!-- Cards -->
   <div
-    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
   >
 
     <!-- Card -->
     <div
-      class="bg-[#f8fafc] rounded-[25px] p-8 shadow-lg text-center"
+      class="bg-[#f8fafc] rounded-xl p-8 shadow-lg text-center"
     >
-      <h2 class="text-[18px] font-bold text-[#156082]">
+      <h2 class="text-[16px] font-bold text-[#156082]">
         Trusted Company
       </h2>
 
@@ -286,9 +290,9 @@
 
     <!-- Card -->
     <div
-      class="bg-[#f8fafc] rounded-[25px] p-8 shadow-lg text-center"
+      class="bg-[#f8fafc] rounded-xl p-8 shadow-lg text-center"
     >
-      <h2 class="text-[18px] font-bold text-[#156082]">
+      <h2 class="text-[16px] font-bold text-[#156082]">
         Premium Projects
       </h2>
 
@@ -300,9 +304,9 @@
 
     <!-- Card -->
     <div
-      class="bg-[#f8fafc] rounded-[25px] p-8 shadow-lg text-center"
+      class="bg-[#f8fafc] rounded-xl p-8 shadow-lg text-center"
     >
-      <h2 class="text-[18px] font-bold text-[#156082]">
+      <h2 class="text-[16px] font-bold text-[#156082]">
         Expert Guidance
       </h2>
 
@@ -314,9 +318,9 @@
 
     <!-- Card -->
     <div
-      class="bg-[#f8fafc] rounded-[25px] p-8 shadow-lg text-center"
+      class="bg-[#f8fafc] rounded-xl p-8 shadow-lg text-center"
     >
-      <h2 class="text-[18px] font-bold text-[#156082]">
+      <h2 class="text-[16px] font-bold text-[#156082]">
         Customer Support
       </h2>
 
@@ -332,7 +336,7 @@
 
 <!-- Statistics Section -->
 <section
-  class="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#156082] py-16 mt-10"
+  class="relative w-full bg-[#156082] py-16 mt-10"
 >
 
   <div
@@ -388,9 +392,9 @@
 </section>
 
 <!-- Testimonials -->
-<section class="w-full py-16 bg-white">
+<section class="w-full py-12 bg-white">
 
-  <div class="text-center mb-12">
+  <div class="text-center mb-8">
 
     <p
       class="text-[#d49a37c9] text-[18px] font-semibold uppercase tracking-[2px]"
@@ -399,7 +403,7 @@
     </p>
 
     <h1
-      class="text-[28px] sm:text-[35px] font-bold text-[#0B1560] mt-3"
+      class="text-[15px] sm:text-[15px] font-bold text-[#0B1560] mt-3"
     >
       What Our Clients Say
     </h1>
@@ -473,13 +477,13 @@
 
 <!-- Final CTA Section -->
 <section
-  class="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#0B1560] py-16"
+  class="relative w-full bg-[#0B1560] py-16"
 >
 
   <div class="text-center px-5">
 
     <h1
-      class="text-white text-[30px] sm:text-[40px] font-bold"
+      class="text-white text-[25px] sm:text-[25px] font-bold"
     >
       Ready To Find Your Dream Property?
     </h1>
@@ -509,7 +513,7 @@
 
 </section>
 
-  </section>
+  
 </template>
 
 <script setup>

@@ -27,7 +27,7 @@
          bg-[#B91C1C] text-white
          px-1 py-2 rounded-l-xl shadow-xl text-[12px]
          hidden lg:block"
-  style="writing-mode: vertical-rl; transform: translateY(-50%) rotate(180deg);"
+  style="writing-mode: vertical-rl; transform: translateY(-50%) rotate(360deg);"
 >
   CONTACT US FOR ENQUIRY
 </a>

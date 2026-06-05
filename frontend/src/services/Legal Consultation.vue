@@ -1,10 +1,10 @@
 <template>
 
   <!-- Banner Section -->
-  <section class="px-4 sm:px-6 lg:px-10 my-8">
+  <section class=" mb-6">
 
     <div
-      class="relative w-full h-[300px] sm:h-[500px] lg:h-[650px] overflow-hidden rounded-[40px]"
+      class="relative w-full h-[350px] sm:h-[450px] lg:h-[450px] overflow-hidden"
     >
 
       <!-- Banner Image -->
@@ -44,7 +44,7 @@
 
 
   <!-- About Section -->
-  <section class="py-16 px-4 sm:px-6 lg:px-10">
+  <section class="py-8 px-4 sm:px-6 lg:px-10">
 
     <div
       class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center"
@@ -53,12 +53,12 @@
       <!-- Left -->
       <div>
 
-        <p class="text-[#4b4b9b] font-semibold text-lg mb-4">
+        <p class="text-[#4b4b9b] font-bold text-[18px] mb-4">
           Trusted Legal Experts
         </p>
 
         <h2
-          class="text-2xl sm:text-3xl lg:text-3xl font-bold text-[#2f2f68] leading-tight mb-8"
+          class="text-[15px] sm:text-[15px] lg:text-[15px] font-semibold text-[#2f2f68] leading-tight mb-8"
         >
           Complete Legal Support For Real Estate
         </h2>
@@ -105,19 +105,19 @@
 
 
   <!-- Services Section -->
-  <section class="bg-[#f8f8f8] py-16 px-4 sm:px-6 lg:px-10">
+  <section class="bg-[#f8f8f8] py-8 px-4 sm:px-6 lg:px-10">
 
     <div class="max-w-7xl mx-auto">
 
       <!-- Heading -->
-      <div class="text-center mb-14">
+      <div class="text-center mb-7">
 
-        <p class="text-[#4b4b9b] font-semibold text-lg">
+        <p class="text-[#4b4b9b] font-bold text-[18px]">
           Our Legal Services
         </p>
 
         <h2
-          class="text-2xl sm:text-3xl lg:text-3xl font-bold text-[#2f2f68] mt-3"
+          class="text-[15px] sm:text-[15px] lg:text-[15px] font-semibold text-[#2f2f68] mt-3"
         >
           What We Offer
         </h2>
@@ -126,16 +126,16 @@
 
       <!-- Cards -->
       <div
-        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
+        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"
       >
 
         <!-- Card -->
         <div
-          class="bg-white rounded-3xl p-8 shadow-lg hover:-translate-y-2 transition duration-300"
+          class="bg-white rounded-xl p-8 shadow-lg hover:-translate-y-2 transition duration-300"
         >
           <div class="text-5xl mb-5">📑</div>
 
-          <h3 class="text-2xl font-semibold text-[#2f2f68] mb-4">
+          <h3 class="text-[16px] font-semibold text-[#2f2f68] mb-4">
             Property Verification
           </h3>
 
@@ -147,11 +147,11 @@
 
         <!-- Card -->
         <div
-          class="bg-white rounded-3xl p-8 shadow-lg hover:-translate-y-2 transition duration-300"
+          class="bg-white rounded-xl p-8 shadow-lg hover:-translate-y-2 transition duration-300"
         >
           <div class="text-5xl mb-5">🖊️</div>
 
-          <h3 class="text-2xl font-semibold text-[#2f2f68] mb-4">
+          <h3 class="text-[16px] font-semibold text-[#2f2f68] mb-4">
             Agreement Drafting
           </h3>
 
@@ -163,11 +163,11 @@
 
         <!-- Card -->
         <div
-          class="bg-white rounded-3xl p-8 shadow-lg hover:-translate-y-2 transition duration-300"
+          class="bg-white rounded-xl p-8 shadow-lg hover:-translate-y-2 transition duration-300"
         >
           <div class="text-5xl mb-5">🏛️</div>
 
-          <h3 class="text-2xl font-semibold text-[#2f2f68] mb-4">
+          <h3 class="text-[16px] font-semibold text-[#2f2f68] mb-4">
             Registration Support
           </h3>
 
@@ -185,26 +185,26 @@
 
 
   <!-- Why Choose Us -->
-  <section class="pt-16 pb-0 px-4 sm:px-6 lg:px-10">
+  <section class="pt-8 pb-16 px-4 sm:px-6 lg:px-10">
 
     <div class="max-w-6xl mx-auto text-center">
 
-      <p class="text-[#4b4b9b] font-semibold text-lg mb-4">
+      <p class="text-[#4b4b9b] font-bold text-[18px] mb-4">
         Why Choose Us
       </p>
 
       <h2
-        class="text-2xl sm:text-3xl lg:text-3xl font-bold text-[#2f2f68] mb-10"
+        class="text-[15px] sm:text-[15px] lg:text-[15px] font-semibold text-[#2f2f68] mb-5"
       >
         Benefits Of Our Legal Consultation Services
       </h2>
 
       <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
       >
 
-        <div class="bg-white shadow-lg rounded-3xl p-8">
-          <h3 class="text-2xl font-semibold text-[#2f2f68] mb-3">
+        <div class="bg-white shadow-lg rounded-xl p-8">
+          <h3 class="text-[16px] font-semibold text-[#2f2f68] mb-3">
             Experienced Experts
           </h3>
 
@@ -213,8 +213,8 @@
           </p>
         </div>
 
-        <div class="bg-white shadow-lg rounded-3xl p-8">
-          <h3 class="text-2xl font-semibold text-[#2f2f68] mb-3">
+        <div class="bg-white shadow-lg rounded-xl p-8">
+          <h3 class="text-[16px] font-semibold text-[#2f2f68] mb-3">
             Transparent Process
           </h3>
 
@@ -223,8 +223,8 @@
           </p>
         </div>
 
-        <div class="bg-white shadow-lg rounded-3xl p-8">
-          <h3 class="text-2xl font-semibold text-[#2f2f68] mb-3">
+        <div class="bg-white shadow-lg rounded-xl p-8">
+          <h3 class="text-[16px] font-semibold text-[#2f2f68] mb-3">
             Risk-Free Transactions
           </h3>
 
@@ -233,8 +233,8 @@
           </p>
         </div>
 
-        <div class="bg-white shadow-lg rounded-3xl p-8">
-          <h3 class="text-2xl font-semibold text-[#2f2f68] mb-3">
+        <div class="bg-white shadow-lg rounded-xl p-8">
+          <h3 class="text-[16px] font-semibold text-[#2f2f68] mb-3">
             Complete Documentation
           </h3>
 
@@ -246,35 +246,37 @@
       </div>
 
     </div>
+
+
+  </section>
+
     <section
-  class="relative left-1/2 right-1/2 -mx-[50vw] mt-20 w-screen bg-[#0B1560] pt-16 pb-8 mb-0 "
->
+    class="relative w-full bg-[#0B1560] py-16"
+  >
 
-  <div class="text-center px-5">
+    <div class="text-center px-5">
 
-    <h1
-      class="text-white text-[32px] sm:text-[45px] font-bold"
-    >
-      Ready To Build Your Dream Project?
-    </h1>
+      <h1
+        class="text-white text-[25px] sm:text-[25px] font-bold"
+      >
+        Ready To Build Your Dream Project?
+      </h1>
 
-    <p
-      class="text-white/80 text-[15px] leading-8 mt-5 max-w-2xl mx-auto"
-    >
-      Contact Per Square Feet today for premium
-      construction services and trusted project execution.
-    </p>
+      <p
+        class="text-white/80 text-[15px] leading-8 mt-5 max-w-2xl mx-auto"
+      >
+        Contact Per Square Feet today for premium
+        construction services and trusted project execution.
+      </p>
 
-    <button
-      @click="goToContact"
-      class="mt-8 bg-[#d49a37c9] hover:bg-[#d49a37] text-white px-8 py-4 rounded-2xl text-[16px] font-semibold transition duration-300"
-    >
-      Contact Us
-    </button>
+      <button
+        @click="goToContact"
+        class="mt-8 bg-[#d49a37c9] hover:bg-[#d49a37] text-white px-8 py-4 rounded-2xl text-[16px] font-semibold transition duration-300"
+      >
+        Contact Us
+      </button>
 
-  </div>
-
-</section>
+    </div>
 
   </section>
 
