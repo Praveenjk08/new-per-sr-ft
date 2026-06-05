@@ -37,7 +37,7 @@ onMounted(() => {
 
 <template>
 
-  <section class="pt-4 pb-8 mb-8 bg-[#f8f8f8] overflow-hidden">
+  <section class="pt-4 pb-10 mb-10 bg-[#f8f8f8] overflow-hidden">
 
     <div class="max-w-[1600px] mx-auto px-4">
 

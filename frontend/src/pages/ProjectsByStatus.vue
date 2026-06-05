@@ -115,10 +115,10 @@ const filteredProjects = computed(() => {
 
       <!-- Cards -->
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 h-[550px]">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
         <div v-for="project in filteredProjects" :key="project.name"
-          class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition duration-500">
+          class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition duration-500">
 
           <router-link :to="`/project/${project.name}`">
 
@@ -126,7 +126,7 @@ const filteredProjects = computed(() => {
 
             <div class="relative">
 
-              <img :src="project.thumbnail_image" class="w-full h-[230px] object-cover" />
+              <img :src="project.thumbnail_image" class="w-full h-[240px] object-cover p-2 rounded-[13px]" />
 
               <!-- Status -->
 
