@@ -65,14 +65,14 @@
           <!-- Projects Dropdown -->
           <div class="relative group">
 
-            <button class="nav-link flex items-center gap-1">
+            <router-link to="/projects" class="nav-link flex items-center gap-1">
               Projects
 
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
-            </button>
+            </router-link>
 
             <div
               class="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-xl py-3 w-52 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
@@ -301,6 +301,7 @@
 
 <script setup>
 import { ref } from "vue";
+import { RouterLink } from "vue-router";
 
 const isOpen = ref(false);
 const isServicesOpen = ref(false);

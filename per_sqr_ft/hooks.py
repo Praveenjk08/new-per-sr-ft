@@ -20,6 +20,7 @@ website_route_rules = [
     {"from_route": "/search-projects", "to_route": "/"},
     {"from_route": "/project/<path:slug>", "to_route": "/"},
     {"from_route": "/projects/<path:status>", "to_route": "/"},
+      {"from_route": "/gallery", "to_route": "/"},
 ]
 
 # Apps
