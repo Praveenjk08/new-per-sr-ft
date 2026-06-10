@@ -187,3 +187,43 @@ def get_all_details_from_project():
 #     fields=["*"])
 
 #     return contact
+
+
+
+
+
+@frappe.whitelist(allow_guest=True)
+def get_property_types():
+    return frappe.get_all(
+        "Property Type",
+        fields=[
+            
+            "property_type",
+            "property_image"
+        ],
+        order_by="property_type asc"
+    )
+
+
+   
+
+@frappe.whitelist(allow_guest=True)
+def get_projects_by_type(property_type):
+    return frappe.get_all(
+        "Property Project",
+        filters={
+            "project_type": property_type
+        },
+        fields=[
+            "name",
+            "project_name",
+            "status",
+            "full_location",
+            "bhk",
+            "bath",
+            "floors",
+            "thumbnail_image",
+            "description",
+            "url"
+        ]
+    )

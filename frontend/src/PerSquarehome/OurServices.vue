@@ -7,23 +7,17 @@
         Top Real Estate Services
       </p>
 
-      <h2
-        class="text-3xl sm:text-4xl font-bold text-[#2f2f68] mt-3 leading-tight"
-      >
+      <h2 class="text-3xl sm:text-4xl font-bold text-[#2f2f68] mt-3 leading-tight">
         Presenting Best Real Estate Services
       </h2>
     </div>
 
     <!-- Cards -->
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
-    >
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
 
       <!-- Card 1 -->
-      <div
-        class="bg-white rounded-3xl shadow-lg p-10 text-center hover:-translate-y-2 transition duration-300"
-      >
-        <div class="text-7xl text-[#4b4b9b] mb-8">
+      <div class="bg-white rounded-3xl shadow-lg p-4 text-center hover:-translate-y-2 transition duration-300">
+        <div class="text-[85px] text-[#4b4b9b] mb-8">
           🏠
         </div>
 
@@ -36,19 +30,15 @@
           buying, selling, renting, and investment opportunities.
         </p>
 
-        <router-link
-          to="/real estate consultation"
-          class="inline-flex items-center gap-2 mt-8 text-lg font-medium text-black hover:text-[#4b4b9b]"
-        >
+        <router-link to="/real estate consultation"
+          class="inline-flex items-center gap-2 mt-8 text-[17px] font-medium text-black hover:text-[#4b4b9b]">
           Read More →
         </router-link>
       </div>
 
       <!-- Card 2 -->
-      <div
-        class="bg-white rounded-3xl shadow-lg p-10 text-center hover:-translate-y-2 transition duration-300"
-      >
-        <div class="text-7xl text-[#4b4b9b] mb-8">
+      <div class="bg-white rounded-3xl shadow-lg p-10 text-center hover:-translate-y-2 transition duration-300">
+        <div class="text-[85px] text-[#4b4b9b] mb-8">
           💰
         </div>
 
@@ -61,19 +51,15 @@
           flexible EMI options, and expert financial guidance.
         </p>
 
-        <router-link
-          to="/housing-loan"
-          class="inline-flex items-center gap-2 mt-8 text-lg font-medium text-black hover:text-[#4b4b9b]"
-        >
+        <router-link to="/housing-loan"
+          class="inline-flex items-center gap-2 mt-8 text-[17px] font-medium text-black hover:text-[#4b4b9b]">
           Read More →
         </router-link>
       </div>
 
       <!-- Card 3 -->
-      <div
-        class="bg-white rounded-3xl shadow-lg p-10 text-center hover:-translate-y-2 transition duration-300"
-      >
-        <div class="text-7xl text-[#4b4b9b] mb-8">
+      <div class="bg-white rounded-3xl shadow-lg p-10 text-center hover:-translate-y-2 transition duration-300">
+        <div class="text-[85px] text-[#4b4b9b] mb-8">
           🛋️
         </div>
 
@@ -86,19 +72,15 @@
           interior design solutions tailored to your lifestyle.
         </p>
 
-        <router-link
-          to="/interior"
-          class="inline-flex items-center gap-2 mt-8 text-lg font-medium text-black hover:text-[#4b4b9b]"
-        >
+        <router-link to="/interior"
+          class="inline-flex items-center gap-2 mt-8 text-[17px] font-medium text-black hover:text-[#4b4b9b]">
           Read More →
         </router-link>
       </div>
 
       <!-- Card 4 -->
-      <div
-        class="bg-white rounded-3xl shadow-lg p-10 text-center hover:-translate-y-2 transition duration-300"
-      >
-        <div class="text-7xl text-[#4b4b9b] mb-8">
+      <div class="bg-white rounded-3xl shadow-lg p-10 text-center hover:-translate-y-2 transition duration-300">
+        <div class="text-[85px] text-[#4b4b9b] mb-8">
           ⚖️
         </div>
 
@@ -111,19 +93,15 @@
           processes smoothly with professional legal support.
         </p>
 
-        <router-link
-          to="/legal"
-          class="inline-flex items-center gap-2 mt-8 text-lg font-medium text-black hover:text-[#4b4b9b]"
-        >
+        <router-link to="/legal"
+          class="inline-flex items-center gap-2 mt-8 text-[17px] font-medium text-black hover:text-[#4b4b9b]">
           Read More →
         </router-link>
       </div>
 
       <!-- Card 5 -->
-      <div
-        class="bg-white rounded-3xl shadow-lg p-10 text-center hover:-translate-y-2 transition duration-300"
-      >
-        <div class="text-7xl text-[#4b4b9b] mb-8">
+      <div class="bg-white rounded-3xl shadow-lg p-10 text-center hover:-translate-y-2 transition duration-300">
+        <div class="text-[85px] text-[#4b4b9b] mb-8">
           🏢
         </div>
 
@@ -136,19 +114,15 @@
           rentals, tenant support, and property supervision.
         </p>
 
-        <router-link
-          to="/property-management"
-          class="inline-flex items-center gap-2 mt-8 text-lg font-medium text-black hover:text-[#4b4b9b]"
-        >
+        <router-link to="/property-management"
+          class="inline-flex items-center gap-2 mt-8 text-[17px] font-medium text-black hover:text-[#4b4b9b]">
           Read More →
         </router-link>
       </div>
 
       <!-- Card 6 -->
-      <div
-        class="bg-white rounded-3xl shadow-lg p-10 text-center hover:-translate-y-2 transition duration-300"
-      >
-        <div class="text-7xl text-[#4b4b9b] mb-8">
+      <div class="bg-white rounded-3xl shadow-lg p-10 text-center hover:-translate-y-2 transition duration-300">
+        <div class="text-[85px] text-[#4b4b9b] mb-8">
           🏗️
         </div>
 
@@ -161,10 +135,8 @@
           designed with durability, innovation, and excellence.
         </p>
 
-        <router-link
-          to="/construction"
-          class="inline-flex items-center gap-2 mt-8 text-lg font-medium text-black hover:text-[#4b4b9b]"
-        >
+        <router-link to="/construction"
+          class="inline-flex items-center gap-2 mt-8 text-[17px] font-medium text-black hover:text-[#4b4b9b]">
           Read More →
         </router-link>
       </div>

@@ -5,9 +5,7 @@
     <!-- Heading -->
     <div class="text-center mb-14">
 
-      <h1
-        class="text-3xl sm:text-5xl lg:text-4xl font-bold text-[#0B1560]"
-      >
+      <h1 class="text-3xl sm:text-5xl lg:text-4xl font-bold text-[#0B1560]">
         Premium Amenities
       </h1>
 
@@ -18,35 +16,23 @@
     </div>
 
     <!-- Amenities Grid -->
-    <div
-      class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6"
-    >
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
 
       <!-- Card -->
-      <div
-        v-for="item in amenities"
-        :key="item.name"
-        class="group bg-white rounded-3xl p-8 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border border-gray-100"
-      >
+      <div v-for="item in amenities" :key="item.name"
+        class="group bg-white rounded-3xl p-8 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border border-gray-100">
 
         <!-- Icon Box -->
         <div
-          class="w-20 h-20 rounded-3xl bg-gradient-to-br bg-white flex items-center justify-center group-hover:scale-110 transition duration-500"
-        >
+          class="w-[150px] h-[150px] rounded-3xl bg-gradient-to-br bg-white flex items-center justify-center  transition duration-500">
 
           <!-- Icon -->
-          <img
-            :src="item.icon"
-            :alt="item.name"
-            class="w-full h-full object-cover"
-          />
+          <img :src="item.icon" :alt="item.name" class="w-full h-full object-cover" />
 
         </div>
 
         <!-- Title -->
-        <h2
-          class="mt-6 text-sm sm:text-lg font-semibold text-gray-800 text-center"
-        >
+        <h2 class="mt-6 text-sm sm:text-lg font-semibold text-gray-800 text-center">
           {{ item.name }}
         </h2>
 

@@ -21,6 +21,9 @@ website_route_rules = [
     {"from_route": "/project/<path:slug>", "to_route": "/"},
     {"from_route": "/projects/<path:status>", "to_route": "/"},
       {"from_route": "/gallery", "to_route": "/"},
+      {"from_route": "/property/<path:type>", "to_route": "/"},
+
+      
 ]
 
 # Apps

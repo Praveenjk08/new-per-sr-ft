@@ -82,6 +82,11 @@ const routes = [
     component: () => import("@/pages/Gallery.vue")
 
   },
+  {
+    path: "/property/:type",
+    name: "property-listing",
+    component: () => import('@/pages/PropertyListing.vue')
+  },
 
 
 ]

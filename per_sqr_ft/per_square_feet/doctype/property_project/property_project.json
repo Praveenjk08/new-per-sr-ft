@@ -83,9 +83,9 @@
   },
   {
    "fieldname": "project_type",
-   "fieldtype": "Select",
-   "label": "Project Type",
-   "options": "Villa\nApartment\nResidential\nCommercial\nPlot"
+   "fieldtype": "Link",
+   "label": "Property Type",
+   "options": "Property Type"
   },
   {
    "fieldname": "order_by",
@@ -180,7 +180,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-03 17:21:16.054534",
+ "modified": "2026-06-09 14:05:57.677504",
  "modified_by": "Administrator",
  "module": "Per Square Feet",
  "name": "Property Project",
