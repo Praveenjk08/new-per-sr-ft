@@ -120,7 +120,7 @@ const getProjects = async () => {
         const propertyType = route.params.type;
 
         const response = await fetch(
-            `http://localhost:8000/api/method/per_sqr_ft.api.property.get_projects_by_type?property_type=${propertyType}`
+            `/api/method/per_sqr_ft.api.property.get_projects_by_type?property_type=${propertyType}`
         );
 
         const data = await response.json();
