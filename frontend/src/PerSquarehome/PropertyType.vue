@@ -39,7 +39,7 @@ const propertyTypes = ref([]);
 const getPropertyTypes = async () => {
     try {
         const response = await fetch(
-            "http://localhost:8000/api/method/per_sqr_ft.api.property.get_property_types"
+            "/api/method/per_sqr_ft.api.property.get_property_types"
         );
 
         const data = await response.json();
