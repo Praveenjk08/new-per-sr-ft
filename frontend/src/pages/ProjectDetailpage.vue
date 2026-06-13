@@ -605,9 +605,8 @@
                             <p class="text-gray-500 mt-2 text-xl">
                                 Get Floor Plans & Pricing
                             </p>
-                            <div v-if="successMessage"
-                                class="mb-4 p-3 bg-green-100 text-green-700 rounded-lg text-center">
-                                Lead added successfully!
+                            <div v-if="sucessMessage" class="mb-4 p-3 text-green-700 rounded-lg text-center">
+                                Your query has been sent to the contact team.
                             </div>
 
                             <!-- Error Message -->

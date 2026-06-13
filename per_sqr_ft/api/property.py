@@ -224,7 +224,7 @@ def get_projects_by_type(property_type):
 
 
 
-import frappe
+
 
 @frappe.whitelist(allow_guest=True)
 def get_project_details(url):
