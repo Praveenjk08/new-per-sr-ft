@@ -21,7 +21,7 @@
                         class="w-full h-48 md:h-60 object-cover group-hover:scale-105 transition duration-300" />
                 </div>
 
-                <h3 class="text-center mt-4 text-lg md:text-2xl font-semibold">
+                <h3 class="text-center mt-4 text-[20px] md:text-[25px] font-semibold">
                     {{ item.property_type }}
                 </h3>
             </div>

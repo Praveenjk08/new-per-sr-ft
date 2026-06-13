@@ -74,7 +74,7 @@ onMounted(() => {
 
       <SwiperSlide v-for="(item, index) in project.carousel_images" :key="index">
 
-        <div class="relative h-[450px] sm:h-[450px] md:h-[450px] ">
+        <div class="relative h-[450px] sm:h-[450px] md:h-[450px] mx-auto ">
 
           <img :src="item.image" class="w-full h-full object-cover" />
 

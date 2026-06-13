@@ -87,6 +87,11 @@ const routes = [
     name: "property-listing",
     component: () => import('@/pages/PropertyListing.vue')
   },
+  {
+    path: "/detailpage/:url",
+    name: "detailpage",
+    component: () => import('@/pages/ProjectDetailpage.vue')
+  },
 
 
 ]

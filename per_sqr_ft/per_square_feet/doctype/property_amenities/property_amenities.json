@@ -1,0 +1,39 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-06-11 11:45:07.429154",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "amenities_images",
+  "amenities_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "amenities_images",
+   "fieldtype": "Attach Image",
+   "label": "Amenities_images"
+  },
+  {
+   "fieldname": "amenities_name",
+   "fieldtype": "Data",
+   "label": "Amenities_name"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-06-11 11:47:57.894690",
+ "modified_by": "Administrator",
+ "module": "Per Square Feet",
+ "name": "Property Amenities",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

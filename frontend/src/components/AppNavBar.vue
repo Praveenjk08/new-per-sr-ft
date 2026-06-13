@@ -217,21 +217,22 @@
             <!-- Projects -->
             <li>
 
-              <button @click="toggleProjects" class="w-full flex items-center text-[18px] font-medium text-[#156082]">
+              <router-link to="/projects" @click="closeMenu">
+                <button @click="toggleProjects" class="w-full flex items-center text-[18px] font-medium text-[#156082]">
 
-                <span>Projects</span>
+                  <span>Projects</span>
 
-                <span :class="{ 'rotate-180': isProjectsOpen }" class="transition duration-300 ml-auto">
+                  <span :class="{ 'rotate-180': isProjectsOpen }" class="transition duration-300 ml-auto">
 
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd"
-                      d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
-                      clip-rule="evenodd" />
-                  </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd"
+                        d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                        clip-rule="evenodd" />
+                    </svg>
 
-                </span>
+                  </span>
 
-              </button>
+                </button></router-link>
 
               <ul v-show="isProjectsOpen" class="mt-3 ml-4 space-y-3">
 

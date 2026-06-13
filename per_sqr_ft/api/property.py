@@ -6,15 +6,7 @@ def get_all_projects():
     projects = frappe.get_all(
         "Property Project",
         fields=[
-            "name",
-            "project_name",
-            "status",
-            "full_location",
-            "bhk",
-            "bath",
-            "super_built_up_area",
-            "thumbnail_image",
-            "url"
+          "*"
         ],
         order_by="creation desc"
     )
@@ -48,17 +40,18 @@ def get_project_detail(slug):
 def get_all_project_by_status(status):
     projects=frappe.get_all("Property Project",
          filters={'status':status},
-         fields=[
-             "name",
-             "project_name",
-             "status",
-             "full_location",
-             "bhk",
-             "bath",
-             "super_built_up_area",
-             "thumbnail_image",
-             "url"
-         ])
+        #  fields=[
+        #      "name",
+        #      "project_name",
+        #      "status",
+        #      "full_location",
+        #      "bhk",
+        #      "bath",
+        #      "super_built_up_area",
+        #      "thumbnail_image",
+        #      "url"
+        #  ])
+        fields=["*"])
 
     return projects
 
@@ -227,3 +220,50 @@ def get_projects_by_type(property_type):
             "url"
         ]
     )
+
+
+
+
+import frappe
+
+@frappe.whitelist(allow_guest=True)
+def get_project_details(url):
+
+    doc_name = frappe.db.get_value(
+        "Property Project",
+        {"url": url},
+        "name"
+    )
+
+    if not doc_name:
+        return {}
+
+    doc = frappe.get_doc("Property Project", doc_name)
+
+    return doc.as_dict()
+
+
+
+
+@frappe.whitelist(allow_guest=True)
+def get_details_by_serch(search=""):
+
+    projects = frappe.get_all(
+        "Property Project",
+        or_filters=[
+            ["project_name", "like", f"%{search}%"],
+            ["url", "like", f"%{search}%"],
+            ["full_location", "like", f"%{search}%"],
+            ["status", "like", f"%{search}%"]]
+        ,
+        fields=[
+            "project_name",
+            "url",
+            "full_location",
+            "status"
+            
+        ],
+        limit_page_length=10
+    )
+
+    return projects

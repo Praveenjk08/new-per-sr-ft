@@ -1,6 +1,6 @@
 <template>
   <!-- Amenities Section -->
-  <section class="py-20 px-5 lg:px-20 bg-[#f8fafc]">
+  <section class="py-2 px-5 lg:px-20 bg-[#f8fafc]">
 
     <!-- Heading -->
     <div class="text-center mb-14">

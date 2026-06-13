@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-06-10 15:19:21.701706",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "project_location",
+  "total_land_area",
+  "no_of_units",
+  "towers_and_blocks",
+  "unit_variants",
+  "possession_time",
+  "icons"
+ ],
+ "fields": [
+  {
+   "fieldname": "project_location",
+   "fieldtype": "Data",
+   "label": "Project Location"
+  },
+  {
+   "fieldname": "total_land_area",
+   "fieldtype": "Data",
+   "label": "Total Land Area"
+  },
+  {
+   "fieldname": "no_of_units",
+   "fieldtype": "Data",
+   "label": "No. of Units"
+  },
+  {
+   "fieldname": "towers_and_blocks",
+   "fieldtype": "Data",
+   "label": "Towers and Blocks"
+  },
+  {
+   "fieldname": "unit_variants",
+   "fieldtype": "Data",
+   "label": "Unit Variants"
+  },
+  {
+   "fieldname": "possession_time",
+   "fieldtype": "Data",
+   "label": "Possession Time"
+  },
+  {
+   "fieldname": "icons",
+   "fieldtype": "Attach Image",
+   "label": "Icons"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-06-10 21:18:01.241716",
+ "modified_by": "Administrator",
+ "module": "Per Square Feet",
+ "name": "Property Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

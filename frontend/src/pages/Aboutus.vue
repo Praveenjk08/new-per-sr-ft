@@ -426,6 +426,61 @@
 
   </section>
 
+  <!-- About The Builder -->
+  <!-- Founder Section -->
+  <section class="py-10 bg-gray-50">
+
+    <!-- Heading -->
+    <div class="text-center mb-24">
+
+      <h2 class="text-4xl md:text-[35px] font-light text-[#012147]">
+        Founder
+      </h2>
+
+      <div class="w-32 h-1 bg-[#D4AF37] mx-auto mt-6 "></div>
+
+    </div>
+
+    <!-- Founder Card -->
+    <div class="max-w-md mx-4 md:mx-auto  relative">
+
+      <!-- Image -->
+      <div class="absolute left-1/2 -translate-x-1/2 -top-20 z-10">
+
+        <div class="w-40 h-40 rounded-full border-[4px] border-[#D4AF37] overflow-hidden bg-white shadow-xl">
+
+          <img src="/files/kenchapp.jpeg" alt="Founder" class="w-full h-full object-cover" />
+
+        </div>
+
+      </div>
+
+      <!-- Card -->
+      <div class="bg-white border-2 border-[#D4AF37] rounded-3xl pt-28 pb-12 px-8 text-center shadow-lg">
+
+        <h3 class="text-3xl font-semibold text-gray-900 mb-2">
+          Mr. Kenchappa
+        </h3>
+
+        <p class="text-lg text-gray-600 font-semibold mb-8">
+          Founder & Managing Director
+        </p>
+
+        <p class="text-gray-600 leading-8 text-[16px]">
+          With decades of experience in the real estate industry,
+          Mr. Kenchappa founded Per Square Feet with a vision of
+          helping families discover premium homes through trust,
+          transparency, and expert guidance. His commitment to
+          excellence continues to drive the company's growth and
+          customer satisfaction.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
 
 </template>
 

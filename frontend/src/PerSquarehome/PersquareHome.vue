@@ -31,42 +31,53 @@
           locations with Per Square Feet.
         </p>
 
-        <!-- Search Box -->
-
-        <!-- <div class="flex flex-col md:flex-row gap-2 mt-4">
-
-          <input type="text" v-model="searchText" placeholder="Search by City, Property, Builder..."
-            class="relative  w-full sm:w-[450px]   md:w-[440px] h-[40px] py-2 px-4 rounded-xl outline-none bg-white   text-gray-700 text-sm sm:text-lg" />
-
-          
-          <button @click="searchProperty"
-            class="bg-[#156082] hover:bg-[#0f4f68] text-white px-6 sm:px-10 py-3 sm:py-4 rounded-2xl text-sm sm:text-lg font-semibold transition-all duration-300">
-            Search Property
-          </button>
-
-        </div> -->
 
 
-        <div class="flex flex-col md:flex-row justify-center items-center gap-2 mt-4">
 
-          <!-- Input -->
+        <!-- <div class="flex flex-col md:flex-row justify-center items-center gap-2 mt-4">
+
+          Input
           <input type="text" v-model="searchText" placeholder="Search by City, Property, Builder..."
             class="w-full sm:w-[450px] md:w-[440px] h-[40px] py-2 px-4 rounded-xl outline-none bg-white text-gray-700 text-sm sm:text-lg" />
 
-          <!-- Button -->
+          Button
           <button @click="searchProperty"
             class="w-full md:w-auto h-[40px] bg-[#156082] hover:bg-[#0f4f68] text-white px-6 sm:px-10 rounded-xl text-sm sm:text-lg font-semibold transition-all duration-300">
             Search Property
           </button>
+        </div> -->
+        <div class="flex flex-col md:flex-row justify-center items-start gap-2 mt-4">
+          <div class="relative w-full sm:w-[450px] md:w-[440px]"> <input type="text" v-model="searchText1"
+              @input="searchProjects" placeholder="Search by City, Property, Builder..."
+              class="w-full h-[40px] py-2 px-4 rounded-xl outline-none bg-white text-gray-700 text-sm sm:text-lg" />
+            <div v-if="suggestions.length"
+              class="absolute top-full left-0 w-full bg-white rounded-xl shadow-xl mt-1 z-50 max-h-80 overflow-y-auto">
+              <div v-for="project in suggestions" :key="project.url" @click="selectProject(project)"
+                class="px-4 py-3 hover:bg-gray-100 cursor-pointer border-b">
+                <div class="font-semibold text-gray-800">
+                  {{ project.project_name }}
+                </div>
+
+                <div class="text-sm text-gray-500">
+                  📍 {{ project.full_location }}
+                </div>
+              </div>
+            </div>
+          </div> <button @click="searchProperty"
+            class="w-full md:w-auto h-[40px] bg-[#156082] hover:bg-[#0f4f68] text-white px-6 sm:px-10 rounded-xl text-sm sm:text-lg font-semibold">
+            Search Property </button>
         </div>
+
+
+
+
       </div>
-
-
     </div>
 
   </section>
 
   <PropertyType />
+  <ProjectsCardAndPaginationSEction />
 
   <CompanyExprience />
   <!-- <PropertySlides /> -->
@@ -95,18 +106,48 @@ import PropertyType from "./PropertyType.vue";
 import CompanyExprience from "./CompanyExprience.vue";
 import HomeBuyersSection from "./HomeBuyersSection.vue";
 import BuilderLogoes from "./BuilderLogoes.vue";
+import ProjectsCardAndPaginationSEction from "./ProjectsCardAndPaginationSEction.vue";
+import axios from "axios";
 
 const router = useRouter();
 const searchText = ref("");
 
 const searchProperty = () => {
   router.push({
-    path: "/search-projects",
+    path: "/projects",
     query: {
       search: searchText.value,
     },
   });
 };
 
+const searchText1 = ref("")
+const suggestions = ref([])
 
+const searchProjects = async () => {
+  if (!searchText1.value.trim()) {
+    suggestions.value = []
+    return
+  }
+
+
+  const response = await axios.get("/api/method/per_sqr_ft.api.property.get_details_by_serch",
+    {
+      params: {
+        search: searchText1.value
+      }
+    }
+  )
+
+  suggestions.value = response.data.message || []
+}
+
+const selectProject = (project) => {
+  searchText1.value = project.project_name
+  searchText1.value = project.full_location
+
+  suggestions.value = []
+
+  router.push(`/detailpage/${project.url}`)
+}
 </script>

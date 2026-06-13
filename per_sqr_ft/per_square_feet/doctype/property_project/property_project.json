@@ -19,20 +19,27 @@
   "order_by",
   "column_break_mczd",
   "url",
-  "floors",
-  "bath",
-  "bhk",
+  "price_range",
+  "short_description",
   "full_location",
   "description_heading",
   "description",
   "thumbnail_image",
   "is_active",
-  "location_link",
+  "youtube_link",
+  "master_plan_images",
+  "unit_variants_lg",
   "project_related_images_section",
   "carousel_images",
   "gallery_images",
   "project_gallery_image_section",
-  "per_square_feet_gallery"
+  "per_square_feet_gallery",
+  "section_break_rwwq",
+  "property_details",
+  "property_unit_table_section",
+  "property_unit",
+  "section_break_parl",
+  "property_amenities"
  ],
  "fields": [
   {
@@ -103,21 +110,6 @@
    "unique": 1
   },
   {
-   "fieldname": "floors",
-   "fieldtype": "Data",
-   "label": "Floors"
-  },
-  {
-   "fieldname": "bath",
-   "fieldtype": "Data",
-   "label": "Bath"
-  },
-  {
-   "fieldname": "bhk",
-   "fieldtype": "Data",
-   "label": "BHK"
-  },
-  {
    "fieldname": "full_location",
    "fieldtype": "Data",
    "label": "Full Location"
@@ -172,15 +164,67 @@
    "options": "Per Square feet Gallery"
   },
   {
-   "fieldname": "location_link",
+   "fieldname": "section_break_rwwq",
+   "fieldtype": "Section Break",
+   "label": "Property Details table"
+  },
+  {
+   "fieldname": "property_details",
+   "fieldtype": "Table",
+   "label": "Property Details",
+   "options": "Property Details"
+  },
+  {
+   "fieldname": "property_unit_table_section",
+   "fieldtype": "Section Break",
+   "label": "Property Unit table"
+  },
+  {
+   "fieldname": "property_unit",
+   "fieldtype": "Table",
+   "label": "Property Unit",
+   "options": "Property Unit"
+  },
+  {
+   "fieldname": "youtube_link",
    "fieldtype": "Data",
-   "label": "Location Link"
+   "label": "Youtube LInk"
+  },
+  {
+   "fieldname": "master_plan_images",
+   "fieldtype": "Attach Image",
+   "label": "Master_plan_images"
+  },
+  {
+   "fieldname": "section_break_parl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "property_amenities",
+   "fieldtype": "Table",
+   "label": "Property Amenities",
+   "options": "Property Amenities"
+  },
+  {
+   "fieldname": "short_description",
+   "fieldtype": "Data",
+   "label": "Short_descrption"
+  },
+  {
+   "fieldname": "unit_variants_lg",
+   "fieldtype": "Data",
+   "label": "Unit_variants_lg"
+  },
+  {
+   "fieldname": "price_range",
+   "fieldtype": "Data",
+   "label": "Price Range"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-09 14:05:57.677504",
+ "modified": "2026-06-11 18:28:51.388521",
  "modified_by": "Administrator",
  "module": "Per Square Feet",
  "name": "Property Project",
