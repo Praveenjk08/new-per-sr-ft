@@ -117,6 +117,7 @@ const filteredProjects = computed(() => {
 
 
           <div v-for="(project, index) in filteredProjects" :key="index"
+            @click="$router.push(`/detailpage/${project.url}`)"
             class="bg-white rounded-3xl shadow-sm border overflow-hidden mb-6">
 
             <div class="grid md:grid-cols-12">

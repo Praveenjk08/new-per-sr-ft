@@ -1,6 +1,6 @@
 <template>
   <!-- Main Section -->
-  <section class="w-full py-10 px-4 sm:px-6 lg:px-16 bg-white">
+  <section class="w-full py-5 px-4 sm:px-6 lg:px-16 bg-white">
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
       <!-- Left Image -->
@@ -11,7 +11,7 @@
 
       <!-- Right Content -->
       <div>
-        <h1 class="text-3xl sm:text-5xl lg:text-3xl text-yellow-950 mb-6">
+        <h1 class="text-3xl sm:text-5xl lg:text-3xl text-yellow-950 mb-2">
           Helping You Secure Your Dream Home
         </h1>
 

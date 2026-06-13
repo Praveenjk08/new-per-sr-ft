@@ -1,6 +1,6 @@
 <template>
   <!-- Main Section -->
-  <section class="w-full px-5 lg:px-20 py-12 lg:py-20">
+  <section class="w-full px-5 lg:px-20 py-6 lg:py-10">
 
     <!-- Main Flex -->
     <div class="flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-16">

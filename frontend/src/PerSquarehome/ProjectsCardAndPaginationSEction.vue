@@ -29,6 +29,7 @@
                 class="bg-white  rounded-3xl  shadow-lg overflow-hidden hover:shadow-2xl transition">
                  -->
             <div v-for="project in paginatedProjects" :key="project.name"
+                @click="$router.push(`/detailpage/${project.url}`)"
                 class="bg-white rounded-xl shadow-lg overflow-hidden h-[430px] flex flex-col">
                 <div class="p-2 ">
                     <!-- <img :src="project.thumbnail_image" :alt="project.project_name"
@@ -104,10 +105,11 @@
 <script setup>
 import { ref, computed, onMounted } from "vue"
 import axios from "axios"
+import { useRouter } from "vue-router"
 
 const projects = ref([])
 const activeType = ref("Apartments")
-
+const router = useRouter()
 const currentPage = ref(1)
 const perPage = 6
 
