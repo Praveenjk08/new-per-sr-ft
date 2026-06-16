@@ -365,7 +365,7 @@
 
 
 
-                <div class="mt-12 md:mx-10" v-if="project.master_plan_images?.length">
+                <div class="mt-12 md:mx-10" v-if="project.master_plan?.length">
 
                     <h2 class="text-3xl font-bold text-gray-900 mb-4">
                         Master Plan
