@@ -4,7 +4,7 @@
 
             <!-- Project Image -->
             <img :src="project.thumbnail_image" :alt="project.project_name"
-                class="w-full mx-auto h-[280px] md:h-[530px] object-cover" />
+                class="w-full mx-auto h-[280px] md:h-auto object-cover" />
 
             <!-- Overlay -->
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
