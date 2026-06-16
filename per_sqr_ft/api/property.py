@@ -212,12 +212,12 @@ def get_projects_by_type(property_type):
             "project_name",
             "status",
             "full_location",
-            "bhk",
-            "bath",
             "floors",
             "thumbnail_image",
             "description",
-            "url"
+            "url",
+            "units",
+            "price"
         ]
     )
 

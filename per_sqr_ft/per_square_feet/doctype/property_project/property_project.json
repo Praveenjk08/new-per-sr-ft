@@ -19,7 +19,6 @@
   "order_by",
   "column_break_mczd",
   "url",
-  "price_range",
   "short_description",
   "full_location",
   "description_heading",
@@ -28,7 +27,8 @@
   "is_active",
   "youtube_link",
   "master_plan_images",
-  "unit_variants_lg",
+  "price",
+  "units",
   "project_related_images_section",
   "carousel_images",
   "gallery_images",
@@ -213,16 +213,6 @@
    "label": "Short_descrption"
   },
   {
-   "fieldname": "unit_variants_lg",
-   "fieldtype": "Data",
-   "label": "Unit_variants_lg"
-  },
-  {
-   "fieldname": "price_range",
-   "fieldtype": "Data",
-   "label": "Price Range"
-  },
-  {
    "fieldname": "section_break_hsvk",
    "fieldtype": "Section Break"
   },
@@ -231,12 +221,22 @@
    "fieldtype": "Table",
    "label": "Master Plan",
    "options": "Master Plan Images"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Data",
+   "label": "price"
+  },
+  {
+   "fieldname": "units",
+   "fieldtype": "Data",
+   "label": "Units"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-15 14:15:18.989815",
+ "modified": "2026-06-16 16:53:44.154885",
  "modified_by": "Administrator",
  "module": "Per Square Feet",
  "name": "Property Project",

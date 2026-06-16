@@ -135,7 +135,8 @@
                                         <span class="font-semibold">
                                             Unit Variants:
                                         </span>
-                                        {{ project.unit_variants_lg }}
+                                        <!-- {{ project.unit_variants_lg }} -->
+                                        {{ project.units }}
                                     </p>
 
                                     <p>
@@ -144,7 +145,8 @@
                                         </span>
 
                                         <span class="text-cyan-600 font-semibold">
-                                            {{ project.bath }}
+                                            <!-- {{ project.price_range }} -->
+                                            {{ project.price }}
                                         </span>
                                     </p>
 
