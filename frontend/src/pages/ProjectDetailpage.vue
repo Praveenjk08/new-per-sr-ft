@@ -109,14 +109,24 @@
 
                     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
 
-                        <div v-for="(gallery_images, index) in project.gallery_images" :key="index"
-                            class="w-full overflow-hidden rounded-2xl shadow-lg  ">
+                        <!-- <div v-for="(gallery_images, index) in project.gallery_images" :key="index"
+                            class="w-full overflow-hidden rounded-2xl shadow-lg  "> -->
+                        <div v-for="(gallery_images, index) in (showAllGallery ? project.gallery_images : project.gallery_images.slice(0, 3))"
+                            :key="index" class="w-full overflow-hidden rounded-2xl shadow-lg  ">
+
 
                             <img :src="gallery_images.gallery_images" :alt="'Gallery Image ' + index"
                                 class="w-full h-[180px] md:h-[200px] object-cover hover:scale-105 transition duration-300" />
 
                         </div>
 
+                    </div>
+
+                    <div v-if="project.gallery_images.length > 3" class="text-center mt-6">
+                        <button @click="showAllGallery = !showAllGallery"
+                            class="px-6 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition">
+                            {{ showAllGallery ? 'Show Less' : 'Load More' }}
+                        </button>
                     </div>
 
                 </div>
@@ -698,9 +708,22 @@
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Navigation } from 'vue3-carousel'
 import axios from 'axios'
-import { ref, onMounted, reactive } from "vue";
+import { ref, onMounted, reactive, computed } from "vue";
 import { useRoute } from "vue-router";
 import FeatureImages from "../PerSquarehome/FeatureImages.vue";
+
+
+
+
+
+const showAllGallery = ref(false)
+
+const displayedGalleryImages = computed(() => {
+    return showAllGallery.value
+        ? project.value.gallery_images
+        : project.value.gallery_images?.slice(0, 3)
+})
+
 
 
 
