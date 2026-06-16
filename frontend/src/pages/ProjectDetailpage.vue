@@ -598,8 +598,11 @@
                             </thead>
 
                             <tbody>
-                                <tr v-for="(unit, index) in project.property_unit" :key="index"
-                                    class="border-b border-orange-200 even:bg-orange-50">
+                                <!-- <tr v-for="(unit, index) in project.property_unit" :key="index"
+                                    v-if="unit.approx_all_inclusive_price"
+                                    class="border-b border-orange-200 even:bg-orange-50"> -->
+                                <tr v-for="(unit, index) in project.property_unit?.filter(u => u?.approx_all_inclusive_price)"
+                                    :key="index">
                                     <td class="py-2 px-4 text-center border-r border-orange-200">
                                         {{ unit.unit_type }}
                                     </td>
