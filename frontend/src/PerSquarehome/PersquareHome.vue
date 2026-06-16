@@ -3,8 +3,11 @@
   <section class="relative h-[500px] sm:h-[500px]   overflow-hidden  mx-4  sm:mx-6 mb-10 mt-4 ">
 
     <!-- Background Image -->
-    <img src="/files/real_estate_house_2.jpg" alt="Luxury Home"
+    <!-- <img src="/files/real_estate_house_2.jpg" alt="Luxury Home"
+      class="w-full h-full object-cover absolute inset-0  rounded-lg " /> -->
+    <img src="/files/homepagebannernewiamge.png" alt="Luxury Home"
       class="w-full h-full object-cover absolute inset-0  rounded-lg " />
+
 
     <!-- Content -->
     <div class="relative z-10 flex flex-col items-center justify-center text-center px-4 sm:px-8 py-16 sm:py-24 h-full">

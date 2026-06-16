@@ -39,7 +39,9 @@
   "property_unit_table_section",
   "property_unit",
   "section_break_parl",
-  "property_amenities"
+  "property_amenities",
+  "section_break_hsvk",
+  "master_plan"
  ],
  "fields": [
   {
@@ -219,12 +221,22 @@
    "fieldname": "price_range",
    "fieldtype": "Data",
    "label": "Price Range"
+  },
+  {
+   "fieldname": "section_break_hsvk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "master_plan",
+   "fieldtype": "Table",
+   "label": "Master Plan",
+   "options": "Master Plan Images"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-11 18:28:51.388521",
+ "modified": "2026-06-15 14:15:18.989815",
  "modified_by": "Administrator",
  "module": "Per Square Feet",
  "name": "Property Project",

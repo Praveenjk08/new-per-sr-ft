@@ -13,7 +13,8 @@
     "frappe-ui": "^0.0.105",
     "swiper": "^10.3.1",
     "vue": "^3.2.25",
-    "vue-router": "^4.0.12"
+    "vue-router": "^4.0.12",
+    "vue3-carousel": "^0.17.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.0.0",

@@ -7,7 +7,7 @@
 
         <!-- Logo -->
         <div class="flex items-center gap-2">
-          <router-link to="/">
+          <router-link to="/" class="focus:outline-none">
             <img src="/files/homelogoe.jpg" alt="Logo" class="h-[60px] object-contain" />
           </router-link>
         </div>
@@ -19,7 +19,7 @@
             Per Square Feet
           </router-link>
 
-          <router-link to="/about-us" class="nav-link">
+          <router-link to="/about-us" class="nav-link focus:outline-none">
             About Us
           </router-link>
 
@@ -65,7 +65,7 @@
           <!-- Projects Dropdown -->
           <div class="relative group">
 
-            <router-link to="/projects" class="nav-link flex items-center gap-1">
+            <router-link to="/projects" class="nav-link flex items-center gap-1 focus:outline-none">
               Projects
 
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
@@ -96,11 +96,11 @@
             </div>
           </div>
 
-          <router-link to="/gallery" class="nav-link">
+          <router-link to="/gallery" class="nav-link focus:outline-none">
             Gallery
           </router-link>
 
-          <router-link to="/contact-us" class="nav-link">
+          <router-link to="/contact-us" class="nav-link focus:outline-none">
             Contact
           </router-link>
 

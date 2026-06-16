@@ -337,7 +337,7 @@
 
 
                 <!-- Master Plan -->
-                <div class="mt-12 md:mx-10" v-if="project.master_plan_images?.length">
+                <!-- <div class="mt-12 md:mx-10" v-if="project.master_plan_images?.length">
 
                     <h2 class="text-3xl font-bold text-gray-900 mb-4">
                         Master Plan
@@ -358,6 +358,43 @@
                         </div>
 
                         <img :src="project.master_plan_images" alt="Master Plan" class="w-full h-auto object-cover" />
+
+                    </div>
+
+                </div> -->
+
+
+
+                <div class="mt-12 md:mx-10" v-if="project.master_plan_images?.length">
+
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                        Master Plan
+                    </h2>
+
+                    <div class="w-24 h-1 bg-orange-500 rounded-full mb-8"></div>
+
+                    <div class="bg-white rounded-3xl shadow-lg border overflow-hidden">
+
+                        <div class="p-5 border-b">
+                            <h3 class="text-xl font-semibold">
+                                Project Master Plan
+                            </h3>
+
+                            <p class="text-gray-500 mt-1">
+                                Explore the complete project layout and development plan.
+                            </p>
+                        </div>
+
+                        <Carousel :items-to-show="1" :wrap-around="true">
+                            <Slide v-for="(item, index) in project.master_plan" :key="index">
+                                <img :src="item.master_plan_image" :alt="'Master Plan ' + index"
+                                    class="w-full h-auto object-cover" />
+                            </Slide>
+
+                            <template #addons>
+                                <Navigation />
+                            </template>
+                        </Carousel>
 
                     </div>
 
@@ -630,7 +667,7 @@
 
                             <textarea rows="3" placeholder="Your Requirement"
                                 class="w-full px-4 py-2 border rounded-xl outline-none">
-                        </textarea>
+                </textarea>
 
                             <button
                                 class="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-xl font-medium">
@@ -655,6 +692,8 @@
 </template>
 
 <script setup>
+import 'vue3-carousel/dist/carousel.css'
+import { Carousel, Slide, Navigation } from 'vue3-carousel'
 import axios from 'axios'
 import { ref, onMounted, reactive } from "vue";
 import { useRoute } from "vue-router";
