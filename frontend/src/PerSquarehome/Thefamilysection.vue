@@ -1,19 +1,23 @@
 <template>
   <!-- Main Section -->
-  <section class="w-full py-5 px-4 sm:px-6 lg:px-16 bg-white">
+  <section class="w-full py-8 px-4 sm:px-6 lg:px-16 bg-white">
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
       <!-- Left Image -->
       <div class="flex justify-center">
         <img src="/files/family-photo-home.jpg" alt="Family"
-          class="w-full h-[500px] max-w-[550px] rounded-3xl shadow-lg object-cover" />
+          class="w-full h-[400px] max-w-[450px] rounded-3xl shadow-lg object-cover" />
       </div>
 
       <!-- Right Content -->
       <div>
-        <h1 class="text-3xl sm:text-5xl lg:text-3xl text-yellow-950 mb-2">
+        <!-- <h1 class="text-3xl sm:text-5xl lg:text-3xl text-yellow-950 mb-2">
           Helping You Secure Your Dream Home
-        </h1>
+        </h1> -->
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-4">
+          Helping You Secure Your
+          <span class="text-orange-500">Dream Home</span>
+        </h2>
 
         <div class="text-[14px] text-black leading-8 space-y-1">
 
@@ -34,11 +38,11 @@
             that our clients receive the best options available in the market.
           </p>
 
-          <p>
+          <!-- <p>
             What truly sets Per Square Feet apart is our commitment to delivering
             world-class sales and marketing services while maintaining transparency,
             trust, and customer satisfaction.
-          </p>
+          </p> -->
 
         </div>
 

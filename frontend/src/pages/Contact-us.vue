@@ -1,6 +1,7 @@
 <template>
 
-  <section class="relative h-[280px] sm:h-[450px] overflow-hidden">
+  <!-- <section class="relative h-[280px] sm:h-[450px] overflow-hidden"> -->
+  <section class="relative  h-[350px] md:h-[500px] mt-0">
     <div class="w-full  ">
       <img src="/files/contactbanner.png" alt="Contact Us" class="w-full h-[250px] sm:h-[450px] object-cover" />
     </div>
@@ -35,7 +36,8 @@
 
 
   <!-- Contact Section -->
-  <section class="py-16 px-4 sm:px-6 lg:px-10">
+  <section class="pb-14 mt-0 px-4 sm:px-6 lg:px-10">
+
 
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14">
 
@@ -66,7 +68,9 @@
 
             <div
               class="min-w-[50px] h-[50px] rounded-xl bg-[#0B1560] text-white flex items-center justify-center text-xl">
-              📍
+              <span class="material-symbols-outlined text-3xl">
+                location_on
+              </span>
             </div>
 
             <div>
@@ -88,7 +92,9 @@
 
             <div
               class="min-w-[50px] h-[50px] rounded-xl bg-[#0B1560] text-white flex items-center justify-center text-xl">
-              📞
+              <span class="material-symbols-outlined text-3xl">
+                call
+              </span>
             </div>
 
             <div>
@@ -112,7 +118,9 @@
 
             <div
               class="min-w-[50px] h-[50px] rounded-xl bg-[#0B1560] text-white flex items-center justify-center text-xl">
-              ✉️
+              <span class="material-symbols-outlined text-3xl">
+                mail
+              </span>
             </div>
 
             <div>
@@ -133,7 +141,9 @@
 
             <div
               class="min-w-[50px] h-[50px] rounded-xl bg-[#0B1560] text-white flex items-center justify-center text-xl">
-              ⏰
+              <span class="material-symbols-outlined text-3xl">
+                schedule
+              </span>
             </div>
 
             <div>
@@ -155,7 +165,7 @@
 
 
       <!-- Right Side Form -->
-      <div class="bg-white rounded-lg shadow-xl p-4 sm:px-10 pt-10">
+      <div class="bg-white rounded-lg shadow-2xl border border-gray-100 p-4 sm:px-10 pt-10">
 
         <h2 class="text-3xl font-bold text-[#2f2f68] mb-4">
           Send Message
@@ -226,6 +236,10 @@
     </div>
 
   </section>
+
+
+
+
 
 
   <!-- Map Section -->

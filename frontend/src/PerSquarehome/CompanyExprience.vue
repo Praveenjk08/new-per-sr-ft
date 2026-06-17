@@ -1,51 +1,80 @@
 <template>
+    <section class="w-full py-8 bg-gray-50">
 
-    <section class="relative w-full bg-gray-50 py-16 mt-10">
+        <div class="max-w-7xl mx-auto px-4">
 
-        <div class="grid grid-cols-2  lg:grid-cols-4 gap-10 text-center px-5 lg:px-20">
+            <div class="text-center mb-12">
 
-            <!-- Stat -->
-            <div>
-                <h1 class="text-black text-[35px] font-bold">
-                    500+
-                </h1>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+                    Trusted By Thousands
+                </h2>
 
-                <p class="text-black font-medium text-[15px] mt-2">
-                    Projects
+                <div class="w-20 h-1 bg-orange-500 mx-auto mt-4 rounded-full"></div>
+
+                <p class="text-gray-600 mt-4">
+                    Delivering excellence in real estate services across Bangalore.
                 </p>
+
             </div>
 
-            <!-- Stat -->
-            <div>
-                <h1 class="text-black text-[35px] font-bold">
-                    20K+
-                </h1>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
 
-                <p class="text-black font-medium text-[15px] mt-2">
-                    Happy Clients
-                </p>
-            </div>
+                <!-- Projects -->
+                <div
+                    class="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
 
-            <!-- Stat -->
-            <div>
-                <h1 class="text-black text-[35px] font-bold">
-                    15+
-                </h1>
+                    <h1 class="text-[#156082] text-4xl font-bold">
+                        500+
+                    </h1>
 
-                <p class="text-black font-medium text-[15px] mt-2">
-                    Years Experience
-                </p>
-            </div>
+                    <p class="text-gray-700 font-medium mt-3">
+                        Projects Listed
+                    </p>
 
-            <!-- Stat -->
-            <div>
-                <h1 class="text-black text-[35px] font-bold">
-                    50+
-                </h1>
+                </div>
 
-                <p class="text-black font-medium text-[15px] mt-2">
-                    Locations
-                </p>
+                <!-- Clients -->
+                <div
+                    class="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+
+                    <h1 class="text-[#156082] text-4xl font-bold">
+                        20K+
+                    </h1>
+
+                    <p class="text-gray-700 font-medium mt-3">
+                        Happy Clients
+                    </p>
+
+                </div>
+
+                <!-- Experience -->
+                <div
+                    class="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+
+                    <h1 class="text-[#156082] text-4xl font-bold">
+                        15+
+                    </h1>
+
+                    <p class="text-gray-700 font-medium mt-3">
+                        Years Experience
+                    </p>
+
+                </div>
+
+                <!-- Locations -->
+                <div
+                    class="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+
+                    <h1 class="text-[#156082] text-4xl font-bold">
+                        50+
+                    </h1>
+
+                    <p class="text-gray-700 font-medium mt-3">
+                        Locations
+                    </p>
+
+                </div>
+
             </div>
 
         </div>

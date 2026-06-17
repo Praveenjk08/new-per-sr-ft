@@ -277,53 +277,84 @@
 
   </section>
 
-  <!-- Statistics Section -->
-  <section class="relative w-full bg-[#156082] py-16 mt-10">
+  <section class="py-16 bg-gradient-to-r from-[#0B4F6C] to-[#156082]">
 
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-10 text-center px-5 lg:px-20">
+    <div class="max-w-7xl mx-auto px-4">
 
-      <!-- Stat -->
-      <div>
-        <h1 class="text-white text-[35px] font-bold">
-          500+
-        </h1>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
 
-        <p class="text-white text-[15px] mt-2">
-          Projects
-        </p>
-      </div>
+        <!-- Projects -->
+        <div
+          class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 text-center hover:scale-105 transition duration-300">
 
-      <!-- Stat -->
-      <div>
-        <h1 class="text-white text-[35px] font-bold">
-          20K+
-        </h1>
+          <span class="material-symbols-outlined text-[#f4b942] text-[40px] mb-3">
+            apartment
+          </span>
 
-        <p class="text-white text-[15px] mt-2">
-          Happy Clients
-        </p>
-      </div>
+          <h2 class="text-white text-4xl font-bold">
+            500+
+          </h2>
 
-      <!-- Stat -->
-      <div>
-        <h1 class="text-white text-[35px] font-bold">
-          15+
-        </h1>
+          <p class="text-gray-200 mt-2">
+            Projects
+          </p>
 
-        <p class="text-white text-[15px] mt-2">
-          Years Experience
-        </p>
-      </div>
+        </div>
 
-      <!-- Stat -->
-      <div>
-        <h1 class="text-white text-[35px] font-bold">
-          50+
-        </h1>
+        <!-- Clients -->
+        <div
+          class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 text-center hover:scale-105 transition duration-300">
 
-        <p class="text-white text-[15px] mt-2">
-          Locations
-        </p>
+          <span class="material-symbols-outlined text-[#f4b942] text-[40px] mb-3">
+            groups
+          </span>
+
+          <h2 class="text-white text-4xl font-bold">
+            20K+
+          </h2>
+
+          <p class="text-gray-200 mt-2">
+            Happy Clients
+          </p>
+
+        </div>
+
+        <!-- Experience -->
+        <div
+          class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 text-center hover:scale-105 transition duration-300">
+
+          <span class="material-symbols-outlined text-[#f4b942] text-[40px] mb-3">
+            workspace_premium
+          </span>
+
+          <h2 class="text-white text-4xl font-bold">
+            15+
+          </h2>
+
+          <p class="text-gray-200 mt-2">
+            Years Experience
+          </p>
+
+        </div>
+
+        <!-- Locations -->
+        <div
+          class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 text-center hover:scale-105 transition duration-300">
+
+          <span class="material-symbols-outlined text-[#f4b942] text-[40px] mb-3">
+            location_on
+          </span>
+
+          <h2 class="text-white text-4xl font-bold">
+            50+
+          </h2>
+
+          <p class="text-gray-200 mt-2">
+            Locations
+          </p>
+
+        </div>
+
       </div>
 
     </div>

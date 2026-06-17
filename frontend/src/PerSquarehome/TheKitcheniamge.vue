@@ -42,7 +42,7 @@
       <div class="w-full lg:w-[45%]">
 
         <img src="/files/kitchenimage.png" alt="Interior"
-          class="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[450px] object-cover rounded-3xl shadow-lg" />
+          class="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[380px] object-cover rounded-3xl shadow-lg" />
 
       </div>
 

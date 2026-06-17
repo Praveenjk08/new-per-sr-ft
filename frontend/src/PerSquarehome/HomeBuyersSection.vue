@@ -23,15 +23,15 @@
                     <div class="text-center py-5 px-4">
 
                         <h3 class="text-3xl font-semibold">
-                            {{ buyers[currentIndex].name }}
+                            <!-- {{ buyers[currentIndex].name }} -->
                         </h3>
 
                         <p class="text-gray-600 mt-2">
-                            {{ buyers[currentIndex].property }}
+                            <!-- {{ buyers[currentIndex].property }} -->
                         </p>
 
                         <p class="text-gray-500">
-                            {{ buyers[currentIndex].location }}
+                            <!-- {{ buyers[currentIndex].location }} -->
                         </p>
 
                     </div>
@@ -55,7 +55,7 @@
                     <div class="grid md:grid-cols-2 gap-4">
 
                         <div v-for="review in reviews" :key="review.name"
-                            class="bg-white rounded-3xl border border-[#d4b46a] p-5 relative">
+                            class="bg-white rounded-3xl border border-gray-200 p-6 relative shadow-md hover:shadow-xl transition-all duration-300">
 
                             <div class="flex justify-between">
 

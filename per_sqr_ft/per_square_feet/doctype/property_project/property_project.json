@@ -41,7 +41,9 @@
   "section_break_parl",
   "property_amenities",
   "section_break_hsvk",
-  "master_plan"
+  "master_plan",
+  "section_break_fxoc",
+  "property_specifications"
  ],
  "fields": [
   {
@@ -231,12 +233,22 @@
    "fieldname": "units",
    "fieldtype": "Data",
    "label": "Units"
+  },
+  {
+   "fieldname": "section_break_fxoc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "property_specifications",
+   "fieldtype": "Table",
+   "label": "Property Specifications",
+   "options": "Property Specification"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-16 16:53:44.154885",
+ "modified": "2026-06-16 17:32:10.374792",
  "modified_by": "Administrator",
  "module": "Per Square Feet",
  "name": "Property Project",

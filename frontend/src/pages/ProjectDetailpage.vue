@@ -49,7 +49,7 @@
         </div>
     </section>
 
-    <section class=" max-w-7xl mx-auto px-4 pt-12 ">
+    <section class=" max-w-7xl mx-auto px-4 pt-6 ">
 
         <!-- <div class="grid grid-cols-12 gap-8"> -->
         <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
@@ -57,8 +57,9 @@
             <!-- Left Side -->
             <div class="col-span-8">
 
+
                 <!-- Overview -->
-                <div class="bg-white px-8">
+                <div class="bg-white mt-4 md:mx-10">
 
                     <div class="mb-8 ">
 
@@ -70,7 +71,21 @@
 
                     </div>
 
-                    <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed" v-html="project.description">
+                    <!-- <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed" v-html="project.description">
+                    </div> -->
+                    <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+
+                        <div v-if="showFullDescription" v-html="project.description"></div>
+
+                        <div v-else v-html="project.description?.substring(0, 1000) + ''"></div>
+
+                    </div>
+
+                    <div v-if="project.description?.length > 1000" class=" pb-4 pt-0">
+                        <button @click="showFullDescription = !showFullDescription"
+                            class="text-orange-500 font-semibold hover:text-orange-600">
+                            {{ showFullDescription ? 'Show Less' : 'Read More' }}
+                        </button>
                     </div>
 
                 </div>
@@ -412,7 +427,7 @@
 
 
                 <!-- Specifications -->
-                <div class="mt-12 md:mx-10">
+                <!-- <div class="mt-12 md:mx-10">
 
                     <h2 class="text-3xl font-bold text-gray-900 mb-4">
                         Project Specifications
@@ -426,7 +441,7 @@
 
                             <tbody>
 
-                                <!-- Structure -->
+                                 Structure 
                                 <tr class="border-b border-gray-200">
 
                                     <td class="w-[180px] p-6 text-center border-r border-gray-200">
@@ -453,7 +468,7 @@
 
                                 </tr>
 
-                                <!-- Flooring -->
+                                 Flooring 
                                 <tr class="border-b border-gray-200">
 
                                     <td class="p-6 text-center border-r border-gray-200">
@@ -483,7 +498,7 @@
 
                                 </tr>
 
-                                <!-- Doors -->
+                                 Doors 
                                 <tr class="border-b border-gray-200">
 
                                     <td class="p-6 text-center border-r border-gray-200">
@@ -511,7 +526,7 @@
 
                                 </tr>
 
-                                <!-- Electrical -->
+                                Electrical 
                                 <tr>
 
                                     <td class="p-6 text-center border-r border-gray-200">
@@ -545,11 +560,52 @@
 
                     </div>
 
+                </div> -->
+
+                <div class="mt-12 md:mx-10">
+
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                        Project Specifications
+                    </h2>
+
+                    <div class="w-24 h-1 bg-orange-500 rounded-full mb-8"></div>
+
+                    <div class="overflow-hidden border border-gray-200 bg-white">
+
+                        <table class="w-full">
+
+                            <tbody>
+
+                                <tr v-for="(spec, index) in project.property_specifications" :key="index"
+                                    class="border-b border-gray-200">
+
+                                    <td class="p-6 text-center border-r border-gray-200">
+
+                                        <div
+                                            class="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-orange-100 text-5xl">
+                                            {{ spec.specification_icon }}
+                                        </div>
+
+                                        <h3 class="font-semibold text-xl mt-4">
+                                            {{ spec.specification_name }}
+                                        </h3>
+
+                                    </td>
+
+                                    <td class="p-6">
+                                        <div class="specification-content text-gray-700"
+                                            v-html="spec.specification_details"></div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
                 <!-- Animation Component -->
                 <!-- Project Highlights -->
-                <div class="mt-12 mx-10" v-if="project.property_amenities?.length">
+                <div class="mt-12 md:mx-10" v-if="project.property_amenities?.length">
 
                     <h2 class="text-3xl font-bold text-gray-900 mb-4">
                         Project Amenities
@@ -717,6 +773,7 @@ import FeatureImages from "../PerSquarehome/FeatureImages.vue";
 
 
 const showAllGallery = ref(false)
+const showFullDescription = ref(false)
 
 const displayedGalleryImages = computed(() => {
     return showAllGallery.value
@@ -813,3 +870,15 @@ const submitContactForm = async () => {
 
 }
 </script>
+
+<style>
+.specification-content ul {
+    list-style-type: disc !important;
+    padding-left: 24px !important;
+    margin: 0;
+}
+
+.specification-content li {
+    margin-bottom: 8px;
+}
+</style>
