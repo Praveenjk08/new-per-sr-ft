@@ -1,5 +1,5 @@
 <template>
-  <section class="py-16 px-4 sm:px-6 lg:px-10 bg-[#f8f8f8]">
+  <section class="py-16 px-4 sm:px-6 lg:px-10 bg-[#FAF0E6]">
 
     <!-- Heading -->
     <div class="text-center mb-14">
@@ -16,7 +16,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
 
       <!-- Card 1 -->
-      <div class="bg-white rounded-3xl shadow-lg p-4 text-center hover:-translate-y-2 transition duration-300">
+      <div class="bg-[#FAF0E6] rounded-3xl shadow-lg p-4 text-center hover:-translate-y-2 transition duration-300">
         <div class="text-[85px] text-[#4b4b9b] mb-8">
           🏠
         </div>
@@ -37,7 +37,7 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="bg-white rounded-3xl shadow-lg p-10 text-center hover:-translate-y-2 transition duration-300">
+      <div class="bg-[#FAF0E6] rounded-3xl shadow-lg p-10 text-center hover:-translate-y-2 transition duration-300">
         <div class="text-[85px] text-[#4b4b9b] mb-8">
           💰
         </div>
@@ -58,7 +58,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="bg-white rounded-3xl shadow-lg p-10 text-center hover:-translate-y-2 transition duration-300">
+      <div class="bg-[#FAF0E6] rounded-3xl shadow-lg p-10 text-center hover:-translate-y-2 transition duration-300">
         <div class="text-[85px] text-[#4b4b9b] mb-8">
           🛋️
         </div>
@@ -79,7 +79,7 @@
       </div>
 
       <!-- Card 4 -->
-      <div class="bg-white rounded-3xl shadow-lg p-10 text-center hover:-translate-y-2 transition duration-300">
+      <div class="bg-[#FAF0E6] rounded-3xl shadow-lg p-10 text-center hover:-translate-y-2 transition duration-300">
         <div class="text-[85px] text-[#4b4b9b] mb-8">
           ⚖️
         </div>
@@ -100,7 +100,7 @@
       </div>
 
       <!-- Card 5 -->
-      <div class="bg-white rounded-3xl shadow-lg p-10 text-center hover:-translate-y-2 transition duration-300">
+      <div class="bg-[#FAF0E6] rounded-3xl shadow-lg p-10 text-center hover:-translate-y-2 transition duration-300">
         <div class="text-[85px] text-[#4b4b9b] mb-8">
           🏢
         </div>
@@ -121,7 +121,7 @@
       </div>
 
       <!-- Card 6 -->
-      <div class="bg-white rounded-3xl shadow-lg p-10 text-center hover:-translate-y-2 transition duration-300">
+      <div class="bg-[#FAF0E6] rounded-3xl shadow-lg p-10 text-center hover:-translate-y-2 transition duration-300">
         <div class="text-[85px] text-[#4b4b9b] mb-8">
           🏗️
         </div>

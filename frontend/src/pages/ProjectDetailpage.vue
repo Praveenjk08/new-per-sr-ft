@@ -1,10 +1,28 @@
 <template>
+    <!-- Popup -->
+    <div v-if="showPopup && project.thumbnail_image"
+        class=" hidden sm:hiddenlg:hidden md:hidden fixed inset-0 bg-black/30 z-[9999] flex items-center justify-center p-8">
+
+        <div class="relative max-w-5xl w-full mt-20 mb-5">
+
+            <button @click="showPopup = false"
+                class="absolute -top-3 -right-3  w-10 h-10 rounded-full shadow-lg text-[18px] z-10">
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </button>
+
+            <img :src="project.thumbnail_image" class="w-full h-[480px] object-cover rounded-2xl shadow-2xl"
+                alt="Project Popup">
+        </div>
+
+    </div>
     <section class="max-w-7xl mx-auto md:px-16 pt-1">
         <div class="relative overflow-hidden ">
 
             <!-- Project Image -->
             <img :src="project.thumbnail_image" :alt="project.project_name"
-                class="w-full mx-auto h-[280px] md:h-[530px] object-cover" />
+                class="w-full mx-auto h-[280px] md:h-auto object-cover" />
 
             <!-- Overlay -->
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
@@ -293,11 +311,12 @@
 
                 </div>
 
-                <!-- Unit Configuration -->
-                <div class="mt-12 md:mx-10" v-if="project.property_unit && project.property_unit.length">
+
+                <!--  Unit Configuration & Pricing -->
+                <div class="mt-6 md:mx-10" v-if="project.property_unit?.length">
 
                     <h2 class="text-3xl font-bold text-gray-900 mb-2">
-                        Available Unit Options
+                        Unit Configuration & Pricing
                     </h2>
 
                     <div class="w-24 h-1 bg-orange-500 rounded-full mb-6"></div>
@@ -315,24 +334,36 @@
                                         Unit Type
                                     </th>
 
-                                    <th class="py-2 px-4 text-center">
+                                    <th class="py-2 px-4 border-r text-center">
                                         Size in Sq.Ft
+                                    </th>
+                                    <th class="py-2 px-4 text-center">
+                                        Approx. Starting Price
                                     </th>
 
                                 </tr>
                             </thead>
 
                             <tbody>
-                                <tr v-for="(unit, index) in project.property_unit" :key="index"
-                                    class="border-b border-orange-200 even:bg-orange-50">
+                                <!-- <tr v-for="(unit, index) in project.property_unit" :key="index"
+                                    v-if="unit.approx_all_inclusive_price"
+                                    class="border-b border-orange-200 even:bg-orange-50"> -->
+                                <tr v-for="(unit, index) in project.property_unit?.filter(u => u?.approx_all_inclusive_price)"
+                                    :key="index">
                                     <td class="py-2 px-4 text-center border-r border-orange-200">
                                         {{ unit.unit_type }}
                                     </td>
 
-                                    <td class="py-2 px-4 text-center">
+                                    <td class="py-2 px-4 border-r text-center">
                                         {{ unit.size_in_sqft }}
                                     </td>
+
+                                    <td class="py-2 px-4 text-center">
+                                        <!-- {{ unit.approx.all_inclusive_price }} -->
+                                        {{ unit.approx_all_inclusive_price }}
+                                    </td>
                                 </tr>
+
                             </tbody>
 
                         </table>
@@ -562,7 +593,7 @@
 
                 </div> -->
 
-                <div class="mt-12 md:mx-10">
+                <div class="mt-12 md:mx-10" v-if="project.property_specifications?.length">
 
                     <h2 class="text-3xl font-bold text-gray-900 mb-4">
                         Project Specifications
@@ -581,9 +612,17 @@
 
                                     <td class="p-6 text-center border-r border-gray-200">
 
-                                        <div
+                                        <!-- <div
                                             class="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-orange-100 text-5xl">
                                             {{ spec.specification_icon }}
+                                        </div> -->
+                                        <div
+                                            class="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-orange-100">
+
+                                            <span class="material-symbols-outlined text-orange-500 text-[40px]">
+                                                {{ spec.specification_icon }}
+                                            </span>
+
                                         </div>
 
                                         <h3 class="font-semibold text-xl mt-4">
@@ -630,12 +669,11 @@
                     </div>
 
                 </div>
-
-                <!--  Unit Configuration & Pricing -->
-                <div class="mt-6 md:mx-10" v-if="project.property_unit?.length">
+                <!-- Unit Configuration -->
+                <div class="mt-12 md:mx-10" v-if="project.property_unit && project.property_unit.length">
 
                     <h2 class="text-3xl font-bold text-gray-900 mb-2">
-                        Unit Configuration & Pricing
+                        Available Unit Options
                     </h2>
 
                     <div class="w-24 h-1 bg-orange-500 rounded-full mb-6"></div>
@@ -653,36 +691,24 @@
                                         Unit Type
                                     </th>
 
-                                    <th class="py-2 px-4 border-r text-center">
-                                        Size in Sq.Ft
-                                    </th>
                                     <th class="py-2 px-4 text-center">
-                                        Approx. Starting Price
+                                        Size in Sq.Ft
                                     </th>
 
                                 </tr>
                             </thead>
 
                             <tbody>
-                                <!-- <tr v-for="(unit, index) in project.property_unit" :key="index"
-                                    v-if="unit.approx_all_inclusive_price"
-                                    class="border-b border-orange-200 even:bg-orange-50"> -->
-                                <tr v-for="(unit, index) in project.property_unit?.filter(u => u?.approx_all_inclusive_price)"
-                                    :key="index">
+                                <tr v-for="(unit, index) in project.property_unit" :key="index"
+                                    class="border-b border-orange-200 even:bg-orange-50">
                                     <td class="py-2 px-4 text-center border-r border-orange-200">
                                         {{ unit.unit_type }}
                                     </td>
 
-                                    <td class="py-2 px-4 border-r text-center">
+                                    <td class="py-2 px-4 text-center">
                                         {{ unit.size_in_sqft }}
                                     </td>
-
-                                    <td class="py-2 px-4 text-center">
-                                        <!-- {{ unit.approx.all_inclusive_price }} -->
-                                        {{ unit.approx_all_inclusive_price }}
-                                    </td>
                                 </tr>
-
                             </tbody>
 
                         </table>
@@ -690,6 +716,8 @@
                     </div>
 
                 </div>
+
+
 
 
             </div>
@@ -774,6 +802,7 @@ import FeatureImages from "../PerSquarehome/FeatureImages.vue";
 
 const showAllGallery = ref(false)
 const showFullDescription = ref(false)
+const showPopup = ref(false)
 
 const displayedGalleryImages = computed(() => {
     return showAllGallery.value
@@ -808,6 +837,11 @@ onMounted(async () => {
         const data = await response.json();
 
         project.value = data.message;
+        if (project.value.thumbnail_image) {
+            setTimeout(() => {
+                showPopup.value = true
+            }, 1000)
+        }
 
         console.log(project.value);
         console.log(project.gallery_images[0])

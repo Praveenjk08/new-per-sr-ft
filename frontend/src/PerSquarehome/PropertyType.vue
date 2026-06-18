@@ -1,5 +1,5 @@
 <template>
-    <section class="pb-4 pt-0 px-4 md:px-10">
+    <section class="pb-4 pt-0 px-4 md:px-10 bg-[#FAF0E6]">
         <!-- Heading -->
         <div class="text-center mb-6">
             <h2 class="text-3xl md:text-5xl font-semibold">

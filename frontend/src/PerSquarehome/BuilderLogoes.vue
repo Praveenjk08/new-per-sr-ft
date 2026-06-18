@@ -1,7 +1,7 @@
 <template>
-    <section class="pb-16 pt-2">
+    <section class="pb-16 pt-2 bg-[#FAF0E6]">
 
-        <div class="bg-[#f7f7f7] sm:rounded-xl py-12 mx-4 lg:mx-4 rounded-3xl">
+        <div class="bg-[#FAF0E6] sm:rounded-xl py-12 mx-4 lg:mx-4 rounded-3xl">
 
             <!-- Heading -->
             <div

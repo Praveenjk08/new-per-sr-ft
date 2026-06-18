@@ -1,5 +1,5 @@
 <template>
-    <section class="max-w-7xl mx-auto py-8 px-4">
+    <section class="max-w-7xl mx-auto py-8 px-4 bg-[#FAF0E6]">
 
         <div class="text-center mb-10">
             <h2 class="text-4xl font-semibold">
@@ -10,12 +10,12 @@
             </p>
         </div>
 
-        <div class="bg-[#f5f5f5] rounded-3xl p-6">
+        <div class="bg-[#FAF0E6] rounded-3xl p-6">
 
             <div class="grid lg:grid-cols-[35%_65%] gap-6">
 
                 <!-- LEFT SIDE -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow">
+                <div class="bg-[#FAF0E6] rounded-2xl overflow-hidden shadow">
 
                     <img :src="buyers[currentIndex].image" :alt="buyers[currentIndex].name"
                         class="w-full h-[320px] object-cover" />
@@ -50,7 +50,7 @@
                 </div>
 
                 <!-- RIGHT SIDE -->
-                <div class="bg-white rounded-2xl p-6 shadow">
+                <div class="bg-[#FAF0E6] rounded-2xl p-6 shadow">
 
                     <div class="grid md:grid-cols-2 gap-4">
 
@@ -197,7 +197,7 @@ const prevSlide = () => {
 let interval;
 
 onMounted(() => {
-    interval = setInterval(nextSlide, 5000);
+    interval = setInterval(nextSlide, 2000);
 });
 
 onBeforeUnmount(() => {

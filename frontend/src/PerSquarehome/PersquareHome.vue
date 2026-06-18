@@ -1,14 +1,14 @@
 <template>
   <!-- Hero Section -->
   <!-- <section class="relative h-[500px] sm:h-[500px]   overflow-hidden  mx-4  sm:mx-6 mb-10 mt-4 "> -->
-  <section class="relative h-[550px] md:h-[500px] overflow-hidden mx-2 md:mx-6 mb-10 mt-4 rounded-lg">
+  <section class="relative h-[550px]  md:h-[500px] overflow-hidden mx-2 md:mx-6 mb-10 mt-4 rounded-lg ">
     <div class="absolute inset-0 bg-black/40 rounded-lg"></div>
     <!-- Background Image -->
     <!-- <img src="/files/real_estate_house_2.jpg" alt="Luxury Home"
       class="w-full h-full object-cover absolute inset-0  rounded-lg " /> -->
 
     <img src="/files/HomePageBannerImageNEw-One.jpeg" alt="Luxury Home"
-      class="w-full h-full object-cover absolute inset-0  rounded-lg " />
+      class="w-full h-full object-cover absolute inset-0   rounded-lg " />
 
 
     <!-- Content -->
@@ -28,14 +28,7 @@
         </div>
 
         <!-- Heading -->
-        <!-- <h1 class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-4xl font-bold leading-tight"> -->
-        <!-- <h1 class="text-white font-bold drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
-          Find Your Dream
-          <span class="text-[#f4b942]">
-            Property
-          </span>
-        </h1> -->
-        <!-- <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/25 to-black/50 rounded-lg"></div> -->
+
         <h1
           class="text-white text-3xl sm:text-4xl md:text-7xl font-extrabold leading-tight drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
           Find Your Dream
@@ -49,9 +42,7 @@
 
           <div class="w-24 h-[2px] bg-[#f4b942]"></div>
 
-          <!-- <span class="text-[#f4b942] text-2xl">
-            🏠
-          </span> -->
+
           <span class="material-symbols-outlined text-[#f4b942] text-[50px]">
             real_estate_agent
           </span>
@@ -62,10 +53,7 @@
 
 
         <!-- Sub Heading -->
-        <!-- <p class="text-white text-sm sm:text-xl md:text-2xl mt-6 max-w-3xl mx-auto leading-relaxed px-2">
-          Explore premium apartments, villas, and plots across India’s top
-          locations with Per Square Feet.
-        </p> -->
+
         <p
           class="text-white text-sm sm:text-base md:text-2xl mt-4 max-w-4xl mx-auto leading-relaxed px-4 drop-shadow-lg">
           Explore premium apartments, villas and plots across
@@ -78,18 +66,7 @@
 
 
 
-        <!-- <div class="flex flex-col md:flex-row justify-center items-center gap-2 mt-4">
 
-          Input
-          <input type="text" v-model="searchText" placeholder="Search by City, Property, Builder..."
-            class="w-full sm:w-[450px] md:w-[440px] h-[40px] py-2 px-4 rounded-xl outline-none bg-white text-gray-700 text-sm sm:text-lg" />
-
-          Button
-          <button @click="searchProperty"
-            class="w-full md:w-auto h-[40px] bg-[#156082] hover:bg-[#0f4f68] text-white px-6 sm:px-10 rounded-xl text-sm sm:text-lg font-semibold transition-all duration-300">
-            Search Property
-          </button>
-        </div> -->
         <div class="flex flex-col md:flex-row justify-center items-start gap-2 mt-4 px-4">
           <div class="relative w-full md:w-[440px]"> <input type="text" v-model="searchText1" @input="searchProjects"
               placeholder="Search by City, Property, Builder..."
@@ -108,8 +85,8 @@
               </div>
             </div>
           </div> <button @click="searchProperty"
-            class="w-full md:w-auto h-[40px] bg-[#156082] hover:bg-[#0f4f68] text-white px-6 sm:px-10 rounded-xl text-sm sm:text-lg font-semibold">
-            Search Property </button>
+            class="w-full md:w-auto h-[40px] bg-white/30 hover:bg-[#0f4f68] text-[#f4b942]font-bold px-6 sm:px-10 rounded-xl text-sm sm:text-lg font-semibold">
+            <span class="text-[16px] text-[#f4b942]">Search Property</span> </button>
         </div>
 
 
@@ -121,15 +98,24 @@
         <!-- Projects -->
         <div class="flex flex-col items-center">
 
-          <div class="w-16 h-16 rounded-full bg-[#0B4F6C] flex items-center justify-center">
+          <div class="w-16 h-16 rounded-full bg-white/30  flex items-center justify-center">
+
             <span class="material-symbols-outlined text-[#f4b942] text-[40px]">
               apartment
             </span>
+
           </div>
 
-          <div class="text-center">
-            <h3 class="text-4xl font-bold">500+</h3>
-            <p class="text-lg">Projects</p>
+          <div class="text-center ">
+
+            <h3 class="text-4xl font-bold">
+              500+
+            </h3>
+
+            <p class="text-lg">
+              Projects
+            </p>
+
           </div>
 
         </div>
@@ -137,7 +123,7 @@
         <!-- Builders -->
         <div class="flex flex-col items-center">
 
-          <div class="w-16 h-16 rounded-full bg-[#0B4F6C] flex items-center justify-center">
+          <div class="w-16 h-16 rounded-full bg-white/30  flex items-center justify-center">
             <span class="material-symbols-outlined text-[#f4b942] text-[40px]">
               groups
             </span>
@@ -153,7 +139,7 @@
         <!-- Happy Buyers -->
         <div class="flex flex-col items-center">
 
-          <div class="w-16 h-16 rounded-full bg-[#0B4F6C] flex items-center justify-center">
+          <div class="w-16 h-16 rounded-full bg-white/30  flex items-center justify-center">
             <span class="material-symbols-outlined text-[#f4b942] text-[40px]">
               person
             </span>

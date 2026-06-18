@@ -1,6 +1,6 @@
 <template>
   <!-- Main Section -->
-  <section class="w-full py-8 px-4 sm:px-6 lg:px-16 bg-white">
+  <section class="w-full py-8 px-4 sm:px-6 lg:px-16 bg-[#FAF0E6]">
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
       <!-- Left Image -->

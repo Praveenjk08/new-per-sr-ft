@@ -1,5 +1,5 @@
 <template>
-    <section class="w-full py-8 bg-gray-50">
+    <section class="w-full py-8 bg-[#FAF0E6]">
 
         <div class="max-w-7xl mx-auto px-4">
 
