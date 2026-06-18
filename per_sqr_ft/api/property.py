@@ -207,18 +207,19 @@ def get_projects_by_type(property_type):
         filters={
             "project_type": property_type
         },
-        fields=[
-            "name",
-            "project_name",
-            "status",
-            "full_location",
-            "floors",
-            "thumbnail_image",
-            "description",
-            "url",
-            "units",
-            "price"
-        ]
+        # fields=[
+        #     "name",
+        #     "project_name",
+        #     "status",
+        #     "full_location",
+        #     "floors",
+        #     "thumbnail_image",
+        #     "description",
+        #     "url",
+        #     "units",
+        #     "price"
+        # ]
+        fields=["*"]
     )
 
 
