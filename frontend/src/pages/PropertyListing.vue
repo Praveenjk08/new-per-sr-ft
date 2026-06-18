@@ -103,7 +103,7 @@
                         </div>
 
                         <!-- Content -->
-                        <div class="md:col-span-8 p-4 md:p-8 flex flex-col justify-between">
+                        <div class="md:col-span-8 p-4 md:p-8 flex-1 flex-col justify-between">
 
                             <!-- Top -->
                             <div>
@@ -125,7 +125,7 @@
                                 <div class="space-y-2 md:space-y-3 text-base md:text-lg">
 
                                     <p>
-                                        <span class="font-semibold">
+                                        <span class="font-semibold break-words">
                                             Location:
                                         </span>
                                         {{ project.full_location }}
@@ -153,14 +153,14 @@
                                 </div>
 
                                 <!-- Buttons -->
-                                <div class="flex flex-col sm:flex-row gap-3">
+                                <div class="flex flex-col shrink-0 sm:flex-row gap-3">
 
                                     <router-link :to="`/detailpage/${project.url}`"
-                                        class="px-6 py-3 border rounded-xl text-center text-base md:text-lg hover:bg-gray-100">
+                                        class="px-6 py-2 border rounded-xl text-center text-base md:w-[280px]text-lg hover:bg-gray-100">
                                         View Project
                                     </router-link>
 
-                                    <router-link :to="`/detailpage/${project.url}`" class="px-6 py-3 bg-yellow-500 text-white rounded-xl text-base md:text-lg
+                                    <router-link :to="`/detailpage/${project.url}`" class="px-6 py-2 text-center bg-yellow-500 text-white rounded-xl text-base md:w-[280px]text-lg
                                        ">
 
                                         Get Pricing

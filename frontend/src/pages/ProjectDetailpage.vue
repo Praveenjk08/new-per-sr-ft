@@ -22,7 +22,7 @@
 
             <!-- Project Image -->
             <img :src="project.thumbnail_image" :alt="project.project_name"
-                class="w-full mx-auto h-[280px] md:h-auto object-cover" />
+                class=" mx-auto h-[280px] md:h-auto w-full object-cover" />
 
             <!-- Overlay -->
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
