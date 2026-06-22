@@ -215,7 +215,10 @@ const getProjects = async () => {
             `/api/method/per_sqr_ft.api.property.get_projects_by_type?property_type=${propertyType}`
         );
 
+        console.log(response.data);
         const data = await response.json();
+
+
 
         projects.value = data.message || [];
 

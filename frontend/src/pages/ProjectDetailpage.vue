@@ -458,7 +458,7 @@
 
 
                 <!-- Specifications -->
-                <!-- <div class="mt-12 md:mx-10">
+                <div class="mt-12 md:mx-10">
 
                     <h2 class="text-3xl font-bold text-gray-900 mb-4">
                         Project Specifications
@@ -472,7 +472,7 @@
 
                             <tbody>
 
-                                 Structure 
+                                Structure
                                 <tr class="border-b border-gray-200">
 
                                     <td class="w-[180px] p-6 text-center border-r border-gray-200">
@@ -499,7 +499,7 @@
 
                                 </tr>
 
-                                 Flooring 
+                                Flooring
                                 <tr class="border-b border-gray-200">
 
                                     <td class="p-6 text-center border-r border-gray-200">
@@ -529,7 +529,7 @@
 
                                 </tr>
 
-                                 Doors 
+                                Doors
                                 <tr class="border-b border-gray-200">
 
                                     <td class="p-6 text-center border-r border-gray-200">
@@ -557,7 +557,7 @@
 
                                 </tr>
 
-                                Electrical 
+                                Electrical
                                 <tr>
 
                                     <td class="p-6 text-center border-r border-gray-200">
@@ -591,7 +591,7 @@
 
                     </div>
 
-                </div> -->
+                </div>
 
                 <div class="mt-12 md:mx-10" v-if="project.property_specifications?.length">
 

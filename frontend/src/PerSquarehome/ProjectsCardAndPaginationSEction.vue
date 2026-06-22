@@ -30,7 +30,7 @@
                  -->
             <div v-for="project in paginatedProjects" :key="project.name"
                 @click="$router.push(`/detailpage/${project.url}`)"
-                class="bg-white rounded-xl shadow-lg overflow-hidden h-[430px] flex flex-col">
+                class="bg-white rounded-xl shadow-lg overflow-hidden h-[430px] flex flex-col    ">
                 <div class="p-2 ">
                     <!-- <img :src="project.thumbnail_image" :alt="project.project_name"
                         class="w-full  rounded-lg h-64 object-cover" /> -->
@@ -47,29 +47,31 @@
                         </span>
                     </div>
 
-                    <h3 class="text-2xl font-bold mb-2">
+                    <h3 class="text-[18px] font-bold mb-2 pl-2">
                         {{ project.project_name }}
                     </h3>
 
-                    <p class="text-gray-500 my-4">
-                        {{ project.full_location }}
-                    </p>
 
-                    <div class="flex gap-4 text-[16px] text-gray-600 my-4">
-                        <span v-if="project.bhk">
-                            🏠 <span class="font-extrabold">{{ project.bhk }}</span>
+                    <div class="flex items-center gap-1 bg-blue-50 text-blue-600 px-3 py-1 rounded-full w-fit">
+                        <span class="material-symbols-outlined text-[18px]">
+                            home
+                        </span>
+                        <span class="text-[14px] font-medium">
+                            {{ project.units }}
+                        </span>
+                    </div>
+                    <div class="flex items-start gap-2 mt-3  p-2  h-[50px] mb-4">
+                        <span class="material-symbols-outlined text-orange-500 text-[18px] shrink-0">
+                            location_on
                         </span>
 
-                        <!-- <span v-if="project.bath">
-                            🚿 {{ project.bath }}
-                        </span>
-
-                        <span v-if="project.floors">
-                            🏢 {{ project.floors }}
-                        </span> -->
+                        <p class="text-gray-700 text-[14px] line-clamp-2">
+                            {{ project.full_location }}
+                        </p>
                     </div>
 
-                    <router-link :to="`/detailpage/${project.url}`" class="text-orange-600 font-medium ">
+                    <router-link :to="`/detailpage/${project.url}`"
+                        class="text-orange-600 font-medium text-[16px]  pl-2">
                         View Details →
                     </router-link>
 
