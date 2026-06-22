@@ -113,7 +113,7 @@ const projects = ref([])
 const activeType = ref("Apartments")
 const router = useRouter()
 const currentPage = ref(1)
-const perPage = 6
+const perPage = 8
 
 const propertyTypes = [
     "Apartments",

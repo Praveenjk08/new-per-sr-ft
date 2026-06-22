@@ -174,7 +174,7 @@
           </div>
 
           <!-- Email -->
-          <div class="flex items-center gap-3 break-all">
+          <div class="flex items-center gap-4 ">
 
             <i class="ri-mail-line text-yellow-400 text-xl"></i>
 
