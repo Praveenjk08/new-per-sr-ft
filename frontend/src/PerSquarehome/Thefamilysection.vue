@@ -49,7 +49,7 @@
         <!-- Button -->
         <router-link to="/about-us" custom v-slot="{ navigate }">
           <button @click="navigate"
-            class="mt-8 flex items-center gap-2 bg-[#1A1A1A] hover:bg-black transition-all duration-300 text-white px-6 py-3 rounded-xl text-sm font-medium shadow-md">
+            class="mt-8 flex items-center gap-2 bg-[#1A1A1A] hover:bg-black transition-all duration-300 text-white px-3 py-2 rounded-xl text-sm font-medium shadow-md">
             About Us
 
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"

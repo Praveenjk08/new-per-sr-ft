@@ -9,7 +9,7 @@
 
             <div class="relative z-10 max-w-5xl mx-auto text-center px-4">
 
-                <h2 class="text-4xl md:text-5xl font-bold text-white">
+                <h2 class="text-4xl md:text-4xl font-bold text-white">
                     Ready To Find Your
                     <span class="text-orange-400">
                         Dream Home?
@@ -24,12 +24,12 @@
                 <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
 
                     <router-link to="/projects"
-                        class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition">
+                        class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-xl font-semibold transition">
                         Explore Projects
                     </router-link>
 
                     <router-link to="/contact-us"
-                        class="bg-white text-gray-900 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition">
+                        class="bg-white text-gray-900 px-4 py-2 rounded-xl font-semibold hover:bg-gray-100 transition">
                         Contact Us
                     </router-link>
 

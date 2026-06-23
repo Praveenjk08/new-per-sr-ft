@@ -2,7 +2,7 @@
     <section class="py-5 bg-[#FAF0E6]">
 
         <!-- Heading -->
-        <div class="text-center mb-10">
+        <div class="text-center mb-6">
             <h2 class="text-4xl font-bold">
                 Explore Premium Properties
             </h2>
@@ -15,7 +15,7 @@
         <!-- Tabs -->
         <div class="flex flex-wrap justify-center gap-6 mb-6">
             <button v-for="type in propertyTypes" :key="type" @click="changeType(type)"
-                class="px-5 py-2 rounded-full font-medium transition" :class="activeType === type
+                class="px-3 py-1 text-[14px] rounded-full font-medium transition" :class="activeType === type
                     ? 'bg-orange-600 text-white'
                     : 'bg-gray-100 hover:bg-gray-200'
                     ">

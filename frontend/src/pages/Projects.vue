@@ -87,9 +87,9 @@ const filteredProjects = computed(() => {
 
       <!-- Heading -->
 
-      <div class="text-center mb-10">
+      <div class="text-center mb-5">
 
-        <h1 class="text-4xl md:text-5xl font-bold text-[#0B1560]">
+        <h1 class="text-4xl md:text-4xl font-bold text-[#0B1560]">
           Find Your Dream Property rams
         </h1>
 
@@ -101,10 +101,10 @@ const filteredProjects = computed(() => {
 
       <!-- Search Bar -->
 
-      <div class="flex justify-center mb-12">
+      <div class="flex justify-center mb-6">
 
         <input v-model="searchQuery" type="text" placeholder="Search project, location or status..."
-          class="w-full md:w-[700px] bg-white border border-gray-200 rounded-full px-6 py-4 outline-none focus:border-[#0B1560] shadow-sm" />
+          class="w-full md:w-[500px] bg-white border border-gray-200 rounded-full px-3 py-2 outline-none focus:border-[#0B1560] shadow-sm" />
 
       </div>
       <!-- Projects -->

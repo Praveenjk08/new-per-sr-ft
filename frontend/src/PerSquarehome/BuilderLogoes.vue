@@ -1,11 +1,11 @@
 <template>
-    <section class="pb-16 pt-2 bg-[#FAF0E6]">
+    <section class="pb-8 pt-2 bg-[#FAF0E6]">
 
-        <div class="bg-[#FAF0E6] sm:rounded-xl py-12 mx-4 lg:mx-4 rounded-3xl">
+        <div class="bg-[#FAF0E6] sm:rounded-xl py-6 mx-4 lg:mx-4 rounded-3xl">
 
             <!-- Heading -->
             <div
-                class="w-[90%] md:w-full max-w-4xl mx-auto backdrop-blur-3xl bg-gray-200 rounded-2xl shadow-lg p-5 md:p-8 text-center mb-12">
+                class="w-[90%] md:w-full max-w-4xl mx-auto backdrop-blur-3xl bg-gray-200 rounded-2xl shadow-lg p-5 md:p-8 text-center mb-6">
 
                 <h2 class="text-2xl md:text-5xl font-bold leading-tight">
                     Builders Behind

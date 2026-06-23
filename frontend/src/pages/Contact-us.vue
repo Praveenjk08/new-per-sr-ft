@@ -1,240 +1,207 @@
 <template>
 
   <!-- <section class="relative h-[280px] sm:h-[450px] overflow-hidden"> -->
-  <section class="relative  h-[350px] md:h-[500px] mt-0">
-    <div class="w-full  ">
-      <img src="/files/contactbanner.png" alt="Contact Us" class="w-full h-[250px] sm:h-[450px] object-cover" />
-    </div>
+  <!-- Banner Section -->
 
-
-    <div class="absolute inset-0 bg-black/55"></div>
-
-    <div class="absolute inset-0 flex items-center justify-center">
-
-      <div class="text-center px-4">
-
-        <!-- <h1
-        class="text-white text-5xl md:text-7xl font-bold"
-      >
-        Let's Connect
-      </h1> -->
-
-        <!-- <p
-        class="text-white/90 text-lg md:text-xl mt-6 max-w-3xl mx-auto"
-      >
-        Whether you're buying, selling, investing,
-        or seeking property consultation,
-        our experts are here to help.
-      </p> -->
-
-      </div>
-
-    </div>
-
-
+  <section class="mb-0 md:mb-4">
+    <img src="/files/contactbanner (2).png" alt="Contact Us"
+      class="w-full h-[250px] object-contain md:h-[450px] md:object-cover" />
   </section>
 
 
-  <!-- Contact Section -->
-  <section class="pb-14 mt-0 px-4 sm:px-6 lg:px-10">
 
 
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14">
 
-      <!-- Left Side Contact Card -->
-      <div class="bg-white rounded-lg shadow-xl p-4 sm:p-8 lg:p-10 h-auto">
 
-        <!-- Heading -->
-        <p class="text-[#4b4b9b]text-2xl sm:text-3xl  font-bold text-base mb-3 tracking-wide">
-          Get In Touch
-        </p>
+  <section class="mb-14 ">
+    <div class="pt-12 max-w-6xl mx-auto px-2 sm:px-6 lg:px-8">
 
-        <h2 class=" sm:text-lg font-semibold text-[#2f2f68] leading-tight mb-6">
-          Let’s Discuss Your Dream Project
-        </h2>
+      <!-- Main Section -->
+      <div class="grid lg:grid-cols-2 gap-10">
 
-        <p class="text-gray-600 text-sm sm:text-base leading-8 mb-10">
-          Have questions about real estate, construction, interiors,
-          or property management? Our expert team is here to help
-          you with trusted guidance and professional support.
-        </p>
-
-        <!-- Contact Items -->
-        <div class="space-y-5">
+        <!-- Left Image -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
           <!-- Address -->
           <div
-            class="flex items-start gap-4 border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition duration-300">
-
-            <div
-              class="min-w-[50px] h-[50px] rounded-xl bg-[#0B1560] text-white flex items-center justify-center text-xl">
-              <span class="material-symbols-outlined text-3xl">
+            class="bg-[#FFF8E7] rounded-lg p-2 shadow-md hover:shadow-xl transition flex flex-col items-center justify-center text-center">
+            <div class="w-16 h-16 mx-auto rounded-xl bg-orange-50 flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-orange-500 text-3xl">
                 location_on
               </span>
             </div>
 
-            <div>
-              <h3 class="text-lg sm:text-xl font-semibold text-[#2f2f68] mb-1">
-                Office Address
-              </h3>
+            <h3 class="text-xl font-semibold text-[#2f2f68] mb-2">
+              Address
+            </h3>
 
-              <p class="text-gray-600 leading-7 text-sm sm:text-base">
-                Per Square Feet,<br />
-                Bangalore, Karnataka, India
-              </p>
-            </div>
-
+            <p class="text-gray-500">
+              Bangalore, Karnataka, India
+            </p>
           </div>
 
-          <!-- Phone -->
+          <!-- Contact -->
           <div
-            class="flex items-start gap-4 border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition duration-300">
-
-            <div
-              class="min-w-[50px] h-[50px] rounded-xl bg-[#0B1560] text-white flex items-center justify-center text-xl">
-              <span class="material-symbols-outlined text-3xl">
+            class="bg-white rounded-lg p-2 shadow-md hover:shadow-xl transition flex flex-col items-center justify-center text-center">
+            <div class="w-16 h-16 mx-auto rounded-xl bg-cyan-50 flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-cyan-600 text-3xl">
                 call
               </span>
             </div>
 
-            <div>
-              <h3 class="text-lg sm:text-xl font-semibold text-[#2f2f68] mb-1">
-                Call Us
-              </h3>
+            <h3 class="text-xl font-semibold text-[#2f2f68] mb-2">
+              Contact
+            </h3>
 
-              <p class="text-gray-600 leading-7 text-sm sm:text-base">
-                +91 9686872201
-              </p>
-              <p class="text-gray-600 leading-7 text-sm sm:text-base">
-                +91 8884436688
-              </p>
-            </div>
-
+            <p class="text-gray-500">
+              +91 9686872201
+            </p>
           </div>
 
           <!-- Email -->
           <div
-            class="flex items-start gap-4 border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition duration-300">
-
-            <div
-              class="min-w-[50px] h-[50px] rounded-xl bg-[#0B1560] text-white flex items-center justify-center text-xl">
-              <span class="material-symbols-outlined text-3xl">
+            class="bg-white rounded-lg p-2 shadow-md hover:shadow-xl transition flex flex-col items-center justify-center text-center">
+            <div class="w-16 h-16 mx-auto rounded-xl bg-green-50 flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-green-600 text-3xl">
                 mail
               </span>
             </div>
 
-            <div>
-              <h3 class="text-lg sm:text-xl font-semibold text-[#2f2f68] mb-1">
-                Email Address
-              </h3>
+            <h3 class="text-xl font-semibold text-[#2f2f68] mb-2">
+              Email
+            </h3>
 
-              <p class="text-gray-600 leading-7 text-sm sm:text-base">
-                kenchagowda.gj@gmail.com
-              </p>
-            </div>
-
+            <p class="text-gray-500 break-all">
+              info@persquarefeet.com
+            </p>
           </div>
 
-          <!-- Timing -->
+          <!-- Map -->
           <div
-            class="flex items-start gap-4 border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition duration-300">
+            class="bg-[#FFF8E7] rounded-lg p-2 shadow-md hover:shadow-xl transition flex flex-col items-center justify-center text-center">
 
-            <div
-              class="min-w-[50px] h-[50px] rounded-xl bg-[#0B1560] text-white flex items-center justify-center text-xl">
-              <span class="material-symbols-outlined text-3xl">
-                schedule
+            <div class="w-16 h-16 rounded-xl bg-pink-50 flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-pink-600 text-3xl">
+                map
               </span>
             </div>
 
-            <div>
-              <h3 class="text-lg sm:text-xl font-semibold text-[#2f2f68] mb-1">
-                Working Hours
-              </h3>
+            <h3 class="text-xl font-semibold text-[#2f2f68] mb-2">
+              Google Map
+            </h3>
 
-              <p class="text-gray-600 leading-7 text-sm sm:text-base">
-                Monday - Saturday <br />
-                9:00 AM - 6:00 PM
-              </p>
-            </div>
+            <a href="#" class="text-indigo-600 hover:text-indigo-700">
+              View Location
+            </a>
 
           </div>
+
+        </div>
+
+        <!-- Right Form -->
+        <!-- Right Side Form -->
+        <div class="bg-[#FFF8E7] rounded-[30px] shadow-xl p-6 sm:p-6">
+
+          <h2 class="text-4xl font-bold text-[#2f2f68] mb-2">
+            Send us a message
+          </h2>
+
+          <p class="text-gray-500 text-lg leading-6 mb-6">
+            Your satisfaction is our top priority, and we are committed to
+            providing exceptional service and support.
+          </p>
+
+          <form @submit.prevent="submitForm" class="space-y-3">
+
+            <!-- Name -->
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">
+                Your Name <span class="text-red-500">*</span>
+              </label>
+
+              <input v-model="form.name" type="text" placeholder="Enter your name"
+                class="w-full h-10 px-5 border border-gray-300 rounded-xl outline-none focus:border-[#0B1560]"
+                required />
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">
+                Email Address <span class="text-red-500">*</span>
+              </label>
+
+              <input v-model="form.email" type="email" placeholder="Enter your email"
+                class="w-full h-10 px-5 border border-gray-300 rounded-xl outline-none focus:border-[#0B1560]"
+                required />
+            </div>
+
+            <!-- Phone -->
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">
+                Phone Number <span class="text-red-500">*</span>
+              </label>
+
+              <input v-model="form.phone" type="text" placeholder="Enter your phone number"
+                class="w-full h-10 px-5 border border-gray-300 rounded-xl outline-none focus:border-[#0B1560]"
+                required />
+            </div>
+
+            <!-- Service -->
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">
+                Select Service
+              </label>
+
+              <select class="w-full h-10 px-5 border border-gray-300 rounded-xl outline-none focus:border-[#0B1560]">
+                <option>Select Service</option>
+                <option>Real Estate Consultation</option>
+                <option>Housing Loan Services</option>
+                <option>Interior Design Services</option>
+                <option>Legal Consultation</option>
+                <option>Property Management</option>
+                <option>Construction Services</option>
+              </select>
+            </div>
+
+            <!-- Message -->
+            <!-- <div>
+              <label class="block text-gray-700 font-medium mb-2">
+                Message
+              </label>
+
+              <textarea rows="5" placeholder="Write your message..."
+                class="w-full border border-gray-300 rounded-xl px-5 py-4 outline-none focus:border-[#0B1560]"></textarea>
+            </div> -->
+
+            <!-- Submit -->
+            <button type="submit"
+              class="w-full h-10 bg-[#0B1560] hover:bg-[#16248f] text-white rounded-xl font-semibold transition">
+              Send Message
+            </button>
+
+          </form>
+
+          <!-- Success -->
+          <p v-if="successMessage" class="mt-4 text-green-600 text-center font-medium">
+            Your message has been submitted successfully.
+          </p>
+
+          <!-- Error -->
+          <p v-if="errorMessage" class="mt-4 text-red-600 text-center font-medium">
+            {{ errorText }}
+          </p>
 
         </div>
 
       </div>
 
 
-      <!-- Right Side Form -->
-      <div class="bg-white rounded-lg shadow-2xl border border-gray-100 p-4 sm:px-10 pt-10">
-
-        <h2 class="text-3xl font-bold text-[#2f2f68] mb-4">
-          Send Message
-        </h2>
-
-        <form class="space-y-6" @submit.prevent="submitForm">
-
-          <!-- Name -->
-          <div>
-            <input v-model="form.name" type="text" placeholder="Your Name"
-              class="w-full border border-gray-300 rounded-2xl px-5 py-4 outline-none focus:border-[#0B1560]"
-              required />
-          </div>
-
-          <!-- Email -->
-          <div>
-            <input v-model="form.email" type="email" placeholder="Your Email"
-              class="w-full border border-gray-300 rounded-2xl px-5 py-4 outline-none focus:border-[#0B1560]"
-              required />
-          </div>
-
-          <!-- Phone -->
-          <div>
-            <input v-model="form.phone" type="text" placeholder="Phone Number"
-              class="w-full border border-gray-300 rounded-2xl px-5 py-4 outline-none focus:border-[#0B1560]"
-              required />
-          </div>
-
-          <!-- Service -->
-          <div>
-            <select class="w-full border border-gray-300 rounded-2xl px-5 py-4 outline-none focus:border-[#0B1560]">
-              <option value="">Select Service</option>
-              <option>Real Estate Consultation</option>
-              <option>Housing Loan Services</option>
-              <option>Interior Design Services</option>
-              <option>Legal Consultation</option>
-              <option>Property Management</option>
-              <option>Construction Services</option>
-            </select>
-          </div>
-
-          <!-- Message v-model="form.service"   v-model="form.message"-->
-          <div>
-            <textarea rows="5" placeholder="Write Your Message"
-              class="w-full border border-gray-300 rounded-2xl px-5 py-4 outline-none focus:border-[#0B1560]"></textarea>
-          </div>
-
-          <!-- Button -->
-          <button type="submit"
-            class="w-full bg-[#0B1560] hover:bg-[#16248f] text-white py-4 rounded-2xl text-lg font-semibold transition duration-300">
-            Send Message
-          </button>
-
-        </form>
 
 
 
-        <p v-if="successMessage" class="text-green-600 text-center font-medium mt-4">
-          Your message has been submitted successfully.
-        </p>
 
-        <p v-if="errorMessage" class="text-red-600 text-center font-medium mt-4">
-          This email is already registered.
-        </p>
-
-      </div>
 
     </div>
-
   </section>
 
 

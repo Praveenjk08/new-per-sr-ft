@@ -19,12 +19,12 @@
 
         <!-- Hero Section -->
         <section class="py-4 text-center">
-            <h1 class="text-4xl font-bold text-gray-900">
+            <h1 class="text-[18px] font-bold text-gray-900">
                 Gallery
             </h1>
             <div class="h-1 w-24 bg-orange-500 rounded-full mx-auto mt-3"></div>
 
-            <p class="mt-3 text-gray-600">
+            <p class="mt-3 text-gray-600 ">
                 Discover the beauty and elegance of our featured projects.
             </p>
         </section>
@@ -34,7 +34,7 @@
             <div class="flex flex-wrap gap-3 justify-center">
 
                 <button v-for="category in categories" :key="category" @click="selectedCategory = category"
-                    class="px-5 py-2 rounded-full border transition" :class="selectedCategory === category
+                    class="px-4 py-1 rounded-full border text-[14px] transition" :class="selectedCategory === category
                         ? 'bg-orange-500 text-white border-orange-500'
                         : 'bg-white text-gray-700 border-gray-200 hover:bg-orange-50'
                         ">

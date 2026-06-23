@@ -98,9 +98,9 @@ const filteredProjects = computed(() => {
 
       <!-- Heading -->
 
-      <div class="text-center mb-10">
+      <div class="text-center mb-5">
 
-        <h1 class="text-4xl md:text-5xl font-bold text-[#0B1560]">
+        <h1 class="text-4xl md:text-4xl font-bold text-[#0B1560]">
 
           {{ route.params.status }} Projects
 
@@ -114,10 +114,10 @@ const filteredProjects = computed(() => {
 
       <!-- Search Bar -->
 
-      <div class="flex justify-center mb-14">
+      <div class="flex justify-center mb-7">
 
         <input v-model="searchQuery" type="text" placeholder="Search projects, location..."
-          class="w-full md:w-[650px] bg-white border border-gray-200 rounded-full px-6 py-4 outline-none focus:border-[#0B1560] shadow-sm" />
+          class="w-full md:w-[500px] bg-white border border-gray-200 rounded-full px-3 py-2 outline-none focus:border-[#0B1560] shadow-sm" />
 
       </div>
 
@@ -134,7 +134,7 @@ const filteredProjects = computed(() => {
 
           <div v-for="(project, index) in filteredProjects" :key="index"
             @click="$router.push(`/detailpage/${project.url}`)"
-            class="bg-white rounded-3xl shadow-sm border overflow-hidden mb-8">
+            class="bg-white rounded-3xl shadow-sm border overflow-hidden mb-4">
 
             <div class="grid md:grid-cols-12">
 

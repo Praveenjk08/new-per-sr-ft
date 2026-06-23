@@ -56,7 +56,7 @@
 
         <!-- Button -->
         <button @click="goToProjects"
-          class="mt-2 bg-[#156082] hover:bg-[#0B1560] text-white px-8 py-3 rounded-2xl text-lg font-medium transition-all duration-300">
+          class="mt-2 bg-[#156082] hover:bg-[#0B1560] text-white px-4 py-2 rounded-2xl text-lg font-medium transition-all duration-300">
           Explore More
         </button>
 
@@ -432,7 +432,7 @@
 
     <div class="text-center px-5">
 
-      <h1 class="text-white text-[25px] sm:text-[25px] font-bold">
+      <h1 class="text-white text-4xl sm:text-4xl font-bold">
         Ready To Find Your Dream Property?
       </h1>
 
@@ -449,7 +449,7 @@
     </button> -->
 
       <button @click="goToContact"
-        class="mt-8 bg-[#d49a37c9] hover:bg-[#d49a37] text-white px-8 py-4 rounded-2xl text-[16px] font-semibold transition duration-300">
+        class="mt-8 bg-[#d49a37c9] hover:bg-[#d49a37] text-white px-4 py-2 rounded-2xl text-[16px] font-semibold transition duration-300">
         Contact Us
       </button>
 

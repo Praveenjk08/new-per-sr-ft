@@ -31,7 +31,7 @@
 
         <!-- Button -->
 
-        <button class="mt-6 bg-black text-white px-6 py-3 rounded-2xl text-sm sm:text-base">
+        <button class="mt-6 bg-black text-white px-3 py-2 rounded-xl text-sm sm:text-base">
           <router-link to="/projects">Discover →</router-link>
         </button>
 

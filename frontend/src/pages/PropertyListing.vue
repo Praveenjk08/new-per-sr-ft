@@ -17,7 +17,7 @@
                     Premium Properties in Bangalore
                 </span>
 
-                <h1 class="text-3xl md:text-6xl font-bold text-white leading-tight">
+                <h1 class="text-3xl md:text-[18px] font-bold text-white leading-tight">
 
                     Explore the Best
 
