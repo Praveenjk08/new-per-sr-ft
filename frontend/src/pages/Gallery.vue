@@ -66,9 +66,31 @@
         </div>
 
         <!-- Lightbox -->
-        <div v-if="selectedImage" class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6"
+        <!-- <div v-if="selectedImage" class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6"
             @click="selectedImage = null">
             <img :src="selectedImage.src" class="max-w-full max-h-[90vh] rounded-xl" />
+        </div> -->
+        <!-- <div v-if="selectedImage" class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6">
+
+            <button @click="selectedImage = null" class="absolute top-3 right-6 text-white text-4xl">
+                ×
+            </button>
+
+            <img :src="selectedImage.src" class="max-w-full max-h-[90vh] rounded-xl" />
+        </div> -->
+        <div v-if="selectedImage" class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6">
+
+            <div class="relative">
+
+                <button @click="selectedImage = null"
+                    class="absolute -top-3 -right-3  text-black w-14 h-14  rounded-full shadow-lg flex items-center justify-center text-2xl hover:bg-gray-200">
+                    <span class="text-[35px]"> ×</span>
+                </button>
+
+                <img :src="selectedImage.src" class="max-w-full max-h-[90vh] rounded-xl" />
+
+            </div>
+
         </div>
 
     </div>

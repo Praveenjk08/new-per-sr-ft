@@ -95,7 +95,8 @@
               Google Map
             </h3>
 
-            <a href="#" class="text-indigo-600 hover:text-indigo-700">
+            <a href="https://maps.app.goo.gl/Gxjg83C6gciWH16y6" target="_blank"
+              class="text-indigo-600 hover:text-indigo-700">
               View Location
             </a>
 
