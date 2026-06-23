@@ -196,7 +196,7 @@
           <div class="flex">
 
             <input type="email" placeholder="Enter Your Email"
-              class="w-full px-4 py-3 rounded-l-full bg-[#13206f] border border-gray-600 outline-none text-sm placeholder:text-gray-400" />
+              class="w-full px-4 py-2 rounded-l-full bg-[#13206f] border border-gray-600 outline-none text-sm placeholder:text-gray-400" />
 
             <button class="bg-yellow-400 hover:bg-yellow-500 text-black px-6 rounded-r-full font-medium duration-300">
               Send

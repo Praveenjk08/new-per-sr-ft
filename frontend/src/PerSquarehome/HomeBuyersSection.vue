@@ -1,5 +1,6 @@
 <template>
-    <section class="max-w-7xl mx-auto py-8 px-4 bg-[#FAF0E6]">
+    <!-- <section class="max-w-7xl mx-auto py-8 px-4 bg-[#FAF0E6]"> -->
+    <section class="w-full py-8 px-4 bg-[#FAF0E6]">
 
         <div class="text-center mb-10">
             <h2 class="text-4xl font-semibold">

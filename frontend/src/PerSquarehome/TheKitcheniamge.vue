@@ -2,8 +2,9 @@
   <!-- Main Section -->
   <section class="w-full px-5 lg:px-20 py-6 lg:py-10 bg-[#FAF0E6]">
 
-    <!-- Main Flex -->
-    <div class="flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-16">
+    <div class="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-16">
+
+      <!-- content -->
 
       <!-- Left Content -->
       <div class="w-full lg:w-[50%]">

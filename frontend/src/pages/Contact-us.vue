@@ -4,8 +4,9 @@
   <!-- Banner Section -->
 
   <section class="mb-0 md:mb-4">
-    <img src="/files/contactbanner (2).png" alt="Contact Us"
-      class="w-full h-[250px] object-contain md:h-[450px] md:object-cover" />
+    <img src="/files/newContactBanne.jpeg" alt="Contact Us"
+      class="w-full h-auto md:h-[450px] object-contain md:object-cover" />
+
   </section>
 
 
@@ -20,11 +21,12 @@
       <div class="grid lg:grid-cols-2 gap-10">
 
         <!-- Left Image -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div
+          class="bg-gradient-to-r from-[#FFF3E6] via-[#F8E7C1] to-[#FFF8F0] p-6 rounded-[30px] shadow-[50px]   grid grid-cols-1 sm:grid-cols-2 gap-4">
 
           <!-- Address -->
           <div
-            class="bg-[#FFF8E7] rounded-lg p-2 shadow-md hover:shadow-xl transition flex flex-col items-center justify-center text-center">
+            class="bg-white rounded-lg p-2 shadow-md hover:shadow-xl transition flex flex-col items-center justify-center text-center">
             <div class="w-16 h-16 mx-auto rounded-xl bg-orange-50 flex items-center justify-center mb-5">
               <span class="material-symbols-outlined text-orange-500 text-3xl">
                 location_on
@@ -35,7 +37,7 @@
               Address
             </h3>
 
-            <p class="text-gray-500">
+            <p class="text-black font-semibold">
               Bangalore, Karnataka, India
             </p>
           </div>
@@ -53,8 +55,11 @@
               Contact
             </h3>
 
-            <p class="text-gray-500">
+            <p class="text-black font-semibold">
               +91 9686872201
+            </p>
+            <p class="text-black font-semibold">
+              +91 8884436688
             </p>
           </div>
 
@@ -71,14 +76,14 @@
               Email
             </h3>
 
-            <p class="text-gray-500 break-all">
+            <p class="text-black font-semibold break-all">
               info@persquarefeet.com
             </p>
           </div>
 
           <!-- Map -->
           <div
-            class="bg-[#FFF8E7] rounded-lg p-2 shadow-md hover:shadow-xl transition flex flex-col items-center justify-center text-center">
+            class="bg-white rounded-lg p-2 shadow-md hover:shadow-xl transition flex flex-col items-center justify-center text-center">
 
             <div class="w-16 h-16 rounded-xl bg-pink-50 flex items-center justify-center mb-5">
               <span class="material-symbols-outlined text-pink-600 text-3xl">
@@ -100,7 +105,7 @@
 
         <!-- Right Form -->
         <!-- Right Side Form -->
-        <div class="bg-[#FFF8E7] rounded-[30px] shadow-xl p-6 sm:p-6">
+        <div class="bg-gradient-to-r from-[#FFF3E6] via-[#F8E7C1] to-[#FFF8F0] rounded-[30px] shadow-xl p-6 sm:p-6">
 
           <h2 class="text-4xl font-bold text-[#2f2f68] mb-2">
             Send us a message

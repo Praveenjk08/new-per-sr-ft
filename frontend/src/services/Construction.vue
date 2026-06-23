@@ -36,7 +36,7 @@
   </section>
 
   <!-- About Construction -->
-  <section class="w-full py-12 px-5 lg:px-20 bg-white">
+  <section class="max-w-7xl mx-auto py-12 px-5 lg:px-20 bg-white">
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 

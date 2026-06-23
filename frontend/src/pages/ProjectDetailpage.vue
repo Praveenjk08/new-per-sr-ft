@@ -29,11 +29,15 @@
 
             <!-- Content -->
             <div class="absolute bottom-0 left-0 w-full p-6 md:p-10">
-                <h1 class="text-white text-lg md:text-5xl font-bold mb-2 md:mb-4">
+                <h1 class="text-white text-lg md:text-4xl font-bold mb-2 md:mb-4">
                     {{ project.project_name }}
                 </h1>
 
-                <h2 class="text-gray-200 text-xs md:text-3xl font-medium md:font-bold mb-3 md:mb-5">
+                <h2
+                    class="text-gray-200 text-xs md:text-3xl font-medium md:font-bold mb-3 md:mb-5 flex items-center gap-1">
+                    <span class="material-symbols-outlined text-red-500 text-sm md:text-3xl">
+                        location_on
+                    </span>
                     {{ project.full_location }}
                 </h2>
 

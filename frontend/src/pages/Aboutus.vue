@@ -11,7 +11,8 @@
   </section>
 
 
-  <section class="max-w-6xl mx-8 px-4 pb-2">
+  <!-- <section class="max-w-6xl mx-8 px-4 pb-2"> -->
+  <section class="max-w-7xl mx-auto px-5 lg:px-10 pb-2">
     <!-- Bottom Content -->
     <div class="flex flex-col lg:flex-row items-center gap-14 mt-4">
 
