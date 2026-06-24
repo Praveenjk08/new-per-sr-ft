@@ -83,8 +83,8 @@
             <div class="relative">
 
                 <button @click="selectedImage = null"
-                    class="absolute -top-3 -right-3  text-black w-14 h-14  rounded-full shadow-lg flex items-center justify-center text-2xl hover:bg-gray-200">
-                    <span class="text-[35px]"> ×</span>
+                    class="absolute -top-3 -right-3  text-black w-14 h-14  rounded-full shadow-lg flex items-center justify-center text-2xl   md:hover:bg-gray-200">
+                    <span class="text-[35px] text-white"> ×</span>
                 </button>
 
                 <img :src="selectedImage.src" class="max-w-full max-h-[90vh] rounded-xl" />
@@ -96,7 +96,7 @@
     </div>
 </template>
 
-<script setup>
+<!-- <script setup>
 import { ref, computed } from "vue";
 
 const categories = [
@@ -328,6 +328,57 @@ const filteredImages = computed(() => {
 });
 
 const selectedImage = ref(null);
+
+const openImage = (image) => {
+    selectedImage.value = image;
+};
+</script> -->
+<script setup>
+import { ref, computed, onMounted } from "vue";
+import axios from "axios";
+
+const categories = [
+    "All",
+    "Exterior",
+    "Interior",
+    "Amenities",
+    "Master Plan",
+];
+
+const selectedCategory = ref("All");
+const images = ref([]);
+const selectedImage = ref(null);
+
+const getGalleryImages = async () => {
+    try {
+        const response = await axios.get(
+            "/api/method/per_sqr_ft.api.gallery.get_gallery_images"
+        );
+
+        images.value = response.data.message.map(item => ({
+            src: item.image,
+            category: item.category,
+            title: item.title
+        }));
+
+    } catch (error) {
+        console.error("Error fetching gallery images:", error);
+    }
+};
+
+onMounted(() => {
+    getGalleryImages();
+});
+
+const filteredImages = computed(() => {
+    if (selectedCategory.value === "All") {
+        return images.value;
+    }
+
+    return images.value.filter(
+        (img) => img.category === selectedCategory.value
+    );
+});
 
 const openImage = (image) => {
     selectedImage.value = image;
