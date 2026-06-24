@@ -749,7 +749,7 @@
 
                             <!-- Error Message -->
                             <div v-if="errorMessage" class="mb-4 p-3 bg-red-100 text-red-700 rounded-lg text-center">
-                                Something went wrong. Please try again.
+                                {{ errorText }}
                             </div>
 
 
@@ -807,6 +807,7 @@ import FeatureImages from "../PerSquarehome/FeatureImages.vue";
 const showAllGallery = ref(false)
 const showFullDescription = ref(false)
 const showPopup = ref(false)
+const errorText = ref("");
 
 const displayedGalleryImages = computed(() => {
     return showAllGallery.value
@@ -875,12 +876,7 @@ const submitContactForm = async () => {
             }
         );
         console.log(response.data);
-        // if (response.data.message === "Lead added successfully") {
-        //     alert("sent your data")
-        // }
-        // else {
-        //     alert('something went wrong')
-        // }
+
 
         sucessMessage.value = true
 
@@ -893,16 +889,32 @@ const submitContactForm = async () => {
             contctDetails.email = ""
 
     }
+
     catch (error) {
 
+        if (error.response?.data?._server_messages) {
+
+            const messages = JSON.parse(
+                error.response.data._server_messages
+            );
+
+            const serverError = JSON.parse(messages[0]);
+
+            errorText.value = serverError.message;
+
+        } else {
+
+            errorText.value = "Something went wrong";
+
+        }
 
         errorMessage.value = true;
 
         setTimeout(() => {
             errorMessage.value = false;
         }, 4000);
-        console.log(error);
 
+        console.log(error);
 
     }
 

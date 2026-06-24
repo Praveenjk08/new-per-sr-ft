@@ -320,8 +320,112 @@ const form = reactive({
   phone: "",
 });
 
+// const submitForm = async () => {
+//   // Frontend validations
+//   if (!form.name.trim()) {
+//     errorText.value = "Name is required";
+//     errorMessage.value = true;
+
+//     setTimeout(() => {
+//       errorMessage.value = false;
+//     }, 4000);
+
+//     return;
+//   }
+
+//   if (!form.email.trim()) {
+//     errorText.value = "Email is required";
+//     errorMessage.value = true;
+
+//     setTimeout(() => {
+//       errorMessage.value = false;
+//     }, 4000);
+
+//     return;
+//   }
+
+//   if (!form.phone.trim()) {
+//     errorText.value = "Phone number is required";
+//     errorMessage.value = true;
+
+//     setTimeout(() => {
+//       errorMessage.value = false;
+//     }, 4000);
+
+//     return;
+//   }
+
+//   try {
+//     const response = await fetch(
+//       "/api/method/per_sqr_ft.api.lead.add_lead",
+//       {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify({
+//           name: form.name,
+//           email: form.email,
+//           phone: form.phone,
+//         }),
+//       }
+//     );
+
+//     const data = await response.json();
+//     // const data = await response.json();
+
+//     console.log("Response Status:", response.status);
+//     console.log("Response Data:", data);
+
+//     // Backend validation errors
+//     if (data.exc) {
+//       errorText.value = "Email or Phone already exists";
+//       errorMessage.value = true;
+
+//       setTimeout(() => {
+//         errorMessage.value = false;
+//       }, 4000);
+
+//       return;
+//     }
+
+//     if (data.message === "Lead added successfully") {
+//       successMessage.value = true;
+
+//       setTimeout(() => {
+//         successMessage.value = false;
+//       }, 4000);
+
+//       // Clear form
+//       form.name = "";
+//       form.email = "";
+//       form.phone = "";
+//     }
+//   } catch (error) {
+//     console.error(error);
+
+//     errorText.value = "Something went wrong";
+//     errorMessage.value = true;
+
+//     setTimeout(() => {
+//       errorMessage.value = false;
+//     }, 4000);
+
+//     if (!/^\d{10}$/.test(form.phone)) {
+//       errorText.value = "Phone number must contain exactly 10 digits";
+//       errorMessage.value = true;
+
+//       setTimeout(() => {
+//         errorMessage.value = false;
+//       }, 4000);
+
+//       return;
+//     }
+//   }
+// };
 const submitForm = async () => {
-  // Frontend validations
+
+  // Name Validation
   if (!form.name.trim()) {
     errorText.value = "Name is required";
     errorMessage.value = true;
@@ -333,6 +437,7 @@ const submitForm = async () => {
     return;
   }
 
+  // Email Required
   if (!form.email.trim()) {
     errorText.value = "Email is required";
     errorMessage.value = true;
@@ -344,6 +449,19 @@ const submitForm = async () => {
     return;
   }
 
+  // Email Format Validation
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+    errorText.value = "Please enter a valid email address";
+    errorMessage.value = true;
+
+    setTimeout(() => {
+      errorMessage.value = false;
+    }, 4000);
+
+    return;
+  }
+
+  // Phone Required
   if (!form.phone.trim()) {
     errorText.value = "Phone number is required";
     errorMessage.value = true;
@@ -355,7 +473,20 @@ const submitForm = async () => {
     return;
   }
 
+  // Phone Validation
+  if (!/^\d{10}$/.test(form.phone)) {
+    errorText.value = "Phone number must contain exactly 10 digits";
+    errorMessage.value = true;
+
+    setTimeout(() => {
+      errorMessage.value = false;
+    }, 4000);
+
+    return;
+  }
+
   try {
+
     const response = await fetch(
       "/api/method/per_sqr_ft.api.lead.add_lead",
       {
@@ -372,14 +503,25 @@ const submitForm = async () => {
     );
 
     const data = await response.json();
-    // const data = await response.json();
+    console.log(data);
 
-    console.log("Response Status:", response.status);
-    console.log("Response Data:", data);
+    // Duplicate Email / Phone
+    // if (data.exc) {
+    //   errorText.value = "Email or Phone already exists";
+    //   errorMessage.value = true;
 
-    // Backend validation errors
+    //   setTimeout(() => {
+    //     errorMessage.value = false;
+    //   }, 4000);
+
+    //   return;
+    // }
     if (data.exc) {
-      errorText.value = "Email or Phone already exists";
+
+      const messages = JSON.parse(data._server_messages);
+      const error = JSON.parse(messages[0]);
+
+      errorText.value = error.message;
       errorMessage.value = true;
 
       setTimeout(() => {
@@ -389,19 +531,22 @@ const submitForm = async () => {
       return;
     }
 
+    // Success
     if (data.message === "Lead added successfully") {
+
       successMessage.value = true;
 
       setTimeout(() => {
         successMessage.value = false;
       }, 4000);
 
-      // Clear form
       form.name = "";
       form.email = "";
       form.phone = "";
     }
+
   } catch (error) {
+
     console.error(error);
 
     errorText.value = "Something went wrong";
@@ -410,17 +555,6 @@ const submitForm = async () => {
     setTimeout(() => {
       errorMessage.value = false;
     }, 4000);
-
-    if (!/^\d{10}$/.test(form.phone)) {
-      errorText.value = "Phone number must contain exactly 10 digits";
-      errorMessage.value = true;
-
-      setTimeout(() => {
-        errorMessage.value = false;
-      }, 4000);
-
-      return;
-    }
   }
 };
 
