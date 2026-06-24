@@ -1,11 +1,13 @@
 <template>
   <!-- Hero Section -->
-  <section class="   mb-0 ">
+  <section class="   mb-4 ">
 
-    <div class="relative w-full h-[350px] sm:h-[450px] md:h-[450px] overflow-hidden">
+    <div class="relative w-full h-auto sm:h-[450px] lg:h-[450px] md:h-[450px] overflow-hidden">
 
-      <!-- Background Image -->
-      <img src="/files/constructionbannerimage.png" alt="Construction" class="w-full h-full object-cover " />
+      <div class="w-full">
+        <img src="/files/constructionbannerimage.png" alt="Construction"
+          class="w-full h-auto md:h-[450px] object-contain md:object-cover" />
+      </div>
 
       <!-- Dark Overlay -->
       <div class="absolute inset-0rounded-[40px]"></div>
@@ -36,7 +38,7 @@
   </section>
 
   <!-- About Construction -->
-  <section class="max-w-7xl mx-auto py-12 px-5 lg:px-20 bg-white">
+  <section class="max-w-7xl mx-auto pb-12 px-5 lg:px-20 bg-white">
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 

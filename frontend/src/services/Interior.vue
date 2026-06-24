@@ -1,29 +1,24 @@
 <template>
 
   <!-- Banner Section -->
-  <section class="   mb-0">
+  <section class="mb-0">
 
-    <div class="relative w-full h-[350px] sm:h-[450px] lg:h-[450px] overflow-hidden">
+    <div class="relative w-full h-full md:h-[450px] overflow-hidden">
 
-      <!-- Banner Image -->
       <img src="/files/interiordesignbanner.png" alt="Interior Design Services" class="w-full h-full object-cover" />
 
-      <!-- Overlay -->
-      <div class="absolute inset-0 bg-black/45 rounded-[40px]"></div>
+      <div class="absolute inset-0 bg-black/45"></div>
 
-      <!-- Content -->
       <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-
-        <h1 class="text-white text-3xl sm:text-3xl lg:text-3xl font-bold leading-tight">
+        <h1 class="p-4 bg-white/25 text-black rounded-2xl text-3xl font-bold">
           Interior Design <br />
           Services
         </h1>
 
-        <p class="text-white/90 text-sm sm:text-lg lg:text-xl mt-5 max-w-3xl leading-8">
-          Creating elegant, functional, and modern interiors that
-          perfectly match your lifestyle and vision.
-        </p>
-
+        <!-- <p class="text-white/90 text-sm sm:text-lg mt-5 max-w-3xl">
+          Creating elegant, functional, and modern interiors that perfectly
+          match your lifestyle and vision.
+        </p> -->
       </div>
 
     </div>
@@ -32,7 +27,7 @@
 
 
   <!-- About Section -->
-  <section class="pb-8 pt-16 px-4 sm:px-6 lg:px-10">
+  <section class="py-8 px-4 sm:px-6 lg:px-10">
 
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 

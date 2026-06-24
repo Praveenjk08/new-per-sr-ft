@@ -85,7 +85,7 @@
           </li>
 
           <li>
-            <router-link to="/contact" class="hover:text-yellow-400 duration-300 no-underline text-gray-300">
+            <router-link to="/contact-us" class="hover:text-yellow-400 duration-300 no-underline text-gray-300">
               Contact
             </router-link>
           </li>
@@ -193,7 +193,7 @@
             Subscribe Newsletter
           </h3>
 
-          <div class="flex">
+          <!-- <div class="flex">
 
             <input type="email" placeholder="Enter Your Email"
               class="w-full px-4 py-2 rounded-l-full bg-[#13206f] border border-gray-600 outline-none text-sm placeholder:text-gray-400" />
@@ -202,6 +202,21 @@
               Send
             </button>
 
+          </div> -->
+          <div class="flex">
+            <input v-model="email" type="email" placeholder="Enter Your Email"
+              class="w-full px-4 py-2 rounded-l-full bg-[#13206f] border border-gray-600 outline-none text-sm placeholder:text-gray-400" />
+
+            <button @click="subscribe"
+              class="bg-yellow-400 hover:bg-yellow-500 text-black px-6 rounded-r-full font-medium duration-300">
+              Send
+            </button>
+          </div>
+
+          <div class="w-[250px]">
+            <p v-if="message" class="mt-5 pl-10 pr-2 rounded-3xl text-[14px] bg-orange-700/50 text-green-400">
+              {{ message }}
+            </p>
           </div>
 
         </div>
@@ -227,3 +242,49 @@
     </div>
   </footer>
 </template>
+
+<script setup>
+import { ref } from "vue";
+import axios from "axios";
+
+const email = ref("");
+const message = ref("");
+
+const subscribe = async () => {
+
+  if (!email.value.trim()) {
+    message.value = "Email is required";
+
+    setTimeout(() => {
+      message.value = "";
+    }, 5000);
+
+    return;
+  }
+
+  try {
+    const res = await axios.post(
+      "/api/method/per_sqr_ft.api.newsletter.subscribe_newsletter",
+      {
+        email: email.value
+      }
+    );
+
+    message.value = res.data.message;
+    email.value = "";
+
+  } catch (err) {
+
+    if (err.response?.data?._server_messages) {
+      const errors = JSON.parse(err.response.data._server_messages);
+      message.value = JSON.parse(errors[0]).message;
+    } else {
+      message.value = "Something went wrong";
+    }
+  }
+
+  setTimeout(() => {
+    message.value = "";
+  }, 5000);
+};
+</script>

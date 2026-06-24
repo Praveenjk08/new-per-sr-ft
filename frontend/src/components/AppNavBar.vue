@@ -27,14 +27,14 @@
           <!-- Services Dropdown -->
           <div class="relative group">
 
-            <button class="nav-link flex items-center gap-1">
+            <router-link to="/services" class="nav-link flex items-center gap-1 focus:outline-none">
               Services
 
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
-            </button>
+            </router-link>
 
             <div
               class="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-xl py-3 w-80 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
@@ -155,7 +155,7 @@
             <!-- Services -->
             <li>
 
-              <button @click="toggleServices" class="w-full flex items-center text-[18px] font-medium text-[#156082]">
+              <!-- <button @click="toggleServices" class="w-full flex items-center text-[18px] font-medium text-[#156082]">
 
                 <span>Services</span>
 
@@ -169,7 +169,25 @@
 
                 </span>
 
-              </button>
+              </button> -->
+              <div class="flex items-center w-full">
+
+                <router-link to="/services" class="text-[18px] font-medium text-[#156082] no-underline"
+                  @click="closeMenu">
+                  Services
+                </router-link>
+
+                <button @click.stop="toggleServices" class="ml-auto">
+                  <span :class="{ 'rotate-180': isServicesOpen }" class="transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd"
+                        d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </button>
+
+              </div>
 
               <ul v-show="isServicesOpen" class="mt-3 ml-4 space-y-3">
 
@@ -218,7 +236,7 @@
             <!-- Projects -->
             <li>
 
-              <router-link to="/projects" @click="closeMenu">
+              <!-- <router-link to="/projects" @click="closeMenu">
                 <button @click="toggleProjects" class="w-full flex items-center text-[18px] font-medium text-[#156082]">
 
                   <span>Projects</span>
@@ -233,7 +251,25 @@
 
                   </span>
 
-                </button></router-link>
+                </button></router-link> -->
+              <div class="flex items-center w-full">
+
+                <router-link to="/projects" class="text-[18px] font-medium text-[#156082] no-underline"
+                  @click="closeMenu">
+                  Projects
+                </router-link>
+
+                <button @click.stop="toggleProjects" class="ml-auto">
+                  <span :class="{ 'rotate-180': isProjectsOpen }" class="transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd"
+                        d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </button>
+
+              </div>
 
               <ul v-show="isProjectsOpen" class="mt-3 ml-4 space-y-3">
 

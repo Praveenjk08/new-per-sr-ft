@@ -26,7 +26,8 @@ def add_lead(name, email, phone):
         "doctype": "CRM Lead",
         "first_name": name,
         "email": email,
-        "mobile_no": phone
+        "mobile_no": phone,
+         "source": "Website"
     })
 
     lead.insert(ignore_permissions=True)

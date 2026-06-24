@@ -1,12 +1,13 @@
 <template>
 
   <!-- Banner Section -->
-  <section class=" mb-6">
+  <section class=" mb-0">
 
-    <div class="relative w-full h-[350px] sm:h-[450px] lg:h-[450px] overflow-hidden ">
+    <div class="relative w-full h-auto md:h-[450px] lg:h-[450px] overflow-hidden ">
 
       <!-- Banner Image -->
-      <img src="/files/homeloanbanner.png" alt="Housing Loan Services" class="w-full h-full object-cover" />
+      <img src="/files/homeloanbanner.png" alt="Housing Loan Services"
+        class="w-full h-auto object-contain md:h-[450px] md:object-cover" />
 
       <!-- Overlay -->
       <div class="absolute inset-0 bg-black/45 rounded-[40px]"></div>
@@ -14,15 +15,15 @@
       <!-- Content -->
       <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
 
-        <h1 class="text-white text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">
+        <h1 class="p-4 bg-white/25 text-black rounded-2xl text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">
           Housing Loan <br />
           Services
         </h1>
 
-        <p class="text-white/90 text-sm sm:text-lg lg:text-xl mt-5 max-w-3xl leading-8">
+        <!-- <p class="text-white/90 text-sm sm:text-lg lg:text-xl mt-5 max-w-3xl leading-8">
           Making your dream home affordable with flexible and reliable
           housing loan solutions tailored to your financial needs.
-        </p>
+        </p> -->
 
       </div>
 
@@ -32,7 +33,7 @@
 
 
   <!-- About Section -->
-  <section class="py-10  px-4 sm:px-6 lg:px-10">
+  <section class="py-8  px-4 sm:px-6 lg:px-10">
 
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 

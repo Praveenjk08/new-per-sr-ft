@@ -92,6 +92,11 @@ const routes = [
     name: "detailpage",
     component: () => import('@/pages/ProjectDetailpage.vue')
   },
+  {
+    path: "/services",
+    name: "services",
+    component: () => import('@/pages/ServicePage.vue')
+  }
 
 
 ]

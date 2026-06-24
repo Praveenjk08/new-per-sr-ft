@@ -1,13 +1,13 @@
 <template>
 
   <!-- Banner Section -->
-  <section class="mb-6">
+  <section class="mb-0">
 
-    <div class="relative w-full h-[350px] sm:h-[450px] lg:h-[450px] overflow-hidden ">
+    <div class="relative w-full h-auto sm:h-[450px] md:h-[450px] lg:h-[450px] overflow-hidden ">
 
       <!-- Banner Image -->
       <img src="/files/propertymanagementbanner.png" alt="Property Management Services"
-        class="w-full h-full object-cover" />
+        class="w-full h-auto md:h-[450px] md:object-cover" />
 
       <!-- Overlay -->
       <div class="absolute inset-0 bg-black/45 rounded-[40px]"></div>
@@ -15,15 +15,15 @@
       <!-- Content -->
       <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
 
-        <h1 class="text-white text-3xl sm:text-3xl lg:text-3xl font-bold leading-tight">
+        <h1 class="p-4 bg-white/25 text-black rounded-2xl text-3xl sm:text-3xl lg:text-3xl font-bold leading-tight">
           Property Management <br />
           Services
         </h1>
 
-        <p class="text-white/90 text-sm sm:text-lg lg:text-xl mt-5 max-w-3xl leading-8">
+        <!-- <p class="text-white/90 text-sm sm:text-lg lg:text-xl mt-5 max-w-3xl leading-8">
           Reliable property management solutions designed to protect,
           maintain, and maximize the value of your real estate assets.
-        </p>
+        </p> -->
 
       </div>
 
@@ -44,7 +44,7 @@
           Professional Property Care
         </p>
 
-        <h2 class="text-[15px] sm:text-[15px] lg:text-[15px] font-semibold text-[#2f2f68] leading-tight mb-8">
+        <h2 class="text-[15px] sm:text-[15px] lg:text-[15px] font-semibold text-[#2f2f68] leading-tight mb-4">
           Complete Management For Your Properties
         </h2>
 
