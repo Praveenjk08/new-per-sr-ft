@@ -462,7 +462,57 @@
 
 
                 <!-- Specifications -->
-                <div class="mt-12 md:mx-10">
+                <div class="mt-12 md:mx-10" v-if="project.property_specifications?.length">
+
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                        Project Specifications
+                    </h2>
+
+                    <div class="w-24 h-1 bg-orange-500 rounded-full mb-8"></div>
+
+                    <div class="overflow-hidden border border-gray-200 bg-white">
+
+                        <table class="w-full">
+
+                            <tbody>
+
+                                <tr v-for="(spec, index) in project.property_specifications" :key="index"
+                                    class="border-b border-gray-200">
+
+                                    <td class="p-6 text-center border-r border-gray-200">
+
+                                        <!-- <div
+                                            class="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-orange-100 text-5xl">
+                                            {{ spec.specification_icon }}
+                                        </div> -->
+                                        <div
+                                            class="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-orange-100">
+
+                                            <span class="material-symbols-outlined text-orange-500 text-[40px]">
+                                                {{ spec.specification_icon }}
+                                            </span>
+
+                                        </div>
+
+                                        <h3 class="font-semibold text-xl mt-4">
+                                            {{ spec.specification_name }}
+                                        </h3>
+
+                                    </td>
+
+                                    <td class="p-6">
+                                        <div class="specification-content text-gray-700"
+                                            v-html="spec.specification_details"></div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+                <div class="mt-12 md:mx-10" v-else>
 
                     <h2 class="text-3xl font-bold text-gray-900 mb-4">
                         Project Specifications
@@ -597,54 +647,7 @@
 
                 </div>
 
-                <div class="mt-12 md:mx-10" v-if="project.property_specifications?.length">
 
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">
-                        Project Specifications
-                    </h2>
-
-                    <div class="w-24 h-1 bg-orange-500 rounded-full mb-8"></div>
-
-                    <div class="overflow-hidden border border-gray-200 bg-white">
-
-                        <table class="w-full">
-
-                            <tbody>
-
-                                <tr v-for="(spec, index) in project.property_specifications" :key="index"
-                                    class="border-b border-gray-200">
-
-                                    <td class="p-6 text-center border-r border-gray-200">
-
-                                        <!-- <div
-                                            class="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-orange-100 text-5xl">
-                                            {{ spec.specification_icon }}
-                                        </div> -->
-                                        <div
-                                            class="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-orange-100">
-
-                                            <span class="material-symbols-outlined text-orange-500 text-[40px]">
-                                                {{ spec.specification_icon }}
-                                            </span>
-
-                                        </div>
-
-                                        <h3 class="font-semibold text-xl mt-4">
-                                            {{ spec.specification_name }}
-                                        </h3>
-
-                                    </td>
-
-                                    <td class="p-6">
-                                        <div class="specification-content text-gray-700"
-                                            v-html="spec.specification_details"></div>
-                                    </td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
 
                 <!-- Animation Component -->
                 <!-- Project Highlights -->
@@ -767,7 +770,7 @@
                             <input type="text" v-model="contctDetails.phone" placeholder="Phone Number"
                                 class="w-full px-4 py-2 border rounded-xl outline-none" />
 
-                            <textarea rows="3" placeholder="Your Requirement"
+                            <textarea rows="3" placeholder="Your Requirement" v-model="reqmessages"
                                 class="w-full px-4 py-2 border rounded-xl outline-none">
                 </textarea>
 
@@ -809,6 +812,7 @@ const showAllGallery = ref(false)
 const showFullDescription = ref(false)
 const showPopup = ref(false)
 const errorText = ref("");
+const reqmessages = ref("")
 
 const displayedGalleryImages = computed(() => {
     return showAllGallery.value
@@ -887,7 +891,8 @@ const submitContactForm = async () => {
 
         contctDetails.name = "",
             contctDetails.phone = "",
-            contctDetails.email = ""
+            contctDetails.email = "",
+            reqmessages.value = ""
 
     }
 
