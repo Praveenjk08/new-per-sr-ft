@@ -90,7 +90,7 @@
 
                 <div v-for="(project, index) in projects" :key="index"
                     @click="$router.push(`/detailpage/${project.url}`)"
-                    class="bg-white rounded-3xl shadow-sm border overflow-hidden mb-8">
+                    class="bg-white cursor-pointer rounded-3xl shadow-sm border overflow-hidden mb-8">
 
                     <div class="grid md:grid-cols-12">
 

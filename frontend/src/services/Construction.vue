@@ -15,8 +15,8 @@
       <!-- Content -->
       <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
 
-        <h1 class=" bg-orange-500/25 text-2xl sm:text-4xl lg:text-2xl font-bold leading-tight">
-          Building Dreams
+        <h1 class="p-4 bg-white/25 text-black rounded-2xl  text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">
+          Building Dreams <br>
           With Quality Construction
         </h1>
 

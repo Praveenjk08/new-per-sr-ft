@@ -760,10 +760,11 @@
                             <input type="text" v-model="contctDetails.name" placeholder="Your Name"
                                 class="w-full px-4 py-2 border rounded-xl outline-none" />
 
-                            <input type="text" v-model="contctDetails.phone" placeholder="Phone Number"
-                                class="w-full px-4 py-2 border rounded-xl outline-none" />
 
                             <input type="email" v-model="contctDetails.email" placeholder="Email Address"
+                                class="w-full px-4 py-2 border rounded-xl outline-none" />
+
+                            <input type="text" v-model="contctDetails.phone" placeholder="Phone Number"
                                 class="w-full px-4 py-2 border rounded-xl outline-none" />
 
                             <textarea rows="3" placeholder="Your Requirement"

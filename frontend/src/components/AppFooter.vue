@@ -252,7 +252,18 @@ const message = ref("");
 
 const subscribe = async () => {
 
-  if (!email.value.trim()) {
+  // if (!email.value.trim()) {
+  //   message.value = "Email is required";
+
+  //   setTimeout(() => {
+  //     message.value = "";
+  //   }, 5000);
+
+  //   return;
+  // }
+  const emailValue = email.value.trim();
+
+  if (!emailValue) {
     message.value = "Email is required";
 
     setTimeout(() => {
@@ -262,6 +273,17 @@ const subscribe = async () => {
     return;
   }
 
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailRegex.test(emailValue)) {
+    message.value = "Please enter a valid email address";
+
+    setTimeout(() => {
+      message.value = "";
+    }, 5000);
+
+    return;
+  }
   try {
     const res = await axios.post(
       "/api/method/per_sqr_ft.api.newsletter.subscribe_newsletter",
