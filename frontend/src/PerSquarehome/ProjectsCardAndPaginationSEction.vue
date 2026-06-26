@@ -1,5 +1,5 @@
 <template>
-    <section class="py-5 bg-[#FAF0E6]">
+    <section class="pt-5 bg-[#FAF0E6]">
 
         <!-- Heading -->
         <div class="text-center mb-6">

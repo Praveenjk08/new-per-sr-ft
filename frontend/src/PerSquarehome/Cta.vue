@@ -1,6 +1,6 @@
 <template>
 
-    <section class="relative py-10 mt-8 overflow-hidden ">
+    <section class="relative py-5 mt-4 overflow-hidden ">
         <div class="bg-[#FAF0E6]">
             <div class="absolute inset-0">
                 <img src="/files/HomePageBannerImageNEw-One.jpeg" class="w-full h-full object-cover" />

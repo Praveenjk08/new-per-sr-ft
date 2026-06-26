@@ -27,7 +27,8 @@ def add_lead(name, email, phone):
         "first_name": name,
         "email": email,
         "mobile_no": phone,
-         "source": "Website"
+        # "source": "website"
+        "source": "Website"
     })
 
     lead.insert(ignore_permissions=True)
