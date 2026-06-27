@@ -16,7 +16,7 @@
     </div>
 
     <!-- Amenities Grid -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 mb-6">
 
       <!-- Card -->
       <div v-for="item in amenities" :key="item.name"

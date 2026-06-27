@@ -2,7 +2,7 @@
 import frappe
 
 @frappe.whitelist(allow_guest=True)
-def add_lead(name, email, phone):
+def add_lead(name, email, phone,services=None):
 
     # Empty field validations
     if not name:
@@ -15,12 +15,12 @@ def add_lead(name, email, phone):
         frappe.throw("Phone number is required")
 
     # Check duplicate email
-    if frappe.db.exists("CRM Lead", {"email": email}):
-        frappe.throw("Email already exists")
+    # if frappe.db.exists("CRM Lead", {"email": email}):
+    #     frappe.throw("Email already exists")
 
     # Check duplicate phone
-    if frappe.db.exists("CRM Lead", {"mobile_no": phone}):
-        frappe.throw("Phone number already exists")
+    # if frappe.db.exists("CRM Lead", {"mobile_no": phone}):
+    #     frappe.throw("Phone number already exists")
 
     lead = frappe.get_doc({
         "doctype": "CRM Lead",
@@ -28,7 +28,8 @@ def add_lead(name, email, phone):
         "email": email,
         "mobile_no": phone,
         # "source": "website"
-        "source": "Website"
+        "source": "Website",
+        "services":services
     })
 
     lead.insert(ignore_permissions=True)

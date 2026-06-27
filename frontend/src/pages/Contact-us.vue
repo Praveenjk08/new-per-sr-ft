@@ -158,14 +158,15 @@
                 Select Service
               </label>
 
-              <select class="w-full h-10 px-5 border border-gray-300 rounded-xl outline-none focus:border-[#0B1560]">
-                <option>Select Service</option>
-                <option>Real Estate Consultation</option>
-                <option>Housing Loan Services</option>
-                <option>Interior Design Services</option>
-                <option>Legal Consultation</option>
-                <option>Property Management</option>
-                <option>Construction Services</option>
+              <select v-model="form.services"
+                class="w-full h-10 px-5 border border-gray-300 rounded-xl outline-none focus:border-[#0B1560]">
+                <option value="">Select Service</option>
+                <option value="Real Estate Consultation">Real Estate Consultation</option>
+                <option value="Housing Loan Services">Housing Loan Services</option>
+                <option value="Interior Design Services">Interior Design Services</option>
+                <option value="Legal Consultation">Legal Consultation</option>
+                <option value="Property Management">Property Management</option>
+                <option value="Construction Services">Construction Services</option>
               </select>
             </div>
 
@@ -236,77 +237,7 @@
 
 <script setup>
 
-// import { reactive, ref } from "vue";
 
-// const successMessage=ref(false)
-// const errorMessage = ref(false);
-
-// const form = reactive({
-//   name: "",
-//   email: "",
-//   phone: "",
-//   // service: "",
-//   // message: "",
-// });
-
-// const submitForm = async () => {
-//   try {
-
-//     const response = await fetch(
-//       "/api/method/per_sqr_ft.api.lead.add_lead",
-//       {
-//         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-
-//         body: JSON.stringify({
-//           name: form.name,
-//           phone: form.phone,
-//           email: form.email,
-//           // mobile_no: form.phone,
-//           // service: form.service,
-//           // message: form.message,
-//         }),
-//       }
-//     );
-
-//     const data = await response.json();
-
-//     if (data.message === "Lead added successfully") {
-
-
-//      successMessage.value = true;
-
-// setTimeout(() => {
-//   successMessage.value = false;
-// }, 4000);
-
-
-//       form.name = "";
-//       form.phone = "";
-//       form.email = "";
-
-//       // form.service = "";
-//       // form.message = "";
-//     }
-//     else {
-
-//   errorMessage.value = true;
-
-//   setTimeout(() => {
-//     errorMessage.value = false;
-//   }, 4000);
-
-// }
-
-//   } catch (error) {
-
-//     console.error(error);
-//     alert("Something went wrong");
-
-//   }
-// };
 
 import { reactive, ref } from "vue";
 
@@ -318,111 +249,10 @@ const form = reactive({
   name: "",
   email: "",
   phone: "",
+  services: "",
 });
 
-// const submitForm = async () => {
-//   // Frontend validations
-//   if (!form.name.trim()) {
-//     errorText.value = "Name is required";
-//     errorMessage.value = true;
 
-//     setTimeout(() => {
-//       errorMessage.value = false;
-//     }, 4000);
-
-//     return;
-//   }
-
-//   if (!form.email.trim()) {
-//     errorText.value = "Email is required";
-//     errorMessage.value = true;
-
-//     setTimeout(() => {
-//       errorMessage.value = false;
-//     }, 4000);
-
-//     return;
-//   }
-
-//   if (!form.phone.trim()) {
-//     errorText.value = "Phone number is required";
-//     errorMessage.value = true;
-
-//     setTimeout(() => {
-//       errorMessage.value = false;
-//     }, 4000);
-
-//     return;
-//   }
-
-//   try {
-//     const response = await fetch(
-//       "/api/method/per_sqr_ft.api.lead.add_lead",
-//       {
-//         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify({
-//           name: form.name,
-//           email: form.email,
-//           phone: form.phone,
-//         }),
-//       }
-//     );
-
-//     const data = await response.json();
-//     // const data = await response.json();
-
-//     console.log("Response Status:", response.status);
-//     console.log("Response Data:", data);
-
-//     // Backend validation errors
-//     if (data.exc) {
-//       errorText.value = "Email or Phone already exists";
-//       errorMessage.value = true;
-
-//       setTimeout(() => {
-//         errorMessage.value = false;
-//       }, 4000);
-
-//       return;
-//     }
-
-//     if (data.message === "Lead added successfully") {
-//       successMessage.value = true;
-
-//       setTimeout(() => {
-//         successMessage.value = false;
-//       }, 4000);
-
-//       // Clear form
-//       form.name = "";
-//       form.email = "";
-//       form.phone = "";
-//     }
-//   } catch (error) {
-//     console.error(error);
-
-//     errorText.value = "Something went wrong";
-//     errorMessage.value = true;
-
-//     setTimeout(() => {
-//       errorMessage.value = false;
-//     }, 4000);
-
-//     if (!/^\d{10}$/.test(form.phone)) {
-//       errorText.value = "Phone number must contain exactly 10 digits";
-//       errorMessage.value = true;
-
-//       setTimeout(() => {
-//         errorMessage.value = false;
-//       }, 4000);
-
-//       return;
-//     }
-//   }
-// };
 const submitForm = async () => {
 
   // Name Validation
@@ -498,6 +328,7 @@ const submitForm = async () => {
           name: form.name,
           email: form.email,
           phone: form.phone,
+          services: form.services
         }),
       }
     );
@@ -543,6 +374,7 @@ const submitForm = async () => {
       form.name = "";
       form.email = "";
       form.phone = "";
+      form.services = "";
     }
 
   } catch (error) {

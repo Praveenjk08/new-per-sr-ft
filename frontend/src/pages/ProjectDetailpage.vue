@@ -758,7 +758,7 @@
 
                         </div>
 
-                        <form class="space-y-4" @submit.prevent="submitContactForm">
+                        <form class="space-y-6" @submit.prevent="submitContactForm">
 
                             <input type="text" v-model="contctDetails.name" placeholder="Your Name"
                                 class="w-full px-4 py-2 border rounded-xl outline-none" />
@@ -770,9 +770,28 @@
                             <input type="text" v-model="contctDetails.phone" placeholder="Phone Number"
                                 class="w-full px-4 py-2 border rounded-xl outline-none" />
 
-                            <textarea rows="3" placeholder="Your Requirement" v-model="reqmessages"
+                            <!-- <textarea rows="3" placeholder="Your Requirement" v-model="reqmessages"
                                 class="w-full px-4 py-2 border rounded-xl outline-none">
-                </textarea>
+                </textarea> -->
+                            <!-- <input type="text" v-model="contctDetails.phone" placeholder="Phone Number"
+                                class="w-full px-4 py-2 border rounded-xl outline-none" /> -->
+                            <!-- Service -->
+                            <div>
+                                <!-- <label class="block text-gray-700 font-medium mb-2">
+                                    Select Service
+                                </label> -->
+
+                                <select v-model="contctDetails.services"
+                                    class="w-full px-4 py-2 border rounded-xl outline-none">
+                                    <option value="">Select Service</option>
+                                    <option value="Real Estate Consultation">Real Estate Consultation</option>
+                                    <option value="Housing Loan Services">Housing Loan Services</option>
+                                    <option value="Interior Design Services">Interior Design Services</option>
+                                    <option value="Legal Consultation">Legal Consultation</option>
+                                    <option value="Property Management">Property Management</option>
+                                    <option value="Construction Services">Construction Services</option>
+                                </select>
+                            </div>
 
                             <button
                                 class="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-xl font-medium">
@@ -830,6 +849,7 @@ const contctDetails = reactive({
     name: "",
     phone: "",
     email: "",
+    services: "",
 
 })
 
@@ -873,6 +893,7 @@ const submitContactForm = async () => {
                 name: contctDetails.name,
                 phone: contctDetails.phone,
                 email: contctDetails.email,
+                services: contctDetails.services,
             },
             {
                 headers: {
@@ -892,7 +913,9 @@ const submitContactForm = async () => {
         contctDetails.name = "",
             contctDetails.phone = "",
             contctDetails.email = "",
-            reqmessages.value = ""
+            // reqmessages.value = ""
+            contctDetails.services = ""
+
 
     }
 
