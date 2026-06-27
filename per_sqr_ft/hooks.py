@@ -31,6 +31,22 @@ website_route_rules = [
       
 ]
 
+fixtures = [
+    {
+        "dt": "Custom Field",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                  "CRM Lead-services" 
+                    
+                ]
+            ]
+        ]
+    },
+]
+
 # Apps
 # ------------------
 
