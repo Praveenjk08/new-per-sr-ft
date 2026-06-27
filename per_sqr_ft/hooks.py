@@ -39,7 +39,7 @@ fixtures = [
                 "name",
                 "in",
                 [
-                  "CRM Lead-services" 
+                  "CRM Lead-custom_select_services" 
                     
                 ]
             ]

@@ -29,7 +29,7 @@ def add_lead(name, email, phone,services=None):
         "mobile_no": phone,
         # "source": "website"
         "source": "Website",
-        "services":services
+        "custom_select_services":services
     })
 
     lead.insert(ignore_permissions=True)
