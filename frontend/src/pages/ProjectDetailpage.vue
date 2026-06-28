@@ -783,7 +783,7 @@
 
                                 <select v-model="contctDetails.services"
                                     class="w-full px-4 py-2 border rounded-xl outline-none">
-                                    <option value="">Select Service</option>
+                                    <option value="Others Services">Others Services</option>
                                     <option value="Real Estate Consultation">Real Estate Consultation</option>
                                     <option value="Housing Loan Services">Housing Loan Services</option>
                                     <option value="Interior Design Services">Interior Design Services</option>
@@ -849,7 +849,7 @@ const contctDetails = reactive({
     name: "",
     phone: "",
     email: "",
-    services: "",
+    services: "Others Services",
 
 })
 
@@ -914,7 +914,7 @@ const submitContactForm = async () => {
             contctDetails.phone = "",
             contctDetails.email = "",
             // reqmessages.value = ""
-            contctDetails.services = ""
+            contctDetails.services = "Others Services"
 
 
     }

@@ -160,7 +160,7 @@
 
               <select v-model="form.services"
                 class="w-full h-10 px-5 border border-gray-300 rounded-xl outline-none focus:border-[#0B1560]">
-                <option value="">Select Service</option>
+                <option value="Others Services">Others Services</option>
                 <option value="Real Estate Consultation">Real Estate Consultation</option>
                 <option value="Housing Loan Services">Housing Loan Services</option>
                 <option value="Interior Design Services">Interior Design Services</option>
@@ -249,7 +249,7 @@ const form = reactive({
   name: "",
   email: "",
   phone: "",
-  services: "",
+  services: "Others Services",
 });
 
 
@@ -374,7 +374,7 @@ const submitForm = async () => {
       form.name = "";
       form.email = "";
       form.phone = "";
-      form.services = "";
+      form.services = "Others Services";
     }
 
   } catch (error) {
