@@ -5,7 +5,7 @@
     <div class="relative w-full h-auto sm:h-[450px] lg:h-[450px] md:h-[450px] overflow-hidden">
 
       <div class="w-full">
-        <img src="/files/constructionbannerimage.png" alt="Construction"
+        <img :src="getFileUrl('constructionbannerimage.png')" alt="Construction"
           class="w-full h-auto md:h-[450px] object-contain md:object-cover" />
       </div>
 
@@ -72,7 +72,7 @@
       <!-- Right Image -->
       <div>
 
-        <img src="/files/Constructionrightsideiamge.png" alt="Construction Work"
+        <img :src="getFileUrl('Constructionrightsideiamge.png')" alt="Construction Work"
           class="w-full h-[350px] sm:h-[350px] object-cover rounded-[35px] shadow-xl" />
 
       </div>
@@ -262,6 +262,10 @@ const goToContact = () => {
 
 const goToProjects = () => {
   router.push("/projects");
+};
+
+const getFileUrl = (file) => {
+    return `${window.location.origin}/files/${file}`;
 };
 
 </script>

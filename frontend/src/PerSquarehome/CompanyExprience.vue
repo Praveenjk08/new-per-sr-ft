@@ -1,17 +1,17 @@
 <template>
-    <section class="w-full py-8 bg-[#FAF0E6]">
+    <section class="w-full py-4 bg-[#FAF0E6]">
 
         <div class="max-w-7xl mx-auto px-4">
 
-            <div class="text-center mb-12">
+            <div class="text-center mb-4">
 
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
                     Trusted By Thousands
                 </h2>
 
-                <div class="w-20 h-1 bg-orange-500 mx-auto mt-4 rounded-full"></div>
+                <div class="w-20 h-1 bg-orange-500 mx-auto mt-2 rounded-full"></div>
 
-                <p class="text-gray-600 mt-4">
+                <p class="text-gray-600 mt-1">
                     Delivering excellence in real estate services across Bangalore.
                 </p>
 
@@ -81,3 +81,4 @@
 
     </section>
 </template>
+

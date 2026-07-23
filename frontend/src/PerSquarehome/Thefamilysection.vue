@@ -5,7 +5,7 @@
 
       <!-- Left Image -->
       <div class="flex justify-center">
-        <img src="/files/family-photo-home.jpg" alt="Family"
+        <img :src="getFileUrl('family-photo-home.jpg')" alt="Family"
           class="w-full h-[400px] max-w-[450px] rounded-3xl shadow-lg object-cover" />
       </div>
 
@@ -62,3 +62,8 @@
     </div>
   </section>
 </template>
+<script setup>
+const getFileUrl = (file) => {
+    return `${window.location.origin}/files/${file}`;
+};
+</script>

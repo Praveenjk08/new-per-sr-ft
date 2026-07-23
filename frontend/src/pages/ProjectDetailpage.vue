@@ -35,7 +35,7 @@
 
                 <h2
                     class="text-gray-200 text-xs md:text-3xl font-medium md:font-bold mb-3 md:mb-5 flex items-center gap-1">
-                    <span class="material-symbols-outlined text-red-500 text-sm md:text-3xl">
+                    <span class="material-symbols-outlined text-[#D49A37] text-sm md:text-3xl">
                         location_on
                     </span>
                     {{ project.full_location }}
@@ -81,21 +81,21 @@
 
 
                 <!-- Overview -->
-                <div class="bg-white mt-4 md:mx-10">
+                <div class="bg-white my-5   md:mx-10">
 
-                    <div class="mb-8 ">
+                    <div class="mb-4 ">
 
                         <h2 class="text-4xl font-bold text-gray-900">
                             {{ project.description_heading || 'Overview' }}
                         </h2>
 
-                        <div class="w-24 h-1 bg-orange-500 rounded-full mt-4"></div>
+                        <div class="w-24 h-1 bg-[#D49A37] rounded-full mt-4"></div>
 
                     </div>
 
                     <!-- <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed" v-html="project.description">
                     </div> -->
-                    <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+                    <div class=" text-gray-700 ">
 
                         <div v-if="showFullDescription" v-html="project.description"></div>
 
@@ -103,9 +103,9 @@
 
                     </div>
 
-                    <div v-if="project.description?.length > 1000" class=" pb-4 pt-0">
+                    <div v-if="project.description?.length > 1000" class=" pb-0 pt-2">
                         <button @click="showFullDescription = !showFullDescription"
-                            class="text-orange-500 font-semibold hover:text-orange-600">
+                            class="text-[#D49A37] font-semibold hover:text-[#C19A2D]">
                             {{ showFullDescription ? 'Show Less' : 'Read More' }}
                         </button>
                     </div>
@@ -113,12 +113,12 @@
                 </div>
 
                 <!-- Youtube Video -->
-                <div class="mt-2 mx-2 md:mx-10" v-if="project.youtube_link?.length">
+                <div class="my-5 mx-2 md:mx-10" v-if="project.youtube_link?.length">
 
                     <h2 class="text-3xl font-bold text-gray-900 mb-4">
                         Project Walkthrough
                     </h2>
-                    <div class="w-24 h-1 bg-orange-500 rounded-full mt-4 mb-8"></div>
+                    <div class="w-24 h-1 bg-[#D49A37] rounded-full mt-4 mb-8"></div>
 
 
 
@@ -136,13 +136,13 @@
 
                 <!--Gallery section-->
                 <!-- Gallery Section -->
-                <div class="mt-12 md:mx-10" v-if="project.gallery_images?.length">
+                <div class="my-5 md:mx-10" v-if="project.gallery_images?.length">
 
                     <h2 class="text-3xl   font-bold text-gray-900 mb-4">
                         Project Gallery
                     </h2>
 
-                    <div class="w-24 h-1  bg-orange-500 rounded-full mb-8"></div>
+                    <div class="w-24 h-1  bg-[#D49A37] rounded-full mb-8"></div>
 
                     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
 
@@ -161,20 +161,20 @@
 
                     <div v-if="project.gallery_images.length > 3" class="text-center mt-6">
                         <button @click="showAllGallery = !showAllGallery"
-                            class="px-6 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition">
+                            class="px-6 py-2 bg-[#D49A37] text-white rounded-lg hover:bg-[#C19A2D] transition">
                             {{ showAllGallery ? 'Show Less' : 'Load More' }}
                         </button>
                     </div>
 
                 </div>
                 <!-- Property Configuration -->
-                <div class="mt-12  md:mx-10" v-if="project.property_details?.length">
+                <div class="my-5  md:mx-10" v-if="project.property_details?.length">
 
                     <h2 class="text-3xl font-bold text-gray-900 mb-4">
                         Property Configuration
                     </h2>
 
-                    <div class="w-24 h-1 bg-orange-500 rounded-full mb-8"></div>
+                    <div class="w-24 h-1 bg-[#D49A37] rounded-full mb-8"></div>
 
                     <div v-for="(detail, index) in project.property_details" :key="index"
                         class="overflow-hidden rounded-2xl border border-gray-200 bg-white">
@@ -317,13 +317,13 @@
 
 
                 <!--  Unit Configuration & Pricing -->
-                <div class="mt-6 md:mx-10" v-if="project.property_unit?.length">
+                <div class="my-5 md:mx-10" v-if="project.property_unit?.length">
 
                     <h2 class="text-3xl font-bold text-gray-900 mb-2">
                         Unit Configuration & Pricing
                     </h2>
 
-                    <div class="w-24 h-1 bg-orange-500 rounded-full mb-6"></div>
+                    <div class="w-24 h-1 bg-[#D49A37] rounded-full mb-6"></div>
 
                     <div
                         class="overflow-hidden border border-gray-200 bg-gradient-to-r from-orange-50 to-amber-100 rounded-xl">
@@ -377,13 +377,13 @@
                 </div>
 
                 <!-- Location Map -->
-                <div class="mt-12 md:mx-10" v-if="project.project_location_map_embed?.length">
+                <div class="my-5 md:mx-10" v-if="project.project_location_map_embed?.length">
 
                     <h2 class="text-3xl font-bold text-gray-900 mb-4">
                         Location Map
                     </h2>
 
-                    <div class="w-24 h-1 bg-orange-500 rounded-full mb-8"></div>
+                    <div class="w-24 h-1 bg-[#D49A37] rounded-full mb-8"></div>
 
                     <div class="overflow-hidden rounded-2xl shadow-lg border">
 
@@ -425,13 +425,13 @@
 
 
 
-                <div class="mt-12 md:mx-10" v-if="project.master_plan?.length">
+                <div class="my-5 md:mx-10" v-if="project.master_plan?.length">
 
                     <h2 class="text-3xl font-bold text-gray-900 mb-4">
                         Master Plan
                     </h2>
 
-                    <div class="w-24 h-1 bg-orange-500 rounded-full mb-8"></div>
+                    <div class="w-24 h-1 bg-[#D49A37] rounded-full mb-8"></div>
 
                     <div class="bg-white rounded-3xl shadow-lg border overflow-hidden">
 
@@ -462,13 +462,13 @@
 
 
                 <!-- Specifications -->
-                <div class="mt-12 md:mx-10" v-if="project.property_specifications?.length">
+                <div class="my-5 md:mx-10" v-if="project.property_specifications?.length">
 
                     <h2 class="text-3xl font-bold text-gray-900 mb-4">
                         Project Specifications
                     </h2>
 
-                    <div class="w-24 h-1 bg-orange-500 rounded-full mb-8"></div>
+                    <div class="w-24 h-1 bg-[#D49A37] rounded-full mb-8"></div>
 
                     <div class="overflow-hidden border border-gray-200 bg-white">
 
@@ -512,13 +512,13 @@
                 </div>
 
 
-                <div class="mt-12 md:mx-10" v-else>
+                <div class="my-5 md:mx-10" v-else>
 
                     <h2 class="text-3xl font-bold text-gray-900 mb-4">
                         Project Specifications
                     </h2>
 
-                    <div class="w-24 h-1 bg-orange-500 rounded-full mb-8"></div>
+                    <div class="w-24 h-1 bg-[#D49A37] rounded-full mb-8"></div>
 
                     <div class="overflow-hidden border border-gray-200 bg-white">
 
@@ -651,13 +651,13 @@
 
                 <!-- Animation Component -->
                 <!-- Project Highlights -->
-                <div class="mt-12 md:mx-10" v-if="project.property_amenities?.length">
+                <div class="my-5 md:mx-10" v-if="project.property_amenities?.length">
 
                     <h2 class="text-3xl font-bold text-gray-900 mb-4">
                         Project Amenities
                     </h2>
 
-                    <div class="w-24 h-1 bg-orange-500 rounded-full mb-8"></div>
+                    <div class="w-24 h-1 bg-[#D49A37] rounded-full mb-8"></div>
 
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
 
@@ -677,13 +677,13 @@
 
                 </div>
                 <!-- Unit Configuration -->
-                <div class="mt-12 md:mx-10" v-if="project.property_unit && project.property_unit.length">
+                <div class="my-5 md:mx-10" v-if="project.property_unit && project.property_unit.length">
 
                     <h2 class="text-3xl font-bold text-gray-900 mb-2">
                         Available Unit Options
                     </h2>
 
-                    <div class="w-24 h-1 bg-orange-500 rounded-full mb-6"></div>
+                    <div class="w-24 h-1 bg-[#D49A37] rounded-full mb-6"></div>
 
                     <div
                         class="overflow-hidden border border-gray-200 bg-gradient-to-r from-orange-50 to-amber-100 rounded-xl">
@@ -794,7 +794,7 @@
                             </div>
 
                             <button
-                                class="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-xl font-medium">
+                                class="w-full bg-[#D49A37] hover:bg-orange-700 text-white py-2 rounded-xl font-medium">
                                 Submit Enquiry
                             </button>
 

@@ -6,7 +6,7 @@
     <div class="relative w-full h-auto md:h-[450px] lg:h-[450px] overflow-hidden">
 
       <!-- Banner Image -->
-      <img src="/files/realestatebanner.png" alt="Real Estate Consultation"
+      <img :src="getFileUrl('realestatebanner.png')" alt="Real Estate Consultation"
         class="w-full h-auto md:h-[450px] object-contain md:object-cover" />
 
       <!-- Overlay -->
@@ -78,7 +78,7 @@
       <!-- Right -->
       <div>
 
-        <img src="/files/realestateabout.png" alt="Real Estate"
+        <img :src="getFileUrl('realestateabout.png')" alt="Real Estate"
           class="w-full  h-[420px] rounded-[30px] shadow-xl object-cover" />
 
       </div>
@@ -252,5 +252,8 @@ const router = useRouter();
 
 const goToContact = () => {
   router.push("/contact-us");
+};
+const getFileUrl = (file) => {
+    return `${window.location.origin}/files/${file}`;
 };
 </script>

@@ -65,277 +65,63 @@
 
         </div>
 
-        <!-- Lightbox -->
-        <!-- <div v-if="selectedImage" class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6"
-            @click="selectedImage = null">
-            <img :src="selectedImage.src" class="max-w-full max-h-[90vh] rounded-xl" />
-        </div> -->
-        <!-- <div v-if="selectedImage" class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6">
+        <Transition name="lightbox">
+       
+     <div
+    v-if="selectedImage"
+    class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center">
 
-            <button @click="selectedImage = null" class="absolute top-3 right-6 text-white text-4xl">
-                ×
-            </button>
+    
 
-            <img :src="selectedImage.src" class="max-w-full max-h-[90vh] rounded-xl" />
-        </div> -->
-        <div v-if="selectedImage" class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6">
+    <!-- Previous -->
+    <button
+    @click="prevImage"
+    class="absolute left-6 z-20 w-12 h-12 rounded-full bg-white/20 hover:bg-white/35 transition-all duration-300 flex items-center justify-center backdrop-blur-sm"
+>
+    <span class="material-symbols-outlined text-white text-[28px]">
+        chevron_left
+    </span>
+</button>
 
-            <div class="relative">
+   <div class="relative inline-block">
 
-                <button @click="selectedImage = null"
-                    class="absolute -top-3 -right-3  text-black w-14 h-14  rounded-full shadow-lg flex items-center justify-center text-2xl   md:hover:bg-gray-200">
-                    <span class="text-[35px] text-white"> ×</span>
-                </button>
+    <!-- Image -->
+    <img
+        :src="selectedImage.src"
+        class="max-w-[90vw] max-h-[85vh] rounded-xl object-contain" />
 
-                <img :src="selectedImage.src" class="max-w-full max-h-[90vh] rounded-xl" />
+    <!-- Close Button -->
+    <button
+        @click="closeViewer"
+        class="absolute top-[-9px] right-[-2px] z-50 w-12 h-12 rounded-full bg-black/60 hover:bg-black/80 text-white flex items-center justify-center">
 
-            </div>
+        <span class="text-4xl leading-none">&times;</span>
 
-        </div>
+    </button>
+
+</div>
+
+    <!-- Next -->
+    <button
+        @click="nextImage"
+        class="absolute right-5 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full w-12 h-12 flex items-center justify-center">
+
+        <span class="material-symbols-outlined">
+            arrow_forward_ios
+        </span>
+
+    </button>
+
+</div>
+        </Transition>
 
     </div>
 </template>
 
-<!-- <script setup>
-import { ref, computed } from "vue";
-
-const categories = [
-    "All",
-    "Exterior",
-    "Interior",
-    "Amenities",
-    "Master Plan",
-];
-
-const selectedCategory = ref("All");
-
-const images = ref([
-    {
-        src: "/files/Interior-1.jpg",
-        category: "Interior",
-    },
-    {
-        src: "/files/Interior-2.jpg",
-        category: "Interior",
-    },
-    {
-        src: "/files/Interior-3.jpg",
-        category: "Interior",
-    },
-    {
-        src: "/files/Interior-4.jpg",
-        category: "Interior",
-    },
-    {
-        src: "/files/Interior-5.jpg",
-        category: "Interior",
-    },
-    {
-        src: "/files/Interior-6.jpg",
-        category: "Interior",
-    },
-    {
-        src: "/files/Interior-7.jpg",
-        category: "Interior",
-    },
-    {
-        src: "/files/Interior-23.jpg",
-        category: "Interior",
-    },
-    {
-        src: "/files/Interior-9.jpg",
-        category: "Interior",
-    },
-    {
-        src: "/files/Interior-10.jpg",
-        category: "Interior",
-    },
-    {
-        src: "/files/Interior-11.jpg",
-        category: "Interior",
-    },
-    {
-        src: "/files/Interior-12.jpg",
-        category: "Interior",
-    },
-    {
-        src: "/files/Interior-13.jpg",
-        category: "Interior",
-    },
-    {
-        src: "/files/Interior-14.jpg",
-        category: "Interior",
-    },
-    {
-        src: "/files/Interior-15.jpg",
-        category: "Interior",
-    },
-    {
-        src: "/files/Interior-16.jpg",
-        category: "Interior",
-    },
-    {
-        src: "/files/Interior-17.jpg",
-        category: "Interior",
-    },
-    {
-        src: "/files/Interior-18.jpg",
-        category: "Interior",
-    },
-    {
-        src: "/files/Interior-19.jpg",
-        category: "Interior",
-    },
-    {
-        src: "/files/Interior-20.jpg",
-        category: "Interior",
-    },
-    {
-        src: "/files/Interior-21.jpg",
-        category: "Interior",
-    },
-    {
-        src: "/files/Interior-22.jpg",
-        category: "Interior",
-    },
-    {
-        src: "/files/Interior-23.jpg",
-        category: "Interior",
-    },
-    {
-        src: "/files/Interior-25.jpg",
-        category: "Interior",
-    },
-    {
-        src: "/files/Exterior-1.jpg",
-        category: "Exterior",
-    },
-    {
-        src: "/files/Exterior-2.jpg",
-        category: "Exterior",
-    },
-    {
-        src: "/files/Exterior-3.jpg",
-        category: "Exterior",
-    },
-    {
-        src: "/files/Exterior-4.jpg",
-        category: "Exterior",
-    },
-    {
-        src: "/files/Exterior-5.jpg",
-        category: "Exterior",
-    },
-    {
-        src: "/files/Exterior-6.jpg",
-        category: "Exterior",
-    },
-    {
-        src: "/files/Exterior-7.jpg",
-        category: "Exterior",
-    },
-    {
-        src: "/files/Exterior-8.jpg",
-        category: "Exterior",
-    },
-    {
-        src: "/files/Exterior-9.jpg",
-        category: "Exterior",
-    },
-    {
-        src: "/files/Exterior-10.jpg",
-        category: "Exterior",
-    },
-    {
-        src: "/files/Exterior-11.jpg",
-        category: "Exterior",
-    },
-    {
-        src: "/files/Exterior-12.jpg",
-        category: "Exterior",
-    },
-    {
-        src: "/files/Exterior-13.jpg",
-        category: "Exterior",
-    },
-    {
-        src: "/files/Exterior-14.jpg",
-        category: "Exterior",
-    },
-    {
-        src: "/files/Exterior-15.jpg",
-        category: "Exterior",
-    },
-    {
-        src: "/files/Amenities-1.jpg",
-        category: "Amenities",
-    },
-    {
-        src: "/files/Amenities-2.jpg",
-        category: "Amenities",
-    },
-    {
-        src: "/files/Amenities-3.jpg",
-        category: "Amenities",
-    },
-    {
-        src: "/files/Amenities-4.jpg",
-        category: "Amenities",
-    },
-    {
-        src: "/files/Amenities-5.jpg",
-        category: "Amenities",
-    },
-    {
-        src: "/files/Amenities-6.jpg",
-        category: "Amenities",
-    },
-    {
-        src: "/files/Amenities-7.jpg",
-        category: "Amenities",
-    },
-    {
-        src: "/files/Amenities-8.jpg",
-        category: "Amenities",
-    },
-    {
-        src: "/files/Amenities-9.jpg",
-        category: "Amenities",
-    },
-    {
-        src: "/files/Amenities-10.jpg",
-        category: "Amenities",
-    },
-    {
-        src: "/files/Amenities-11.jpg",
-        category: "Amenities",
-    },
-    {
-        src: "/files/Amenities-12.jpg",
-        category: "Amenities",
-    },
-
-]);
-
-const filteredImages = computed(() => {
-    if (selectedCategory.value === "All") {
-        return images.value;
-    }
-
-    return images.value.filter(
-        (img) => img.category === selectedCategory.value
-    );
-});
-
-const selectedImage = ref(null);
-
-const openImage = (image) => {
-    selectedImage.value = image;
-};
-</script> -->
 <script setup>
-import { ref, computed, onMounted } from "vue";
+import { ref, computed, onMounted,onUnmounted } from "vue";
 import axios from "axios";
+
 
 const categories = [
     "All",
@@ -368,6 +154,7 @@ const getGalleryImages = async () => {
 
 onMounted(() => {
     getGalleryImages();
+    window.addEventListener("keydown", handleKeydown);
 });
 
 const filteredImages = computed(() => {
@@ -380,7 +167,78 @@ const filteredImages = computed(() => {
     );
 });
 
+// const openImage = (image) => {
+//     selectedImage.value = image;
+// };
+
+const currentIndex = ref(0);
+
 const openImage = (image) => {
-    selectedImage.value = image;
+    currentIndex.value = filteredImages.value.findIndex(
+        (img) => img.src === image.src
+    );
+
+    selectedImage.value = filteredImages.value[currentIndex.value];
 };
+
+const nextImage = () => {
+    currentIndex.value =
+        (currentIndex.value + 1) % filteredImages.value.length;
+
+    selectedImage.value = filteredImages.value[currentIndex.value];
+};
+
+const prevImage = () => {
+    currentIndex.value =
+        (currentIndex.value - 1 + filteredImages.value.length) %
+        filteredImages.value.length;
+
+    selectedImage.value = filteredImages.value[currentIndex.value];
+};
+
+const closeViewer = () => {
+    selectedImage.value = null;
+};
+
+
+const handleKeydown = (e) => {
+    if (!selectedImage.value) return;
+
+    switch (e.key) {
+        case "ArrowRight":
+            nextImage();
+            break;
+
+        case "ArrowLeft":
+            prevImage();
+            break;
+
+        case "Escape":
+            closeViewer();
+            break;
+    }
+};
+
+
+onUnmounted(() => {
+    window.removeEventListener("keydown", handleKeydown);
+});
 </script>
+<style scoped>
+.lightbox-enter-active,
+.lightbox-leave-active {
+    transition: all .35s ease;
+}
+
+.lightbox-enter-from,
+.lightbox-leave-to {
+    opacity: 0;
+    transform: scale(.9);
+}
+
+.lightbox-enter-to,
+.lightbox-leave-from {
+    opacity: 1;
+    transform: scale(1);
+}
+</style>

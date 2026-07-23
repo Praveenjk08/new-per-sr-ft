@@ -3,7 +3,7 @@
     <section class="relative py-5 mt-4 overflow-hidden ">
         <div class="bg-[#FAF0E6]">
             <div class="absolute inset-0">
-                <img src="/files/HomePageBannerImageNEw-One.jpeg" class="w-full h-full object-cover" />
+                <img :src="getFileUrl('HomePageBannerImageNEw-One.jpeg')" class="w-full h-full object-cover" />
                 <div class="absolute inset-0 bg-black/60"></div>
             </div>
 
@@ -40,3 +40,9 @@
 
     </section>
 </template>
+
+<script setup>
+const getFileUrl = (file) => {
+    return `${window.location.origin}/files/${file}`;
+};
+</script>

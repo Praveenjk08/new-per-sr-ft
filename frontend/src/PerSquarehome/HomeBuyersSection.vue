@@ -198,7 +198,7 @@ const prevSlide = () => {
 let interval;
 
 onMounted(() => {
-    interval = setInterval(nextSlide, 2000);
+    interval = setInterval(nextSlide, 4000);
 });
 
 onBeforeUnmount(() => {

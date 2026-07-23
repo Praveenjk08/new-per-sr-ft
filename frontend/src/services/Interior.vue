@@ -5,7 +5,7 @@
 
     <div class="relative w-full h-full md:h-[450px] overflow-hidden">
 
-      <img src="/files/interiordesignbanner.png" alt="Interior Design Services" class="w-full h-full object-cover" />
+      <img :src="getFileUrl('interiordesignbanner.png')" alt="Interior Design Services" class="w-full h-full object-cover" />
 
       <div class="absolute inset-0 bg-black/45"></div>
 
@@ -70,7 +70,7 @@
       <!-- Right -->
       <div>
 
-        <img src="/files/interiordesignabout.png" alt="Interior Design"
+        <img :src="getFileUrl('interiordesignabout.png')" alt="Interior Design"
           class="w-full rounded-[30px] shadow-xl object-cover" />
 
       </div>
@@ -274,5 +274,8 @@ const router = useRouter();
 
 const goToContact = () => {
   router.push("/contact-us");
+};
+const getFileUrl = (file) => {
+    return `${window.location.origin}/files/${file}`;
 };
 </script>

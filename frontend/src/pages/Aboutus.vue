@@ -5,7 +5,7 @@
     <!-- Top Image -->
     <div class="w-full">
 
-      <img src="/files/Aboutus.png" alt="Per Square Feet" class="w-full h-[250px] sm:h-[410px] object-cover" />
+      <img :src="getFileUrl('Aboutus.png')" alt="Per Square Feet" class="w-full h-[250px] sm:h-[410px] object-cover" />
 
     </div>
   </section>
@@ -66,7 +66,7 @@
       <!-- Right Side Image -->
       <div class="w-full lg:w-1/2">
 
-        <img src="/files/aboutusright.png" alt="Luxury Property"
+        <img :src="getFileUrl('aboutusright.png')" alt="Luxury Property"
           class="w-full h-[300px] sm:h-[450px] object-cover rounded-xl shadow-xl" />
 
       </div>
@@ -469,7 +469,7 @@
         Founder
       </h2>
 
-      <div class="w-32 h-1 bg-[#D4AF37] mx-auto mt-6 "></div>
+      <div class="w-32 h-1 bg-[#D4AF37] mx-auto  "></div>
 
     </div>
 
@@ -481,7 +481,7 @@
 
         <div class="w-40 h-40 rounded-full border-[4px] border-[#D4AF37] overflow-hidden bg-white shadow-xl">
 
-          <img src="/files/kenchapp.jpeg" alt="Founder" class="w-full h-full object-cover" />
+          <img :src="getFileUrl('kenchapp.jpeg')" alt="Founder" class="w-full h-full object-cover" />
 
         </div>
 
@@ -528,4 +528,7 @@ const goToContact = () => {
 const goToProjects = () => {
   router.push('/projects')
 }
+const getFileUrl = (file) => {
+    return `${window.location.origin}/files/${file}`;
+};
 </script>

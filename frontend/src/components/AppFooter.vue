@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-[#0B1560] text-white pt-16 pb-6 mt-20 relative overflow-hidden">
+  <footer class="bg-[#0B1560] text-white pt-16 pb-6 mt-10 relative overflow-hidden">
 
     <!-- Top Border -->
     <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-yellow-400 to-blue-500"></div>

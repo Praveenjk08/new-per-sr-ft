@@ -106,10 +106,12 @@
           </router-link>
 
           <!-- Login Button -->
-          <button @click="goToLogin"
-            class="ml-4 bg-[#156082] hover:bg-[#0B1560] text-white px-6 py-2 rounded-xl text-[16px] font-medium transition-all duration-300 shadow-md">
-            Login
-          </button>
+          <button
+  @click="goToLogin"
+  class="ml-4 bg-[#D49A37] hover:bg-[#C19A2D] text-white px-5 py-2   rounded-xl text-[14px] font-semibold transition-all duration-300 shadow-md"
+>
+  Talk to an Expert
+</button>
 
         </div>
 
@@ -118,7 +120,7 @@
 
           <button @click="toggleMenu">
 
-            <svg class="w-7 h-7 text-[#156082]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-7 h-7 text-[#D49A37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 
               <path v-if="!isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M4 6h16M4 12h16M4 18h16" />
@@ -321,8 +323,8 @@
             <li>
 
               <button @click="goToLogin"
-                class="w-full bg-[#156082] hover:bg-[#0B1560] text-white py-3 rounded-xl text-[18px] font-medium transition duration-300">
-                Login
+                class="w-full bg-[#D49A37] hover:bg-[#0B1560] text-white py-3 rounded-xl text-[18px] font-medium transition duration-300">
+                Talk to an Expert
               </button>
 
             </li>
@@ -362,7 +364,7 @@ const toggleProjects = () => {
 };
 
 const goToLogin = () => {
-  window.location.href = "/login";
+  window.location.href = "/contact-us";
 };
 </script>
 

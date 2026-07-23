@@ -6,7 +6,7 @@
     <div class="relative w-full h-auto md:h-[450px] lg:h-[450px] overflow-hidden ">
 
       <!-- Banner Image -->
-      <img src="/files/homeloanbanner.png" alt="Housing Loan Services"
+      <img :src="getFileUrl('homeloanbanner.png')" alt="Housing Loan Services"
         class="w-full h-auto object-contain md:h-[450px] md:object-cover" />
 
       <!-- Overlay -->
@@ -78,7 +78,7 @@
       <!-- Right -->
       <div>
 
-        <img src="/files/homeloanabout.png" alt="Housing Loan"
+        <img :src="getFileUrl('homeloanabout.png')" alt="Housing Loan"
           class="w-full h-[350px] rounded-[30px] shadow-xl object-cover" />
 
       </div>
@@ -251,5 +251,9 @@ const router = useRouter();
 
 const goToContact = () => {
   router.push("/contact-us");
+};
+
+const geturl = (file) => {
+  return `${window.location.origin}/files/${file}`;
 };
 </script>

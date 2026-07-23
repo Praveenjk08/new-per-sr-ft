@@ -1,7 +1,7 @@
 <template>
     <section class="pb-4 pt-2 px-4 md:px-10 bg-[#FAF0E6]">
         <!-- Heading -->
-        <div class="text-center mb-6">
+        <div class="property-title text-center mb-6">
             <h2 class="text-3xl md:text-4xl font-semibold">
                 Explore Our
                 <span class="text-orange-500 italic">Property Types</span>
@@ -15,7 +15,7 @@
         <!-- Property Type Cards -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
             <div v-for="item in propertyTypes" :key="item.property_type" @click="goToProjects(item.property_type)"
-                class="cursor-pointer group">
+                class="property-card cursor-pointer group">
                 <div class="overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300">
                     <img :src="item.property_image" :alt="item.property_type"
                         class="w-full h-48 md:h-60 object-cover group-hover:scale-105 transition duration-300" />
@@ -32,6 +32,10 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const router = useRouter();
 const propertyTypes = ref([]);
@@ -45,6 +49,25 @@ const getPropertyTypes = async () => {
         const data = await response.json();
 
         propertyTypes.value = data.message || [];
+
+
+        requestAnimationFrame(() => {
+
+            gsap.from(".property-card", {
+                scrollTrigger: {
+                    trigger: ".property-card",
+                    start: "top 85%",
+                },
+                y: 80,
+                opacity: 0,
+                scale: 0.85,
+                rotateY: 10,
+                stagger: 0.15,
+                duration: 0.8,
+                ease: "back.out(1.8)",
+            });
+
+        });
     } catch (error) {
         console.error("Error fetching property types:", error);
     }
@@ -56,5 +79,30 @@ const goToProjects = (propertyType) => {
 
 onMounted(() => {
     getPropertyTypes();
+
+    gsap.from(".property-title", {
+        scrollTrigger: {
+            trigger: ".property-title",
+            start: "top 85%",
+        },
+        y: -50,
+        opacity: 0,
+        duration: 1,
+        ease: "power4.out",
+    });
+
+    gsap.from(".property-card", {
+        scrollTrigger: {
+            trigger: ".property-card",
+            start: "top 85%",
+        },
+        y: 80,
+        opacity: 0,
+        scale: 0.85,
+        rotateY: 10,
+        stagger: 0.15,
+        duration: 0.8,
+        ease: "back.out(1.8)",
+    });
 });
 </script>

@@ -7,8 +7,11 @@
     <!-- <img src="/files/real_estate_house_2.jpg" alt="Luxury Home"
       class="w-full h-full object-cover absolute inset-0  rounded-lg " /> -->
 
-    <img src="/files/HomePageBannerImageNEw-One.jpeg" alt="Luxury Home"
-      class="w-full h-full object-cover absolute inset-0   rounded-lg " />
+    <img
+  :src="getFileUrl('HomePageBannerImageNEw-One.jpeg')"
+  alt="Luxury Home"
+  class="hero-image w-full h-full object-cover absolute inset-0 rounded-lg"
+/>
 
 
     <!-- Content -->
@@ -19,7 +22,7 @@
       <div class="max-w-5xl w-full">
 
         <!-- Badge -->
-        <div class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full my-6">
+        <div class="hero-badge inline-flex items-center gap-2 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full my-6">
           <span class="w-2 h-2 bg-green-500 rounded-full"></span>
 
           <p class="text-black text-xs sm:text-sm tracking-wide">
@@ -29,8 +32,7 @@
 
         <!-- Heading -->
 
-        <h1
-          class="text-white text-3xl sm:text-4xl md:text-7xl font-extrabold leading-tight drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
+        <h1 class="hero-title text-white text-3xl sm:text-4xl md:text-7xl font-extrabold leading-tight drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
           Find Your Dream
 
           <span class="block text-[#f4b942] mt-1">
@@ -38,7 +40,7 @@
           </span>
         </h1>
 
-        <div class="flex items-center justify-center gap-2 md:gap-4 mt-2">
+        <div class="hero-divider flex items-center justify-center gap-2 md:gap-4 mt-2">
 
           <div class="w-24 h-[2px] bg-[#f4b942]"></div>
 
@@ -55,7 +57,7 @@
         <!-- Sub Heading -->
 
         <p
-          class="text-white text-sm sm:text-base md:text-2xl mt-4 max-w-4xl mx-auto leading-relaxed px-4 drop-shadow-lg">
+          class="hero-subtitle text-white text-sm sm:text-base md:text-2xl mt-4 max-w-4xl mx-auto leading-relaxed px-4 drop-shadow-lg">
           Explore premium apartments, villas and plots across
           India's top locations with
 
@@ -67,7 +69,7 @@
 
 
 
-        <div class="flex flex-col md:flex-row justify-center items-start gap-2 mt-4 px-4">
+        <div class="hero-search  flex flex-col md:flex-row justify-center items-start gap-2 mt-4 px-4">
           <div class="relative w-full md:w-[440px]"> <input type="text" v-model="searchText1" @input="searchProjects"
               placeholder="Search by City, Property, Builder..."
               class="w-full h-[40px] py-2 px-4 rounded-xl outline-none bg-white text-gray-700 text-sm sm:text-lg" />
@@ -93,10 +95,10 @@
 
 
       </div>
-      <div class="grid grid-cols-3 gap-2 md:gap-8 mt-8 md:mt-10 text-white w-full max-w-3xl">
+      <div class="hero-stats grid grid-cols-3 gap-2 md:gap-8 mt-8 md:mt-10 text-white w-full max-w-3xl">
 
         <!-- Projects -->
-        <div class="flex flex-col items-center">
+        <div class=" hero-stat flex flex-col items-center">
 
           <div class="w-16 h-16 rounded-full bg-white/30  flex items-center justify-center">
 
@@ -121,7 +123,7 @@
         </div>
 
         <!-- Builders -->
-        <div class="flex flex-col items-center">
+        <div class="hero-stat flex flex-col items-center">
 
           <div class="w-16 h-16 rounded-full bg-white/30  flex items-center justify-center">
             <span class="material-symbols-outlined text-[#f4b942] text-[40px]">
@@ -137,7 +139,7 @@
         </div>
 
         <!-- Happy Buyers -->
-        <div class="flex flex-col items-center">
+        <div class="hero-stat flex flex-col items-center">
 
           <div class="w-16 h-16 rounded-full bg-white/30  flex items-center justify-center">
             <span class="material-symbols-outlined text-[#f4b942] text-[40px]">
@@ -184,7 +186,8 @@ import Thefamilysection from "./Thefamilysection.vue";
 import TheKitcheniamge from "./TheKitcheniamge.vue";
 import PropertySlides from "./PropertySlides.vue";
 import { useRouter } from "vue-router";
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+import gsap from "gsap";
 import PropertyType from "./PropertyType.vue";
 import CompanyExprience from "./CompanyExprience.vue";
 import HomeBuyersSection from "./HomeBuyersSection.vue";
@@ -235,4 +238,70 @@ const selectProject = (project) => {
 
   router.push(`/detailpage/${project.url}`)
 }
+const getFileUrl = (file) => {
+    return `${window.location.origin}/files/${file}`;
+};
+
+onMounted(() => {
+
+    const tl = gsap.timeline();
+
+    // Background slow zoom
+    gsap.fromTo(
+        ".hero-image",
+        {
+            scale: 1.18,
+        },
+        {
+            scale: 1,
+            duration: 8,
+            ease: "power1.out",
+        }
+    );
+
+    tl.from(".hero-badge", {
+        y: -50,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+    })
+
+    .from(".hero-title", {
+        y: 80,
+        opacity: 0,
+        duration: 1,
+        ease: "power4.out",
+    }, "-=0.3")
+
+    .from(".hero-divider", {
+        scaleX: 0,
+        opacity: 0,
+        duration: 0.6,
+        ease: "power2.out",
+    }, "-=0.4")
+
+    .from(".hero-subtitle", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+    }, "-=0.3")
+
+    .from(".hero-search", {
+        y: 50,
+        opacity: 0,
+        scale: 0.9,
+        duration: 0.8,
+        ease: "back.out(1.7)",
+    }, "-=0.3")
+
+    .from(".hero-stat", {
+        y: 60,
+        opacity: 0,
+        stagger: 0.18,
+        duration: 0.8,
+        ease: "back.out(1.8)",
+    }, "-=0.2");
+
+});
 </script>

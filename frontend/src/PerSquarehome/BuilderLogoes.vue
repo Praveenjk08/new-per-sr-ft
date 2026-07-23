@@ -1,5 +1,5 @@
 <template>
-    <section class="pb-16 pt-2 bg-[#FAF0E6]">
+    <section class="pb-4 pt-2 bg-[#FAF0E6]">
 
         <div class="bg-[#FAF0E6] sm:rounded-xl py-12 mx-4 lg:mx-4 rounded-3xl">
 
