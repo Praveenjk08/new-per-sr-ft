@@ -79,16 +79,50 @@
             </div>
 
         </section>
+
+        <!-- Search Bar -->
+<div class="mb-6">
+    <div class="relative max-w-xl mx-4 md:mx-auto">
+
+        <span
+            class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
+            search
+        </span>
+
+        <input
+            v-model="searchQuery"
+            type="text"
+            placeholder="Search project by name..."
+            class="w-full pl-12 pr-12 py-2 bg-white border border-gray-200
+                   rounded-2xl shadow-sm text-base
+                   focus:outline-none focus:ring-2 focus:ring-cyan-600
+                   focus:border-transparent"
+        />
+
+        <!-- Clear -->
+        <button
+            v-if="searchQuery"
+            @click="searchQuery = ''"
+            class="absolute right-4 top-1/2 -translate-y-1/2
+                   text-gray-400 hover:text-gray-700"
+        >
+            <span class="material-symbols-outlined">
+                close
+            </span>
+        </button>
+
+    </div>
+</div>
         <!-- Projects -->
         <section class="max-w-5xl mx-auto px-4 md:px-0 pb-10">
 
 
 
-            <div v-if="projects.length">
+            <div v-if="filteredProjects.length">
 
 
 
-                <div v-for="(project, index) in projects" :key="index"
+                <div v-for="(project, index) in filteredProjects" :key="index"
                     @click="$router.push(`/detailpage/${project.url}`)"
                     class="bg-white cursor-pointer rounded-3xl shadow-sm border overflow-hidden mb-8">
 
@@ -191,7 +225,7 @@
     </div>
 </template>
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, computed } from "vue";
 import { useRoute } from "vue-router";
 
 const route = useRoute();
@@ -233,5 +267,19 @@ const getProjects = async () => {
 
 onMounted(() => {
     getProjects();
+});
+
+const searchQuery = ref("");
+
+const filteredProjects = computed(() => {
+    if (!searchQuery.value.trim()) {
+        return projects.value;
+    }
+
+    const search = searchQuery.value.toLowerCase().trim();
+
+    return projects.value.filter((project) =>
+        project.project_name?.toLowerCase().includes(search)
+    );
 });
 </script>
